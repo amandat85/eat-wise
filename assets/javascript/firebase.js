@@ -1,4 +1,9 @@
+// DATABASE CONTROLLER USING FIREBASE
+var firebaseController = (function() {
+  // All the firebase code will be moved inside of here eventually
+})();
 
+// no code will actually be run in this file. that will only happen in the main controller file
 $(document).ready(function () { 
 
 // Initialize Firebase
@@ -12,7 +17,7 @@ var config = {
 };
 firebase.initializeApp(config);
 
-
+// These UI elements will eventually be moved to UI.js
 //GET ELEMENTS IN HTML======================================================
 var btnSignUp = document.querySelector("#signUp");
 var txtLogin = document.querySelector("#username");
@@ -21,6 +26,8 @@ var txtEmail = document.querySelector("#email");
 var txtPass = document.querySelector("#password");
 var passLogin = document.querySelector("#loginPassword");
 
+// Event listeners will be moved to main process js file eventually 
+// and the function for what happend when an event is triggered will be kept in this file
 //TODO: VALIDATE FIELDS & ADD EXTRA FIELDS TO VARIABLES
 //LOGIN BUTTON EVENT==============================================
 btnLogin.addEventListener("click", function(event) {
