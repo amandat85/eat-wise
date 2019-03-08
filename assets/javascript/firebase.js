@@ -1,5 +1,6 @@
 
-window.onload=function(){
+$(document).ready(function () { 
+
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyDPHxT4nXafKkjoyGEPlve1lWrELWSBUcI",
@@ -15,42 +16,53 @@ firebase.initializeApp(config);
 //GET ELEMENTS IN HTML======================================================
 var btnSignUp = document.querySelector("#signUp");
 var btnLogin = document.querySelector("#btnLogin");
-var txtEmail = document.querySelector("#username");
+var txtEmail = document.querySelector("#email");
 var txtSignupEmail = document.querySelector("#email")
 var txtPass = document.querySelector("#password");
 //TODO: VALIDATE FIELDS & ADD EXTRA FIELDS TO VARIABLES
 //LOGIN BUTTON EVENT==============================================
-btnLogin.addEventListener("click", e => {
-    console.log(event);
-    //get email and password
-    var email = txtEmail.value;
-    var pass = txtPass.value;
-    var auth = firebase.auth();
-    //sign in 
-    var promise = auth.signInWithEmailAndPassword(email, pass);
-    promise.catch(e => console.log(e.message));
-});
+// btnLogin.addEventListener("click", e => {
+//     console.log(event);
+//     //get email and password
+//     var email = txtEmail.value;
+//     var pass = txtPass.value;
+//     var auth = firebase.auth();
+//     //sign in 
+//     var promise = auth.signInWithEmailAndPassword(email, pass);
+//     promise.catch(e => console.log(e.message));
+// });
 //SIGN UP BUTTON EVENT=============================================
-btnSignUp.addEventListener("click", e => {
-    //console.log(event);
+btnSignUp.addEventListener("click", function(event) {
     //get email and password
-   // var email = txtEmail.value;
+   var email = txtEmail.value;
+   console.log(email);
     var pass = txtPass.value;
     console.log(pass);
-    var signUp = txtSignupEmail.Value; 
-    console.log(signUp)
-    var auth = firebase.auth();
     //sign in 
-    var promise = auth.createUserWithEmailAndPassword(signUp, pass);
-    promise.catch(e => console.log(e.message));
+    firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ...
+        console.log(errorCode);
+        console.log(errorMessage);
+      });
 });
 //ADD REALTIME LISTENER TO CHANGED STATE===========================
-firebase.auth().onAuthStateChanged(firebaseUser => {
-    if (firebaseUser) {
-        console.log(firebaseUser);
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+      var displayName = user.displayName;
+      var email = user.email;
+      var emailVerified = user.emailVerified;
+      var photoURL = user.photoURL;
+      var isAnonymous = user.isAnonymous;
+      var uid = user.uid;
+      var providerData = user.providerData;
+      // ...
+    } else {
+      // User is signed out.
+      // ...
     }
-    else {
-        console.log("not logged in");
-    }
+  });
 });
-};
