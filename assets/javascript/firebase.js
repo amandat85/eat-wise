@@ -15,22 +15,29 @@ firebase.initializeApp(config);
 
 //GET ELEMENTS IN HTML======================================================
 var btnSignUp = document.querySelector("#signUp");
+var txtLogin = document.querySelector("#username");
 var btnLogin = document.querySelector("#btnLogin");
 var txtEmail = document.querySelector("#email");
-var txtSignupEmail = document.querySelector("#email")
 var txtPass = document.querySelector("#password");
+var passLogin = document.querySelector("#loginPassword");
+
 //TODO: VALIDATE FIELDS & ADD EXTRA FIELDS TO VARIABLES
 //LOGIN BUTTON EVENT==============================================
-// btnLogin.addEventListener("click", e => {
-//     console.log(event);
-//     //get email and password
-//     var email = txtEmail.value;
-//     var pass = txtPass.value;
-//     var auth = firebase.auth();
-//     //sign in 
-//     var promise = auth.signInWithEmailAndPassword(email, pass);
-//     promise.catch(e => console.log(e.message));
-// });
+btnLogin.addEventListener("click", function(event) {
+    //get email and password
+   var login = txtLogin.value;
+   console.log(email);
+    var loginPass = passLogin.value;
+    console.log(loginPass);
+firebase.auth().signInWithEmailAndPassword(login, loginPass).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(errorCode);
+    console.log(errorMessage);
+  });
+});
+  
 //SIGN UP BUTTON EVENT=============================================
 btnSignUp.addEventListener("click", function(event) {
     //get email and password
@@ -48,6 +55,7 @@ btnSignUp.addEventListener("click", function(event) {
         console.log(errorMessage);
       });
 });
+
 //ADD REALTIME LISTENER TO CHANGED STATE===========================
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
