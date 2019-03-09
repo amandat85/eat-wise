@@ -1,28 +1,26 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
-    <meta charset="utf-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Title -->
-    <title>Eat Wise | Food Planner and Nutrition App</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://imgur.com/ZvEb6e9">
 
     <!-- Link to CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
     <!-- Link to Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 
-    <!-- Link to Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <!-- Link to Firebase Database -->
     <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
@@ -33,27 +31,37 @@
     <!-- Link to JavaScript File -->
     <script src="assets/javascript/firebase.js" type="text/javascript"></script>
 
+    <!-- Title -->
+    <title>Eat Wise | Food Planner and Nutrition App</title>
 </head>
 
-<body>
-
-    <!-- Top Navbar -->
-    <header id="masthead">
-        <div class="container">
-
-            <!-- Logo -->
-            <a href="index.html" id="logo"><img src="assets/images/eat-wise-logo-1.png" width="180" height="60"
-                    alt="Eat Wise"></a>
-
+<!-- Top Navbar -->
+<header id="masthead">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <span class="navbar-brand my-n2 mx-n3"></span><a href="index.html" id="logo"><img
+                    src="assets/images/eat-wise-logo-1.png" width="180" height="60" alt="Eat Wise"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <!-- Navbar Menu -->
-            <nav>
-                <a href="blog.html">Blog</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
-    <!--/ .Top Navbar -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
 
     <div class="main">
 
@@ -139,7 +147,6 @@
             <div class="container">
                 <form>
                     <div class="form-row">
-
                         <!-- Login Heading -->
                         <h1 class="form-title">Welcome back</h1>
                         <form class="login-form">
@@ -181,6 +188,32 @@
         <!--/ .Login Form -->
     </div>
     <!--/ .Main -->
+
+    <!-- Footer -->
+<footer class="page-footer flex-d fixed-bottom">
+    <!--Icons-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1 mt-md-0 ml-5 pl-3 mt-3 offset-md-2">
+                <a href="#" class="icoIcon" title="Icon"><i class="fas fa-info-circle fa-2x"></i></a>
+            </div>
+
+            <div class="col-md-2 mb-md-0 mb-3 ml-auto">
+                <a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-square fa-2x ml-5"></i></a>
+                <a href="#" class="icoInstagram" title="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter-square fa-2x"></i></a>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">Copyright &copy; 2019 - Pineapple on Pizza</div>
+</footer>
+<!--Script-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+</html>
 </body>
 
 </html>
