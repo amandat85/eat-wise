@@ -69,7 +69,7 @@
         <div class="col-md-8 offset-md-2">
             <div class="card mt-4 mb-5 border-0">
                 <div class="card-body">
-                        <div class="card-title text-center"><i class="fas fa-info-circle fa-5x"></i></div>
+                    <div class="card-title text-center"><i class="fas fa-info-circle fa-5x"></i></div>
                     <h2 id="card-hearder">Disclaimer</h2>
                     <p class="card-text text-center mt-5">Your health and wellbeing is our main priority. Please consult
                         your doctor before enrolling in a meal plan established on Eat Wise.</p>
@@ -80,18 +80,40 @@
     </div>
 </div>
 
-<!-- Footer -->
-  
-  
-<div class="footer d-flex fixed-bottom justify-content-center">
-    <div class="row">
-        <div class="col-md-6">
-            <p class="text-center">&copy; Copyright 2019 - Pineapple on Pizza.  All rights reserved.</p>
+<!--Modal - Disclaimer-->
+<div class="modal fade" id="disclaimer" tabindex="-1" role="dialog" aria-labelledby="disclaimerLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="alertLabel">Disclaimer</h5>
+            </div>
+            <div class="modal-body">
+                <p class="card-text text-center mt-5">Your health and wellbeing is our main priority. Please consult
+                    your doctor before enrolling in a meal plan established on Eat Wise.</p>
+                <p class="card-text text-center">Terms and Conditions</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="closeModal" data-dismiss="modal">Close</button>
+            </div>
         </div>
-        <div class="col-md-6">
-                <a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-square fa-2x ml-5"></i></a>
-                <a href="#" class="icoInstagram" title="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
-                <a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter-square fa-2x"></i></a>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer d-flex fixed-bottom" id="footerPosition">
+    <div class="row justify-content-center">
+        <div class="col-md-2">
+            <a href="#" class="icoIcon" title="Icon"><i class="fas fa-info-circle fa-2x"></i></a>
+        </div>
+        <div class="col-md-6 text-right">
+            <a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-square fa-2x ml-5"></i></a>
+            <a href="#" class="icoInstagram" title="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter-square fa-2x"></i></a>
+        </div>
+    <div class="row">    
+        <div class="col-md-12 mt-4">
+            <p class="text-center">Copyright &copy; 2019 - Pineapple on Pizza. All rights reserved.</p>
         </div>
     </div>
 </div>
