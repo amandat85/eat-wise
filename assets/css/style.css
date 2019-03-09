@@ -64,10 +64,6 @@ nav a:first-child {
   margin-top: 0px;
 }
 
-#footerPosition{
-  margin-left: 26%;
-}
-
 @media only screen and (max-width: 640px) {
   #masthead {
     position: static;
