@@ -3,7 +3,7 @@ body  {
   font-size: 18px;
   line-height: 34px;
   /* height: 1500px; */
-  color: #f3f3f3;
+  /* color: #f3f3f3; */
 }
 
 * {
@@ -14,20 +14,20 @@ body  {
   text-align: center;
 }
 
-.main {
-  color: #ffffff;
-  /* background: #f3f3f3; */
-} 
+/* .main {
+  /* color: #ffffff; */
+  /* background: #f3f3f3; 
+} */
 
-.container {
-  color: #ffffff;
-  /* background: #f3f3f3; */
-}
+/* .container {
+  /* color: #ffffff; */
+  /* background: #f3f3f3; 
+} */
 
 #masthead {
   z-index: 99;
   width: 100%; 
-  color: #ffffff;
+  /* color: #ffffff; */
   /* background: #f3f3f3; */
 }
 
