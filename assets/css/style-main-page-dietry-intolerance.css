@@ -2,7 +2,7 @@ body  {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   line-height: 34px;
-  height: 1500px;
+  height: 1800px;
   color: #f3f3f3;
 }
 
@@ -10,20 +10,26 @@ body  {
   box-sizing: border-box;
 }
 
-.form-title {
-  text-align: center;
-}
+/* Image */
 
 .main {
-  margin-top: 100px;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
-.container {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  clear: both;
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  font-size:10vw;
 }
+
+/* Top Navbar */
 
 #masthead {
   position: fixed;
@@ -72,6 +78,14 @@ nav a:first-child {
   border-left: 0 none;
   margin-top: 0px;
 }
+
+/* Done Button */
+
+.doneBtn {
+  margin-top: 50px;
+}
+
+/* Media Query */
 
 @media only screen and (max-width: 640px) {
   #masthead {

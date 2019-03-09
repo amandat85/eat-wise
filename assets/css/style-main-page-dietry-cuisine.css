@@ -10,20 +10,26 @@ body  {
   box-sizing: border-box;
 }
 
-.form-title {
-  text-align: center;
-}
+/* Image */
 
 .main {
-  margin-top: 100px;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
-.container {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  clear: both;
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  font-size:10vw;
 }
+
+/* Top Navbar */
 
 #masthead {
   position: fixed;
@@ -72,6 +78,41 @@ nav a:first-child {
   border-left: 0 none;
   margin-top: 0px;
 }
+
+/* Selection Buttons */
+
+.items-collection {
+  margin: 20px 0 0 0;
+}
+
+.items-collection label.btn-default.active {
+  background-color: #007ba7;
+  color: #FFF;
+}
+
+.items-collection label.btn-default {
+  width: 90%;
+  border: 1px solid #305891;
+  margin: 5px;
+  border-radius: 17px;
+  color: #305891;
+}
+
+.items-collection label .itemcontent {
+  width: 100%;
+}
+
+.items-collection .btn-group {
+  width: 90%
+}
+
+/* Done Button */
+
+.doneBtn {
+  margin-top: 50px;
+}
+
+/* Media Query */
 
 @media only screen and (max-width: 640px) {
   #masthead {

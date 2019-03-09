@@ -2,7 +2,7 @@ body  {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   line-height: 34px;
-  height: 1500px;
+  height: 2000px;
   color: #f3f3f3;
 }
 
@@ -10,19 +10,32 @@ body  {
   box-sizing: border-box;
 }
 
-.form-title {
-  text-align: center;
-}
+/* Image */
 
 .main {
-  margin-top: 100px;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  font-size:10vw;
+}
+
+/* Top Navbar */
+
 .container {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  clear: both;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    clear: both;
 }
 
 #masthead {
@@ -73,38 +86,47 @@ nav a:first-child {
   margin-top: 0px;
 }
 
+/* Search Button */
+
+.searchBtn {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Media Query */
+
 @media only screen and (max-width: 640px) {
-  #masthead {
+    #masthead {
     position: static;
   }
 
-  #logo {
+    #logo {
     width: 100%;
     margin-left: 0px;
   }
   
-	nav a {
-		margin-right: 70px;
+    nav a {
+	margin-right: 70px;
   }
 
 }
 
 @media only screen and (max-width: 768px) {
-  #logo {
+    #logo {
     margin-left: 0px;
   }
 
-  nav {
-   margin-right: 50px;
+    nav {
+    margin-right: 50px;
   }
 }
 
 @media only screen and (max-width: 980px) {  
-  #logo {
+    #logo {
     margin-left: 0px;
   }
   
-  nav {
+    nav {
     margin-right: 30px;
   }
   

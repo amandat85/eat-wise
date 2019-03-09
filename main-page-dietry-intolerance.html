@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>Eat Wise | Food Planner and Nutrition App</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://imgur.com/ZvEb6e9">
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="assets/css/style-main-page-dietry-intolerance.css">
+
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!-- Link to Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
+
+    <!-- Link to Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Links to Boostrap Toggle -->
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
+
+    <!-- Link to Firebase Database -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+
+    <!-- Link to jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Link to JavaScript File -->
+    <script src="assets/javascript/app.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+    <!-- Top Navbar -->
+    <header id="masthead">
+        <div class="container">
+
+            <!-- Logo -->
+            <a href="main-page.html" id="logo"><img src="assets/images/eat-wise-logo-1.png" width="180" height="60"
+                    alt="Eat Wise"></a>
+
+            <!-- Navbar Menu -->
+            <nav>
+                <a href="blog.html">Blog</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <!--/ .Top Navbar -->
+
+    <!-- Image -->
+    <div class="main">
+        <div class="centered">
+            Intolerance
+        </div>
+        <div class="text-center">
+            <img src="assets/images/casserole-dish-2776735_1920.jpg" class="img-responsive center-block"
+                alt="Intolerance Image">
+        </div>
+    </div>
+    <!--/ .Image -->
+
+    <!-- Selection Menu -->
+    <div class="row">
+        <div class="col">
+            <ul class="list-group text-center">
+                <li class="list-group-item">
+                    <label for="stackedCheck1" class="form-check-label">Diary: </label>
+                    <input type="checkbox" checked data-toggle="toggle" data-on="Yes" data-off="No"
+                        data-onstyle="success" data-offstyle="danger">
+                </li>
+                <li class="list-group-item">
+                    <label for="stackedCheck2" class="form-check-label">Egg: </label>
+                    <input type="checkbox" checked data-toggle="toggle" data-on="Yes" data-off="No"
+                        data-onstyle="success" data-offstyle="danger">
+                </li>
+                <li class="list-group-item">
+                    <label for="stackedCheck3" class="form-check-label">Gluten: </label>
+                    <input type="checkbox" checked data-toggle="toggle" data-on="Yes" data-off="No"
+                        data-onstyle="success" data-offstyle="danger">
+                </li>
+                <li class="list-group-item">
+                    <label for="stackedCheck4" class="form-check-label">Peanut: </label>
+                    <input type="checkbox" checked data-toggle="toggle" data-on="Yes" data-off="No"
+                        data-onstyle="success" data-offstyle="danger">
+                </li>
+                <li class="list-group-item">
+                    <label for="stackedCheck5" class="form-check-label">Sesame: </label>
+                    <input type="checkbox" checked data-toggle="toggle" data-on="Yes" data-off="No"
+                        data-onstyle="success" data-offstyle="danger">
+                </li>
+                <li class="list-group-item">
+                    <label for="stackedCheck6" class="form-check-label">Shellfish: </label>
+                    <input type="checkbox" checked data-toggle="toggle" data-on="Yes" data-off="No"
+                        data-onstyle="success" data-offstyle="danger">
+                </li>
+                <li class="list-group-item">
+                    <label for="stackedCheck7" class="form-check-label">Soy: </label>
+                    <input type="checkbox" checked data-toggle="toggle" data-on="Yes" data-off="No"
+                        data-onstyle="success" data-offstyle="danger">
+                </li>
+                <li class="list-group-item">
+                    <label for="stackedCheck8" class="form-check-label">Sulfate: </label>
+                    <input type="checkbox" checked data-toggle="toggle" data-on="Yes" data-off="No"
+                        data-onstyle="success" data-offstyle="danger">
+                </li>
+                <li class="list-group-item">
+                    <label for="stackedCheck9" class="form-check-label">Tree nut: </label>
+                    <input type="checkbox" checked data-toggle="toggle" data-on="Yes" data-off="No"
+                        data-onstyle="success" data-offstyle="danger">
+                </li>
+                <li class="list-group-item">
+                    <label for="stackedCheck10" class="form-check-label">Wheat: </label>
+                    <input type="checkbox" checked data-toggle="toggle" data-on="Yes" data-off="No"
+                        data-onstyle="success" data-offstyle="danger">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--/ .Selection Menu -->
+
+    <!-- Done Button -->
+    <div class="doneBtn text-center">
+        <a href="#" class="btn btn-default-plain btn-primary active">
+            <i class="fa fa-check fa-1x"> Done</i>
+        </a>
+    </div>
+    <!--/ .Done Button -->
+</body>
+
+</html>
