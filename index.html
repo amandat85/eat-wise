@@ -15,10 +15,14 @@
     <link rel="icon" type="image/png" href="https://imgur.com/ZvEb6e9">
 
     <!-- Link to CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style-main-page.css">
 
     <!-- Link to Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!-- Link to Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
 
     <!-- Link to Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -42,7 +46,7 @@
         <div class="container">
 
             <!-- Logo -->
-            <a href="index.html" id="logo"><img src="assets/images/eat-wise-logo-1.png" width="180" height="60"
+            <a href="main-page.html" id="logo"><img src="assets/images/eat-wise-logo-1.png" width="180" height="60"
                     alt="Eat Wise"></a>
 
             <!-- Navbar Menu -->
@@ -55,132 +59,259 @@
     </header>
     <!--/ .Top Navbar -->
 
+    <!-- Image -->
     <div class="main">
-
-        <!-- Signup form -->
-        <section class="signup">
-            <div class="container">
-                <form>
-                    <div class="form-row">
-
-                        <!-- Signup Heading -->
-                        <h1 class="form-title">Sign up</h1>
-                        <form class="signup-form">
-
-                            <!-- Signup Name -->
-                            <div class="form-group">
-                                <label for="inputState">Name:</label>
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Jane Doe">
-                            </div>
-
-                            <!-- Signup Email -->
-                            <div class="form-group">
-                                <label for="inputState">Email:</label>
-                                <input type="email" class="form-control" name="email" id="email"
-                                    placeholder="jane-doe@gmail.com">
-                            </div>
-
-                            <!-- Signup Password -->
-                            <div class="form-group">
-                                <label for="inputState">Password:</label>
-                                <input type="password" class="form-control" name="password" id="password"
-                                    placeholder="">
-                            </div>
-
-                            <!-- Signup Re-enter Password -->
-                            <div class="form-group">
-                                <label for="inputState">Re-enter password:</label>
-                                <input type="password" class="form-control" name="re_password" id="re_password"
-                                    placeholder="">
-                            </div>
-
-                            <!-- Signup Date of Birth -->
-                            <div class="form-group">
-                                <label for="inputState">Date of Birth:</label>
-                                <input type="date" class="form-control" name="date-of-birth" id="date-of-birth"
-                                    placeholder="Date of Birth">
-                            </div>
-
-                            <!-- Signup Pineapple on Pizza -->
-                            <div class="form-group">
-                                <label for="inputState">Pineapple on Pizza:</label>
-                                <select id="inputState" class="form-control">
-                                    <option selected>Choose</option>
-                                    <option>Yes</option>
-                                    <option>No</option>
-                                </select>
-                            </div>
-
-                            <!-- Signup Terms of Service -->
-                            <div class="form-group">
-                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term">
-                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all
-                                    statements in <a href="#" class="term-service">Terms of service</a></label>
-                            </div>
-
-                            <!-- Signup Button -->
-                            <div class="form-group">
-                                <button type="button" class="btn btn-primary active">Register</button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Signup Already a Member -->
-                    <div class="form-group">
-                        <a href="#" class="signup-link">Already a member?</a>
-                    </div>
-                </form>
-            </div>
-        </section>
-        <!--/ .Signup Form -->
-
-        <!-- Login Form -->
-        <section class="login">
-            <div class="container">
-                <form>
-                    <div class="form-row">
-
-                        <!-- Login Heading -->
-                        <h1 class="form-title">Welcome back</h1>
-                        <form class="login-form">
-
-                            <!-- Login Username or Email -->
-                            <div class="form-group">
-                                <label for="inputState">Username or Email:</label>
-                                <input type="text" class="form-control" name="username" id="username" placeholder="">
-                            </div>
-
-                            <!-- Login Password -->
-                            <div class="form-group">
-                                <label for="inputState">Password:</label>
-                                <input type="password" class="form-control" name="password" id="password"
-                                    placeholder="">
-                            </div>
-
-                            <!-- Login Remember Me -->
-                            <div class="form-group">
-                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term">
-                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember
-                                    me</label>
-                            </div>
-
-                            <!-- Login Button -->
-                            <div class="form-group">
-                                <button type="button" class="btn btn-primary active">Sign in</button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Login Forgot Password -->
-                    <div class="form-group">
-                        <a href="#" class="login-link">Forgot password?</a>
-                    </div>
-                </form>
-            </div>
-        </section>
-        <!--/ .Login Form -->
+        <div class="centered">
+            Home
+        </div>
+        <div class="text-center">
+            <img src="assets/images/casserole-dish-2776735_1920.jpg" class="img-responsive center-block"
+                alt="Home Image">
+        </div>
     </div>
-    <!--/ .Main -->
+    <!--/ .Image -->
+
+    <!-- Dietry Requirements -->
+
+    <div class="container">
+        <div class="row">
+            <!-- Type -->
+            <div class="col-sm jumbotron text-center">
+                <h2>Meal Time</h2>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Breakfast
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Lunch
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                        Dinner
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!--/ .Type -->
+
+        <!-- Intolerance -->
+        <div class="col-sm jumbotron text-center">
+            <h2>Dietry Requirements: <br><small>Intolerance</small></h2>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Diary
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Egg
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> Gluten
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4"> Peanut
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5"> Sesame
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6"> Shellfish
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7"> Soy
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="option8"> Sulfate
+                </label>
+            </div>
+            <div class="form-check form-check-inline disabled">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="option9"> Treenut
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox10" value="option10"> Wheat
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option11"> Other
+                </label>
+            </div>
+        </div>
+        <!--/ .Intolerance -->
+
+        <!-- Diet -->
+        <div class="col-sm jumbotron text-center">
+            <h2>Dietry Requirements: <br><small>Diet</small></h2>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Vegan
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Vegetarian
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> Pescetarian
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4"> Lacto
+                    Vegetarian
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5"> Ovo Vegetarian
+                </label>
+            </div>
+        </div>
+    </div>
+    <!--/ .Diet -->
+
+    <!-- Cuisine -->
+    <div class="col-sm jumbotron text-center">
+        <h2>Dietry Requirements: <br><small>Cuisine</small></h2>
+        <div class="form-check form-check-inline">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Japanese
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Mexican
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> Thai
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4"> British
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5"> Greek
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Chinese
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Carribbean
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> Italian
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4"> Filipino
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5"> German
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Arabic
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> Jewish
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Indian
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> American
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4"> Korean
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5"> Vietnamese
+            </label>
+        </div>
+    </div>
+    <!--/ .Cuisine -->
+
+    <!-- Search Button -->
+    <div class="searchBtn text-center">
+        <a href="#" class="btn btn-default-plain btn-primary active">
+            <i class="fa fa-search fa-1x"> Search</i>
+        </a>
+    </div>
+    <!--/ .Search Button -->
+    </div>
+    <!--/ .Dietry Requirements -->
+    </div>
+    <!--/ .Container -->
+
+    <!-- Search Results -->
+    <div class="results text-center">
+        <!-- Recipes -->
+        <div class="row-sm-12">
+            <div class="col-sm-6 jumbotron">
+                <div class="recipes">
+                    <h2>Recipes</h2>
+                </div>
+            </div>
+        </div>
+        <!--/ .Recipes -->
+
+        <!-- Restaurants -->
+        <div class="col-sm-6 jumbotron">
+            <div class="restaurants">
+                <h2>Restaurants</h2>
+            </div>
+        </div>
+        <!--/ .Restaurants -->
+    </div>
+    <!-- Search Results -->
+
 </body>
 
 </html>
