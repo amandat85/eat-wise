@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>Eat Wise | Food Planner and Nutrition App</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://imgur.com/ZvEb6e9">
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="assets/css/style-main-page.css">
+
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!-- Link to Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
+
+    <!-- Link to Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Link to Firebase Database -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+
+    <!-- Link to jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Link to JavaScript File -->
+    <script src="assets/javascript/app.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+    <!-- Top Navbar -->
+    <header id="masthead">
+        <div class="container">
+
+            <!-- Logo -->
+            <a href="main-page.html" id="logo"><img src="assets/images/eat-wise-logo-1.png" width="180" height="60"
+                    alt="Eat Wise"></a>
+
+            <!-- Navbar Menu -->
+            <nav>
+                <a href="blog.html">Blog</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <!--/ .Top Navbar -->
+
+    <!-- Image -->
+    <div class="main">
+        <div class="centered">
+            Main
+        </div>
+        <div class="text-center">
+            <img src="assets/images/casserole-dish-2776735_1920.jpg" class="img-responsive center-block"
+                alt="Main Image">
+        </div>
+    </div>
+    <!--/ .Image -->
+
+    <!-- Dietry Requirements -->
+
+    <div class="container">
+        <div class="row">
+            <!-- Type -->
+            <div class="col-sm jumbotron text-center">
+                <h2>Meal Time</h2>
+                <form>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Breakfast
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Lunch
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="">Dinner
+                    </label>
+                </form>
+            </div>
+            <!--/ .Type -->
+
+            <!-- Intolerance -->
+            <div class="col-sm">
+                <div class="cuisineBtn jumbotron">
+                    <a href="#" class="btn btn-default-plain btn-primary active">
+                        <i class="fa fa-picture-o fa-1x"> Intolerance</i>
+                    </a>
+                </div>
+            </div>
+            <!--/ .Intolerance -->
+
+            <!-- Diet -->
+            <div class="col-sm">
+                <div class="cuisineBtn jumbotron">
+                    <a href="#" class="btn btn-default-plain btn-primary active">
+                        <i class="fa fa-picture-o fa-1x"> Diet</i>
+                    </a>
+                </div>
+            </div>
+            <!--/ .Diet -->
+
+            <!-- Cuisine -->
+            <div class="col-sm">
+                <div class="cuisineBtn jumbotron">
+                    <a href="#" class="btn btn-default-plain btn-primary active">
+                        <i class="fa fa-picture-o fa-1x"> Cuisine</i>
+                    </a>
+                </div>
+            </div>
+            <!--/ .Cuisine -->
+
+            <!-- Search Button -->
+            <div class="searchBtn text-center">
+                <a href="#" class="btn btn-default-plain btn-primary active">
+                    <i class="fa fa-search fa-1x"> Search</i>
+                </a>
+            </div>
+            <!--/ .Search Button -->
+        </div>
+        <!--/ .Dietry Requirements -->
+    </div>
+    <!--/ .Container -->
+
+    <!-- Search Results -->
+    <div class="results text-center">
+        <!-- Recipes -->
+        <div class="row-sm-12">
+            <div class="col-sm-6 jumbotron">
+                <div class="recipes">
+                    <h2>Recipes</h2>
+                </div>
+            </div>
+        </div>
+        <!--/ .Recipes -->
+
+        <!-- Restaurants -->
+        <div class="col-sm-6 jumbotron">
+            <div class="restaurants">
+                <h2>Restaurants</h2>
+            </div>
+        </div>
+        <!--/ .Restaurants -->
+    </div>
+    <!-- Search Results -->
+
+</body>
+
+</html>
