@@ -130,7 +130,11 @@ var APIController = (function() {
                 },
                 success: function(response) {
                     console.log(response);
-                    callback(response.restaurants);
+                    var restoArr = [];
+                    for (var i = 0; i < response.restaurants.length; i++) {
+                        restoArr.push(response.restaurants[i].restaurant.name);
+                    }
+                    callback(restoArr);
                 }
             });
         },
