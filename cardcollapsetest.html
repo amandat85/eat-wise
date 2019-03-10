@@ -65,93 +65,201 @@
             </nav>
         </div>
     </header>
+    <!--Recipes-->
     <div class="container">
         <div class="row">
             <div class="col-md-10 offset-md-1">
-                    <div id="accordion">
-                            <div class="card">
-                                <div class="card-header" id="headingOne">
-                                        
-                                    <h5 class="mb-0 text-center">
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne"><img class="card-img ml-auto" src="assets/images/699591-312x231.jpg" alt="Card image cap">
-                                            Recipe Title
-                                        </button>
-                                    </h5>
-                                    
-                                </div>
-                                
-                    
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div id="accordion">
+                    <div class="card">
+                        <!--image and Title-->
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0 text-center">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne"><img class="card-img ml-auto"
+                                        src="assets/images/699591-312x231.jpg" alt="Card image cap">
+                                    Recipe Title
+                                </button>
+                            </h5>
+                        </div>
+                        <!--Prep and Instructions-->
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordion">
+                            <div class="card-body">
+                                <h5 class="card-title">Prep Time: </h5>
+                                <h5 class="card-title">Instructions</h5>
+                                <p class="card-text">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad squid. 3
+                                    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                    nesciunt laborum
+                                    eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                    single-origin coffee nulla
+                                    assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                                    anderson cred nesciunt
+                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                                    craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of
+                                    them accusamus
+                                    labore sustainable VHS.</p>
+                            </div>
+                            <!--Ingredients-->
+                            <div class="card-deck">
+                                <div class="card ml-3 border-0">
                                     <div class="card-body">
-                                      Recipe text goes here!!!!!! Including: ingredients, nutrition.
+                                        <h5 class="card-title">Ingredients</h5>
+                                        <ul class="list-group">
+                                            <!--will add bullets. Dynamic list would be easier??-->
+                                            <li class="list-group-item">Cras justo odio</li>
+                                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                                            <li class="list-group-item">Vestibulum at eros</li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </div>
+                                <!--Nutrients-->
+                                <div class="card mr-3 border-0">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nutrients</h5>
+                                        <ul class="list-group">
+                                            <!--will add bullets. Dynamic list would be easier??-->
+                                            <li class="list-group-item">Fat:</li>
+                                            <li class="list-group-item">Calories</li>
+                                            <li class="list-group-item">Protein:</li>
+                                        </ul>
+                                    </div>
+                                </div>
 
-                            <!--Card Two and subsquent appended dynamically-->
-                            <div class="card">
-                                <div class="card-header" id="headingTwo">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                                            aria-expanded="false" aria-controls="collapseTwo">
-                                            Collapsible Group Item #2
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Card Two and subsquent appended dynamically-->
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                    Collapsible Group Item #2
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                <h5 class="card-title">Prep Time: </h5>
+                                <h5 class="card-title">Instructions</h5>
+                                <p class="card-text">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad squid. 3
+                                    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                    nesciunt laborum
+                                    eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                    single-origin coffee nulla
+                                    assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes
+                                    anderson cred nesciunt
+                                    sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                                    craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of
+                                    them accusamus
+                                    labore sustainable VHS.</p>
+                                <a href="#"></a>
+                            </div>
+                            <div class="card-deck">
+                                <div class="card ml-3 border-0">
                                     <div class="card-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-                                        wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                                        eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-                                        assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                        sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                        farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                                        labore sustainable VHS.
+                                        <h5 class="card-title">Ingredients</h5>
+                                        <ul class="list-group">
+                                            <!--will add bullets. Dynamic list would be easier??-->
+                                            <li class="list-group-item">Cras justo odio</li>
+                                            <li class="list-group-item">Dapibus ac facilisis in</li>
+                                            <li class="list-group-item">Vestibulum at eros</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="card mr-3 border-0">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nutrients</h5>
+                                        <ul class="list-group">
+                                            <!--will add bullets. Dynamic list would be easier??-->
+                                            <li class="list-group-item">Fat:</li>
+                                            <li class="list-group-item">Calories</li>
+                                            <li class="list-group-item">Protein:</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Restaurants-->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                    Restaurant Name
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordion">
+                            <div class="card-body">
+                                <h5 class="card-title">Location</h5>
+                                <p class="card-text">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad squid.</p>
+                            </div>
+                            <div class="card-deck">
+                                <!--Rating-->
+                                <div class="card border-0">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rating:</h5>
+                                    </div>
+                                </div>
+                                <!--Average Cost-->
+                                <div class="card mr-3 border-0">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Average Cost:</h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card">
-                                <div class="card-header" id="headingThree">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
-                                            aria-expanded="false" aria-controls="collapseThree">
-                                            Collapsible Group Item #3
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                    <div class="card-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-                                        wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                                        eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-                                        assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                                        sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                        farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                                        labore sustainable VHS.
-                                    </div>
+                            <div class="card border-0">
+                                <!--Tags-->
+                                <div class="card-body"><!--Spacing-->
+                                    <button type="button" class="btn btn-primary">Primary</button>
+                                    <button type="button" class="btn btn-primary">Primary</button>
+                                    <button type="button" class="btn btn-primary">Primary</button>
                                 </div>
                             </div>
                         </div>
-                    
-
-
+                    </div>
+                </div>
             </div>
         </div>
-
-
     </div>
-    
 
 
-<!--Script-->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-    crossorigin="anonymous"></script>
-</body></html>
+
+
+
+    <!--Script-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
