@@ -12,25 +12,48 @@ body  {
 
 /* Image */
 
-.main {
-  margin-top: 0px;
-  margin-bottom: 50px;
+.wrapper {
+  height: 90vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+.section {
   position: relative;
+  height: 90vh;
+  display: flex;
   text-align: center;
+  align-items: center;
+  justify-content: center;
   color: white;
+  text-shadow: 0 0 5px #000;
 }
 
-.centered {
+.parallax::after {
+  content: " ";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 100px;
-  font-size:10vw;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
 }
 
-.form-title {
-  text-align: center;
+.static {
+  background: red;
+}
+
+.bg1::after {
+  opacity: 0.5;
+  background-image: url('casserole-dish-2776735_1920.jpg');
+}
+
+.bg2::after {
+  opacity: 0.5;
+  background-image: url('ryan-concepcion-1398520-unsplash.jpg');
 }
 
 /* .main {
@@ -58,26 +81,27 @@ body  {
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
   font-weight: 700;
-  line-height: 90px;
+  line-height: 50px;
   text-decoration: none;
   text-align: left;
   /* background: #f3f3f3; */
 }
 
 nav {
-  margin-top: 35px;
+  margin-top: 5px;
   margin-right: 25px;
   top: 0;
+  background-color: transparent;
 }
 
 nav a {
   display: inline-block;
   padding-left: 25px;
   margin-left: 15px;
-  line-height: 18px;
-  color: #999;
+  line-height: 10px;
+  color: #3d3838;;
   text-decoration: none;
-  margin-top: 0px;
+  top: 0px;
 }
 
 nav a:first-child {
@@ -90,6 +114,20 @@ nav a:first-child {
 .searchBtn {
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+/* Footer */
+
+footer {
+  background-color: #ebebeb;
+  color: #3d3838;
+  padding: 30px 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.container-fluid {
+  color: #817c7c;
 }
 
 /* Media Query */
@@ -108,6 +146,10 @@ nav a:first-child {
 		margin-right: 70px;
   }
 
+  .parallax {
+    background-attachment: scroll;
+  }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -117,6 +159,10 @@ nav a:first-child {
 
   nav {
    margin-right: 50px;
+  }
+
+  .parallax {
+    background-attachment: scroll;
   }
 }
 
@@ -128,5 +174,8 @@ nav a:first-child {
   nav {
     margin-right: 30px;
   }
-  
+
+  .parallax {
+    background-attachment: scroll;
+  }
 }
