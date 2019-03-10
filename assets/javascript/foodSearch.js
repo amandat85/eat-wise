@@ -13,7 +13,7 @@ function main() {
     }
     
     function mySecondCallback(restaurantArray) {
-        console.log(restaurantArray);
+        UIController.displayRestaurantList(restaurantArray);
     }
     
     function myCallback(cityid) {
@@ -35,10 +35,16 @@ function main() {
     //APIController.spoonacularCall(displayRecipes, searchParams.cuisine, searchParams.intolerances, searchParams.mealType, searchParams.diet);
 }
 
+
+function onAPIControllerLoaded() {
+    alert("API controller loaded");
+    generalFunctions.loadScript("./assets/javascript/UI.js", main);
+}
+
 function onjQueryLoaded(){
     // do stuff that you can do with jQuery
     alert("jQuery loaded");
-    generalFunctions.loadScript("./assets/javascript/apis.js", main);
+    generalFunctions.loadScript("./assets/javascript/apis.js", onAPIControllerLoaded);
 
 }
 
