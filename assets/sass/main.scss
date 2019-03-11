@@ -1,0 +1,91 @@
+//This is a test
+
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  $color-primary: #f9ed69; //This is a variable in sass
+  $color-secondary: #f08a5d; //Orange
+  $color-tertiary: #b83b5e; //Pink 
+  $color-text-dark: #333;
+  $color-text-light: #eee;
+  $width-button: 150px;
+  @mixin clearfix{
+     &::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+  }
+  
+  @mixin style-link-text($col){
+     text-decoration: none;
+    text-transform: uppercase;
+    color: $col;
+  }
+  
+  @function divide($a, $b) {
+    @return $a / $b;
+  }
+  
+    
+  nav {
+    margin: divide(60, 2) * 1px; //=30 px How to theoretically use functions
+    background-color: $color-primary;
+    @include clearfix;
+  }
+  
+  .navigation {
+    list-style: none;
+    float: left; //color goes away because floating so have zero height
+    li { //nested navigation
+      display: inline-block;
+      margin-left: 30px;
+      
+        &:first-child { //pseudoclass to target the different elements in the li //& = .navigation li:first-child Writes out selector at certain point
+      margin: 0;
+      }
+      
+      a:link {
+        @include style-link-text($color-text-dark);
+      }
+      
+    } 
+  }
+  
+  .buttons {
+    float: right;
+  }
+  %btn-placeholder {
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    border-radius:100px;
+    width: $width-button;
+    @include style-link-text($color-text-light);
+  }
+  
+  .btn-main{
+    &:link {
+      @extend %btn-placeholder;
+      background-color: $color-secondary;  
+    }
+    
+    &:hover {
+      background-color: darken($color-secondary, 15%);
+    }
+  }
+  
+  .btn-hot{
+    &:link {
+       @extend %btn-placeholder;
+      background-color: $color-tertiary;  
+    }
+    
+    &:hover {
+      background-color: darken($color-tertiary, 15%);
+    }
+  }
+  
+  

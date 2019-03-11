@@ -4,7 +4,7 @@
   "description": "Food and Nutrition Application - Project One",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "node-sass assets/sass/main.scss assets/css/style1.css -w"
   },
   "repository": {
     "type": "git",
