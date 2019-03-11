@@ -101,19 +101,21 @@
                 <h2>Meal Time</h2>
                 <h5>Please Select One Mealtime</h5>
                 <div class="form-check form-check-inline">
-                    <label class="form-check-label" img src="https://imgur.com/ZvEb6e9">
-                        <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
-                        Breakfast
+                    <label class="form-check-label"></label>
+                    <input class="form-check-input" type="radio" id="inlineCheckbox1" name="mealtime" value="option1">
+                    Breakfast
                     </label>
                 </div>
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="radio" id="inlineCheckbox2" value="option2"> Lunch
+                        <input class="form-check-input" type="radio" id="inlineCheckbox2" name="mealtime"
+                            value="option2"> Lunch
                     </label>
                 </div>
                 <div class="form-check form-check-inline">
                     <label class="form-check-label">
-                        <input class="form-check-input" type="radio" id="inlineCheckbox3" value="option3">
+                        <input class="form-check-input" type="radio" id="inlineCheckbox3" name="mealtime"
+                            value="option3">
                         Dinner
                     </label>
                 </div>
@@ -179,6 +181,11 @@
                     <input class="form-check-input" type="checkbox" id="inlineCheckbox11" value="option11"> Other
                 </label>
             </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox11" value="option11"> None
+                </label>
+            </div>
         </div>
         <!--/ .Intolerance -->
 
@@ -188,30 +195,37 @@
             <h5>Please Select One Dietary Requirement</h5>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Vegan
+                    <input class="form-check-input" type="radio" name="diet" id="inlineCheckbox1" value="option1"> Vegan
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Vegetarian
+                    <input class="form-check-input" type="radio" name="diet" id="inlineCheckbox2" value="option2">
+                    Vegetarian
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <input class="form-check-input" type="radio" name="diet" id="inlineCheckbox3" value="option3">
                     Pescetarian
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4"> Lacto
+                    <input class="form-check-input" type="radio" name="diet" id="inlineCheckbox4" value="option4"> Lacto
                     Vegetarian
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5"> Ovo
+                    <input class="form-check-input" type="radio" name="diet" id="inlineCheckbox5" value="option5"> Ovo
                     Vegetarian
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="diet" id="inlineCheckbox5" value="option5"> Ovo
+                    None
                 </label>
             </div>
         </div>
@@ -223,121 +237,121 @@
             <h5>Please Select One Cuisine</h5>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">African
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox1" value="option1">African
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">American
+                    <input class="form-check-input" type="radio" name="cuisine"id="inlineCheckbox2" value="option2">American
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">British
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox3" value="option3">British
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">Cajun
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox4" value="option4">Cajun
                 </label>
             </div>
 
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">Caribbean
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox5" value="option5">Caribbean
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6"> Chinese
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox6" value="option6"> Chinese
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">Eastern
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox7" value="option7">Eastern
                     European
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="option8">French
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox8" value="option8">French
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="option9">German
+                    <input class="form-check-input" type="radio" name="cuisine"id="inlineCheckbox9" value="option9">German
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox10" value="option10">Greek
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox10" value="option10">Greek
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox11" value="option11">Indian
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox11" value="option11">Indian
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox12" value="option12">Irish
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox12" value="option12">Irish
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox13" value="option13">Italian
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox13" value="option13">Italian
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox14" value="option14">Japanese
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox14" value="option14">Japanese
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox15" value="option15">Jewish
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox15" value="option15">Jewish
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox16" value="option16">
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox16" value="option16">
                     Korean
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox17" value="option17">
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox17" value="option17">
                     Mexican
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox18" value="option18">
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox18" value="option18">
                     Middle Eastern
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox19" value="option19">
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox19" value="option19">
                     Spanish
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox20" value="option20">
+                    <input class="form-check-input" type="radio" name="cuisine"id="inlineCheckbox20" value="option20">
                     Southern
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox21" value="option21">
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox21" value="option21">
                     Thai
                 </label>
             </div>
 
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox22" value="option22">
+                    <input class="form-check-input" type="radio" name="cuisine"id="inlineCheckbox22" value="option22">
                     Vietnamese
                 </label>
             </div>
@@ -346,7 +360,7 @@
         <!--City-->
         <div class="form-group text-center">
             <label>
-                <h4>Eating Out? Let us know what city you live in?</h4>
+                <h4>Let us know what city you live in so we can show you awesome restaurant choices!</h4>
             </label>
             <input type="text" class="form-control mx-auto text-center" id="city" placeholder="City" value=""
                 style="width: 50%">
@@ -442,54 +456,57 @@
                         </div>
                     </div>
                 </div>
-    <!--/ .Recipes -->
+                <!--/ .Recipes -->
 
-    <!-- Restaurants -->
-    <div class="col-md-6 ml-auto">
-        <div class="restaurants">
-            <h2>Restaurant Results</h2>
-            <div id="restaurant_accordion">
-                <div class="card">
-                    <div class="card-header" id="headingTwo">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"
-                                aria-expanded="true" aria-controls="collapseTwo">
-                                <h4>Restaurant Name</h4>
-                            </button>
-                        </h5>
-                    </div>
-                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
-                        data-parent="#restaurant_accordion">
-                        <div class="card-body">
-                            <h5 class="card-title">Location</h5>
-                            <p class="card-text">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                richardson ad squid.
-                            </p>
-                            <p><a href="#">Test</a></p>
-                        </div>
-                        <div class="card-deck">
-                            <!--Rating-->
-                            <div class="card border-0">
-                                <div class="card-body">
-                                    <h5 class="card-title">Rating:</h5>
+                <!-- Restaurants -->
+                <div class="col-md-6 ml-auto">
+                    <div class="restaurants">
+                        <h2>Restaurant Results</h2>
+                        <div id="restaurant_accordion">
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"
+                                            aria-expanded="true" aria-controls="collapseTwo">
+                                            <h4>Restaurant Name</h4>
+                                        </button>
+                                    </h5>
                                 </div>
-                            </div>
-                            <!--Average Cost-->
-                            <div class="card mr-3 border-0">
-                                <div class="card-body">
-                                    <h5 class="card-title">Average Cost:</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card border-0">
-                            <!--Tags-->
-                            <div class="card-body">
-                                <!--Spacing-->
-                                <p class="card-text text-center">Tag1 | Tag2 | Tag3</p>
-                                <!-- <button type="button" class="btn btn-primary">Primary</button>
+                                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
+                                    data-parent="#restaurant_accordion">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Location</h5>
+                                        <p class="card-text">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                            richardson ad squid.
+                                        </p>
+                                        <p><a href="#">Test</a></p>
+                                    </div>
+                                    <div class="card-deck">
+                                        <!--Rating-->
+                                        <div class="card border-0">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Rating:</h5>
+                                            </div>
+                                        </div>
+                                        <!--Average Cost-->
+                                        <div class="card mr-3 border-0">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Average Cost:</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card border-0">
+                                        <!--Tags-->
+                                        <div class="card-body">
+                                            <!--Spacing-->
+                                            <p class="card-text text-center">Tag1 | Tag2 | Tag3</p>
+                                            <!-- <button type="button" class="btn btn-primary">Primary</button>
                                 <button type="button" class="btn btn-primary">Primary</button>
                                 <button type="button" class="btn btn-primary">Primary</button> -->
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -497,9 +514,6 @@
             </div>
         </div>
     </div>
-</div>
-</div>
-</div>
     <!--/ .Restaurants -->
     <!--/ .Search Results -->
 
