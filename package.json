@@ -1,0 +1,22 @@
+{
+  "name": "eat-wise",
+  "version": "1.0.0",
+  "description": "Food and Nutrition Application - Project One",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amandat85/eat-wise.git"
+  },
+  "author": "Pineapple on Pizza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amandat85/eat-wise/issues"
+  },
+  "homepage": "https://github.com/amandat85/eat-wise#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
