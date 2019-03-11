@@ -96,15 +96,18 @@ var APIController = (function() {
         }
     ];
 
+    var numOfResults = 5;
+
     return {
+        numOfResults: numOfResults,
         zomatoGetCityNumber: function(callback, city) {
-            var queryURL, cityID
+            var queryURL, cityID;
             queryURL = 'https://developers.zomato.com/api/v2.1/locations?query=' + city;
               $.ajax({
                 url: queryURL,
                 method: 'GET',
                 headers: {
-                'user-key':'df75e3e330c13e41814d56e42a276a03'
+                    'user-key':'df75e3e330c13e41814d56e42a276a03'
                 },
                 success: function(response) {
                     cityID = response.location_suggestions[0].entity_id;
@@ -121,12 +124,12 @@ var APIController = (function() {
             }
             var queryURL = 'https://developers.zomato.com/api/v2.1/search?entity_id=' 
                             + cityID + '&entity_type=city&q=' + diet + '%20' + mealType 
-                            + '&count=10&cuisines=' + cuisineNum;
+                            + '&count=' + numOfResults + '&cuisines=' + cuisineNum;
               $.ajax({
                 url: queryURL,
                 method: 'GET',
                 headers: {
-                'user-key': 'df75e3e330c13e41814d56e42a276a03'
+                    'user-key': 'df75e3e330c13e41814d56e42a276a03'
                 },
                 success: function(response) {
                     console.log(response);
@@ -138,7 +141,7 @@ var APIController = (function() {
                 }
             });
         },
-        spoonacularCall: function(callback, cuisine, intolerances, type, diet) {
+        spoonacularGetRecipeIDs: function(callback, cuisine, intolerances, type, diet) {
             var intolerancesString = "";
             for (var i = 0; i < intolerances.length; i++) {
                 intolerancesString += intolerances[i];
@@ -149,9 +152,10 @@ var APIController = (function() {
             if (type !== "breakfast") {
                 type = "main+course";
             }
-            var queryURL = 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/searchComplex?cuisine=' 
-                            + cuisine + '&' + 'diet=' + diet + '&' + 'intolerances=' + intolerancesString 
-                            + '&' + 'type=' + type;
+            var queryURL = 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?cuisine=' 
+                            + cuisine + '&diet=' + diet + '&intolerances=' + intolerancesString 
+                            + '&type=' + type + '&number=' + numOfResults + '&instructionsRequired=true&query=food';
+            console.log(queryURL);
             $.ajax({
                 url: queryURL,
                 method: "GET",
@@ -160,12 +164,47 @@ var APIController = (function() {
                 },
                 success: function(response) {
                     console.log(response);
-                    var recipeTitlesArray = [];
-                    for (var property in response["results"]) {
-                        recipeTitlesArray.push(response["results"][property]["title"]);
+                    var recipeIDsArray = [];
+                    for (var i = 0; i < response.results.length; i++) {
+                        recipeIDsArray.push(response.results[i].id);
+                        
                     }
-                    console.log(recipeTitlesArray);
-                    callback(recipeTitlesArray);
+                    console.log(recipeIDsArray);
+                    callback(recipeIDsArray);
+                }
+            });
+        },
+        spoonacularGetRecipeInfo: function(callback, ID) {
+            var queryURL = 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/' 
+                            + ID + '/information?includeNutrition=true';
+              $.ajax({
+                url: queryURL,
+                method: 'GET',
+                headers: {
+                    "X-RapidAPI-Key": "fd24c4e1bamsh51cc6ab2c5a5849p1a9263jsn8e0025b690c2"
+                },
+                success: function(response) {
+                    var recipeInfo = {
+                        title: response.title,
+                        image: response.image,
+                        prepTime: response.readyInMinutes + ' mins',
+                        instructions: response.instructions,
+                        url: response.spoonacularSourceUrl,
+                        cals: response.nutrition.nutrients[0].amount,
+                        protein: response.nutrition.nutrients[7].amount + ' g',
+                        fat: response.nutrition.nutrients[1].amount + ' g'
+                    }
+                    if (recipeInfo.instructions) {
+                        recipeInfo.instructions = recipeInfo.instructions.replace(/\s+/g,' ').trim()
+                    }
+                    var ingredients = [];
+                    for (let i = 0; i < response.extendedIngredients.length; i++) {
+                        var ingredient = response.extendedIngredients[i];
+                        ingredients.push(ingredient.original);
+                    }
+                    recipeInfo.ingredients = ingredients;
+                    console.log(recipeInfo);
+                    callback(recipeInfo);
                 }
             });
         }
