@@ -132,10 +132,19 @@ var APIController = (function() {
                     'user-key': 'df75e3e330c13e41814d56e42a276a03'
                 },
                 success: function(response) {
-                    console.log(response);
                     var restoArr = [];
                     for (var i = 0; i < response.restaurants.length; i++) {
-                        restoArr.push(response.restaurants[i].restaurant.name);
+                        var resto = response.restaurants[i].restaurant;
+                        var restoInfo = {
+                            name: resto.name,
+                            address: resto.location.address,
+                            url: resto.url,
+                            cuisines: resto.cuisines.split(', '),
+                            avgCost: '$' + resto.average_cost_for_two,
+                            userScore: resto.user_rating.rating_text
+                        };
+                        restoArr.push(restoInfo);
+                        console.log(restoInfo);
                     }
                     callback(restoArr);
                 }
@@ -155,7 +164,6 @@ var APIController = (function() {
             var queryURL = 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?cuisine=' 
                             + cuisine + '&diet=' + diet + '&intolerances=' + intolerancesString 
                             + '&type=' + type + '&number=' + numOfResults + '&instructionsRequired=true&query=food';
-            console.log(queryURL);
             $.ajax({
                 url: queryURL,
                 method: "GET",
@@ -163,7 +171,6 @@ var APIController = (function() {
                     "X-RapidAPI-Key": "fd24c4e1bamsh51cc6ab2c5a5849p1a9263jsn8e0025b690c2"
                 },
                 success: function(response) {
-                    console.log(response);
                     var recipeIDsArray = [];
                     for (var i = 0; i < response.results.length; i++) {
                         recipeIDsArray.push(response.results[i].id);

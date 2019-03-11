@@ -2,18 +2,29 @@
 var UIController = (function () {
     // All javascript dealing with DOM manipulation and the UI goes here
     var DOMStrings = {
-        restaurantList: '.restaurant_list',
+        restaurantList: '#restaurant_accordion',
+        cuisineGroup: '#cuisine_tags',
         recipeList: '#recipe_accordion',
         ingredientList: '#ingredient_list',
-        listItemClass: 'list-group-item'
+        listItemClass: 'list-group-item',
+        btnClass: 'btn btn-primary'
     }
 
     return {
         createRestaurantCards: function(restArr) {
-            /*for (var i = 0; i < restArr.length; i++) {
+            for (var i = 0; i < restArr.length; i++) {
                 var resto = restArr[i];
-                $('<li>').text(resto).appendTo(DOMStrings.restaurantList);
-            } */
+                
+                var html = '<div class="card"><div class="card-header" id="restoHeading' + i + '"><h5 class="mb-0"><button class="btn btn-link" data-toggle="collapse" data-target="#restoCollapse' + i + '" aria-expanded="true" aria-controls="restoCollapse' + i + '">' + resto.name + '</button></h5></div><div id="restoCollapse' + i + '" class="collapse" aria-labelledby="restoHeading' + i + '" data-parent="#restaurant_accordion"><div class="card-body"><h5 class="card-title">Location</h5><p class="card-text">' + resto.address + '</p></div><div class="card-deck"><div class="card border-0"><div class="card-body"><h5 class="card-title">Rating: ' + resto.userScore + '</h5></div></div><div class="card mr-3 border-0"><div class="card-body"><h5 class="card-title">Average Cost for Two: ' + resto.avgCost + '</h5></div></div></div><div class="card border-0"><div class="card-body" id="cuisine_tags' + i + '"></div></div></div></div>';
+
+                $(DOMStrings.restaurantList).append(html);
+
+                for (let j = 0; j < resto.cuisines.length; j++) {
+                    $('<button type=button>').addClass(DOMStrings.btnClass)
+                        .text(resto.cuisines[j])
+                        .appendTo(DOMStrings.cuisineGroup + i);
+                }
+            }
         },
         createRecipeCards: function(recipeArr) {
             for (var i = 0; i < recipeArr.length; i++) {
@@ -21,7 +32,7 @@ var UIController = (function () {
                 if (!recipe.instructions) {
                     recipe.instructions = 'See the instructions in the link';
                 }
-                var html = '<div class="card"><div class="card-header" id="heading' + i + '"><h5 class="mb-0 text-center"><button class="btn btn-link" data-toggle="collapse" data-target="#collapse' + i + '" aria-expanded="true" aria-controls="collapse' + i + '"><img class="card-img ml-auto" src="' + recipe.image + '" alt="Card image cap">' + recipe.title + '</button></h5></div><div id="collapse' + i + '" class="collapse" aria-labelledby="heading' + i + '" data-parent="#recipe_accordion"><div class="card-body"><h5 class="card-title">Prep Time: ' + recipe.prepTime + '</h5><h5 class="card-title"></h5><p class="card-text">' + recipe.instructions + '</p></div><div class="card-deck"><div class="card ml-3 border-0"><div class="card-body"><h5 class="card-title">Ingredients</h5><ul class="list-group" id="ingredient_list' + i + '"></ul></div></div><div class="card mr-3 border-0"><div class="card-body"><h5 class="card-title">Nutrients</h5><ul class="list-group"><li class="list-group-item">Fat: ' + recipe.fat + '</li><li class="list-group-item">Calories: ' + recipe.cals + '</li><li class="list-group-item">Protein: ' + recipe.protein + '</li></ul></div></div></div></div></div>';
+                var html = '<div class="card"><div class="card-header" id="recipeHeading' + i + '"><h5 class="mb-0 text-center"><button class="btn btn-link" data-toggle="collapse" data-target="#recipeCollapse' + i + '" aria-expanded="true" aria-controls="recipeCollapse' + i + '"><img class="card-img ml-auto" src="' + recipe.image + '" alt="Card image cap">' + recipe.title + '</button></h5></div><div id="recipeCollapse' + i + '" class="collapse" aria-labelledby="recipeHeading' + i + '" data-parent="#recipe_accordion"><div class="card-body"><h5 class="card-title">Prep Time: ' + recipe.prepTime + '</h5><h5 class="card-title"></h5><p class="card-text">' + recipe.instructions + '</p></div><div class="card-deck"><div class="card ml-3 border-0"><div class="card-body"><h5 class="card-title">Ingredients</h5><ul class="list-group" id="ingredient_list' + i + '"></ul></div></div><div class="card mr-3 border-0"><div class="card-body"><h5 class="card-title">Nutrients</h5><ul class="list-group"><li class="list-group-item">Fat: ' + recipe.fat + '</li><li class="list-group-item">Calories: ' + recipe.cals + '</li><li class="list-group-item">Protein: ' + recipe.protein + '</li></ul></div></div></div></div></div>';
 
                 $(DOMStrings.recipeList).append(html);
 
