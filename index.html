@@ -97,92 +97,38 @@
             <div class="col-sm jumbotron text-center">
                 <h2>Meal Time</h2>
                 <h5>Please Select One Mealtime</h5>
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label"></label>
-                    <input class="form-check-input" type="radio" id="inlineCheckbox1" name="mealtime" value="option1">
-                    Breakfast
-                    </label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="radio" id="inlineCheckbox2" name="mealtime"
-                            value="option2"> Lunch
-                    </label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="radio" id="inlineCheckbox3" name="mealtime"
-                            value="option3">
-                        Dinner
-                    </label>
-                </div>
+                <form>
+                    <input type="radio" id="breakfast" name="mealtime" value="breakfast">
+                    <label for="breafast">Breakfast</label>
+                    <input class="ml-3" type="radio" id="lunch" name="mealtime" value="lunch">
+                    <label for="lunch">Lunch</label>
+                    <input class="ml-3" type="radio" id="dinner" name="mealtime" value="dinner">
+                    <label for="dinner">Dinner</label>
+                </form>
             </div>
         </div>
+
         <!--/ .Type -->
 
         <!-- Intolerance -->
         <div class="col-sm jumbotron text-center color">
             <h2>Intolerance</h2>
             <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Diary
-                </label>
+                <!--Fix Labels-->
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Diary
+                <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox2" value="option2"> Egg
+                <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox3" value="option3"> Gluten
+                <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox4" value="option4"> Peanut
+                <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox5" value="option5"> Sesame
+                <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox6" value="option6"> Shellfish
+                <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox7" value="option7"> Soy
+                <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox8" value="option8"> Sulfate
+                <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox9" value="option9"> Treenut
+                <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox10" value="option10"> Wheat
+                <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox11" value="option11"> Other
+                <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox11" value="option11"> None
             </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Egg
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> Gluten
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4"> Peanut
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5"> Sesame
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6"> Shellfish
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7"> Soy
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="option8"> Sulfate
-                </label>
-            </div>
-            <div class="form-check form-check-inline disabled">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="option9"> Treenut
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox10" value="option10"> Wheat
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox11" value="option11"> Other
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox11" value="option11"> None
-                </label>
-            </div>
+           
         </div>
         <!--/ .Intolerance -->
 
@@ -190,41 +136,20 @@
         <div class="col-sm jumbotron text-center">
             <h2>Diet</h2>
             <h5>Please Select One Dietary Requirement</h5>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="diet" id="inlineCheckbox1" value="option1"> Vegan
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="diet" id="inlineCheckbox2" value="option2">
-                    Vegetarian
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="diet" id="inlineCheckbox3" value="option3">
-                    Pescetarian
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="diet" id="inlineCheckbox4" value="option4"> Lacto
-                    Vegetarian
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="diet" id="inlineCheckbox5" value="option5"> Ovo
-                    Vegetarian
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="diet" id="inlineCheckbox5" value="option5"> Ovo
-                    None
-                </label>
-            </div>
+            <form>
+                <input class="ml-3" type="radio" id="vegan" name="diet" value="vegan">
+                <label for="vegan">Vegan</label>
+                <input class="ml-3" type="radio" id="vegetarian" name="diet" value="vegetarian">
+                <label for="vegetarian">Vegetarian</label>
+                <input class="ml-3" type="radio" id="pescetarian" name="diet" value="pescetarian">
+                <label for="pescetarian">Pescetarian</label>
+                <input class="ml-3" type="radio" id="lactovegetarian" name="diet" value="lactovegetarian">
+                <label for="lactovegetarian">Lacto Vegetarian</label>
+                <input class="ml-3" type="radio" id="ovovegetarian" name="diet" value="ovovegetarian">
+                <label for="ovovegetarian">Ovo Vegetarian</label>
+                <input class="ml-3" type="radio" id="none" name="diet" value="none">
+                <label for="none">None</label>
+            </form>
         </div>
         <!--/ .Diet -->
 
@@ -234,79 +159,94 @@
             <h5>Please Select One Cuisine</h5>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox1" value="option1">African
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox1"
+                        value="option1">African
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="cuisine"id="inlineCheckbox2" value="option2">American
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox2"
+                        value="option2">American
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox3" value="option3">British
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox3"
+                        value="option3">British
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox4" value="option4">Cajun
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox4"
+                        value="option4">Cajun
                 </label>
             </div>
 
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox5" value="option5">Caribbean
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox5"
+                        value="option5">Caribbean
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox6" value="option6"> Chinese
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox6" value="option6">
+                    Chinese
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox7" value="option7">Eastern
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox7"
+                        value="option7">Eastern
                     European
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox8" value="option8">French
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox8"
+                        value="option8">French
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="cuisine"id="inlineCheckbox9" value="option9">German
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox9"
+                        value="option9">German
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox10" value="option10">Greek
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox10"
+                        value="option10">Greek
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox11" value="option11">Indian
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox11"
+                        value="option11">Indian
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox12" value="option12">Irish
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox12"
+                        value="option12">Irish
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox13" value="option13">Italian
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox13"
+                        value="option13">Italian
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox14" value="option14">Japanese
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox14"
+                        value="option14">Japanese
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox15" value="option15">Jewish
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox15"
+                        value="option15">Jewish
                 </label>
             </div>
             <div class="form-check form-check-inline">
@@ -335,7 +275,7 @@
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="cuisine"id="inlineCheckbox20" value="option20">
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox20" value="option20">
                     Southern
                 </label>
             </div>
@@ -348,7 +288,7 @@
 
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="cuisine"id="inlineCheckbox22" value="option22">
+                    <input class="form-check-input" type="radio" name="cuisine" id="inlineCheckbox22" value="option22">
                     Vietnamese
                 </label>
             </div>
@@ -385,12 +325,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 offset-md-2 mb-3">
-                    <button type="button" class="btn btn-primary">Add to Favourites</button>
+                <button type="button" class="btn btn-primary">Add to Favourites</button>
             </div>
             <div class="col-md-3 offset-md-4 mb-3">
-                    <button type="button" class="btn btn-primary">Logout</button>
+                <button type="button" class="btn btn-primary">Logout</button>
             </div>
-    </div>
+        </div>
     </div>
     <!--/ .Restaurants -->
     <!--/ .Search Results -->
