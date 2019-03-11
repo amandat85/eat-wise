@@ -31,7 +31,7 @@ Food and Nutrition Application. Project One for Full Stack Web Development Bootc
 
 ## Future Developments
 
-##License
+## License
 * MIT
 
 ## Animated Gif
