@@ -39,6 +39,7 @@ var foodSearch = (function() {
             alert('All JS files have been loaded. Main process will execute now');
             recipeInfoArray = [];
             searchParams = getValues();
+            UIController.createResultsDivs();
             APIController.zomatoGetCityNumber(performZomatoSearch, searchParams.city);
             APIController.spoonacularGetRecipeIDs(getRecipeInfo, searchParams.cuisine, searchParams.intolerances, searchParams.mealType, searchParams.diet);
         }
