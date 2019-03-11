@@ -28,6 +28,7 @@ body  {
   justify-content: center;
   color: white;
   text-shadow: 0 0 5px #000;
+  font-size:10vw;
 }
 
 .parallax::after {
@@ -115,6 +116,48 @@ nav a:first-child {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
+/* About Page */
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+.letter-e {
+  font-size: 50px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.subtitle {
+  text-align: center;
+  padding: 25px;
+}
+
+.container {
+  text-align: left;
+  padding: 18px;
+  margin: 12px;
+  color: #383e42;
+  font-family: 'Roboto', sans-serif;
+}
+
 
 /* Footer */
 

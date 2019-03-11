@@ -1,5 +1,5 @@
 // USER INTERFACE CONTROLLER
-var UIController = (function() {
+var UIController = (function () {
     // All javascript dealing with DOM manipulation and the UI goes here
     var DOMStrings = {
         restaurantList: '.restaurant_list'
