@@ -7,19 +7,44 @@
 
 //Colour Variables
 
-$color-jumbotron-light: #F2C879;
-$color-jumbotron-dark: #F28C02;
+$color-jumbotron-light1:#F2C879;
+$color-jumbotron-dark1: #F28C02;
+$color-jumbotron-dark2: #80A602;
+$color-jumbotron-light2: #9CA660;
+$color-jumbotron-dark3: #8E0002;
+$color-jumbotron-light3: #8E5D57;
+$color-jumbotron-dark4: #661D8E;
+$color-jumbotron-light4: #79518E;
+$card-header: rgba(#FFB979, .2)!important;
+
 $color-button: #80A602;
-$base-font: 'Roboto', sans-serif;
 
-
-.jumbotron {
-background: linear-gradient(to bottom right, $color-jumbotron-light, $color-jumbotron-dark);
+@mixin style-link-text {
+  text-decoration: none;
+ text-transform: uppercase;
+ color: #3d3838;
 }
 
-* {
-margin: 0;
-padding: 0; }
+$base-font: 'Roboto', sans-serif;
+
+/*Jumbotron*/
+
+#meals {
+background: linear-gradient(to bottom right, rgba($color-jumbotron-light1, 0.2), rgba($color-jumbotron-dark1, 0.6));
+}
+
+#intolerance {
+  background: linear-gradient(to bottom right, rgba($color-jumbotron-light2, 0.2), rgba($color-jumbotron-dark2, 0.6));
+  }
+
+#diet {
+  background: linear-gradient(to bottom right, rgba($color-jumbotron-light3, 0.2), rgba($color-jumbotron-dark3, 0.6));
+  }
+
+#cuisine {
+  background: linear-gradient(to bottom right, rgba($color-jumbotron-light4, 0.2), rgba($color-jumbotron-dark4, 0.6));
+  }
+
 
 body  {
   font-family: $base-font;
@@ -27,13 +52,7 @@ body  {
   line-height: 34px;
 }
 
-
 /* Top Navbar */
-
-#masthead {
-  z-index: 99;
-  width: 100%; 
-}
 
 #logo {
   width: 250px;
@@ -46,27 +65,11 @@ body  {
   text-align: left;
 }
 
-nav {
-  margin-top: 5px;
-  margin-right: 25px;
-  top: 0;
-  background-color: transparent;
-}
-
 nav a {
-  display: inline-block;
-  padding-left: 25px;
-  margin-left: 15px;
-  line-height: 10px;
-  color: #3d3838;;
-  text-decoration: none;
-  top: 0px;
+  @include style-link-text
 }
 
-nav a:first-child {
-  border-left: 0 none;
-  margin-top: 0px;
-}
+
 
 /* Image */
 
@@ -102,17 +105,17 @@ nav a:first-child {
 }
 
 .static {
-  background: red;
+  background: rgba(red, 0.7);
 }
 
 .bg1::after {
   opacity: 0.5;
-  background-image: url('casserole-dish-2776735_1920.jpg');
+  background-image: url("../images/casserole-dish-2776735_1920.jpg");
 }
 
 .bg2::after {
   opacity: 0.5;
-  background-image: url('ryan-concepcion-1398520-unsplash.jpg');
+  background-image: url("../images/ryan-concepcion-1398520-unsplash.jpg");
 }
 
 /* Search Button */
@@ -163,19 +166,12 @@ blockquote p {
   font-family: $base-font;
 }
 
-
-/* Footer */
-
 footer {
   background-color: #ebebeb;
   color: #3d3838;
   padding: 30px 0;
   bottom: 0;
   width: 100%;
-}
-
-.container-fluid {
-  color: #817c7c;
 }
 
 /* Media Query */

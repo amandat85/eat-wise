@@ -76,12 +76,14 @@
             </nav>
         </div>
     </header>
+
+    <button type="button" class="btn btn-primary getStarted">Let's Get Started</button> 
     <!--/ .Top Navbar -->
     <!-- Image -->
-    <!-- <main class="wrapper">
-        <section class="section parallax bg1"> -->
-    <!--Will style-->
-    <!-- <button type="button" class="btn btn-primary getStarted">Let's Get Started</button>
+    <main class="wrapper">
+        <section class="section parallax bg1">
+            <!--Will style-->
+            <button type="button" class="btn btn-primary getStarted">Let's Get Started</button>
             <h1>Find Recipes and Restaurants: <br><small>tailored to your dietry requirements</small></hi>
         </section>
         <section class="section static">
@@ -90,14 +92,14 @@
         <section class="section parallax bg2">
             <h1>Your next delicious meal is at your fingertips!<br><small></small></hi>
         </section>
-    </main> -->
+    </main>
     <!--/ .Image -->
 
     <!-- Dietry Requirements -->
     <div class="container">
         <div class="row">
             <!-- Type -->
-            <div class="col-sm jumbotron text-center">
+            <div class="col-sm jumbotron text-center" id="meals">
                 <h2>Meal Time</h2>
                 <h5>Please Select One Mealtime</h5>
                 <form>
@@ -114,7 +116,7 @@
         <!--/ .Type -->
 
         <!-- Intolerance -->
-        <div class="col-sm jumbotron text-center color">
+        <div class="col-sm jumbotron text-center color" id="intolerance">
             <h2>Intolerance</h2>
             <div class="form-check form-check-inline">
                 <!--Fix Labels-->
@@ -135,7 +137,7 @@
         <!--/ .Intolerance -->
 
         <!-- Diet -->
-        <div class="col-sm jumbotron text-center">
+        <div class="col-sm jumbotron text-center" id="diet">
             <h2>Diet</h2>
             <h5>Please Select One Dietary Requirement</h5>
             <form>
@@ -156,7 +158,7 @@
         <!--/ .Diet -->
 
         <!-- Cuisine -->
-        <div class="col-sm jumbotron text-center">
+        <div class="col-sm jumbotron text-center" id="cuisine">
             <h2>Cuisine</h2>
             <h5>Please Select One Cuisine</h5>
             <form>
@@ -237,7 +239,7 @@
                         <div id="recipe_accordion">
                             <div class="card">
                                 <!--image and Title-->
-                                <div class="card-header" id="headingOne">
+                                <div class="card-header collapseTitle" id="headingOne">
                                     <h5 class="mb-0 text-center">
                                         <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
                                             aria-expanded="true" aria-controls="collapseOne"><img
