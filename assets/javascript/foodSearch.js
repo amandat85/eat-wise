@@ -1,5 +1,5 @@
 var foodSearch = (function() {
-    alert('All JS files have been loaded. Main process will execute now');
+    
     var searchParams, recipeInfoArray;
     // This would be in the UI controller in reality
     function getValues() {
@@ -36,6 +36,7 @@ var foodSearch = (function() {
 
     return {
         init: function() {
+            alert('All JS files have been loaded. Main process will execute now');
             recipeInfoArray = [];
             searchParams = getValues();
             APIController.zomatoGetCityNumber(performZomatoSearch, searchParams.city);
