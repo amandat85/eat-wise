@@ -39,6 +39,10 @@
     <!-- Link to JavaScript File -->
     <script src="assets/javascript/UI.js" type="text/javascript"></script>
 
+    <!-- Link to JavaScript File -->
+    <script src="assets/javascript/firebase.js" type="text/javascript"></script>
+
+
 </head>
 
 <body>
@@ -76,8 +80,8 @@
     <!-- Image -->
     <!-- <main class="wrapper">
         <section class="section parallax bg1"> -->
-            <!--Will style-->
-            <!-- <button type="button" class="btn btn-primary getStarted">Let's Get Started</button>
+    <!--Will style-->
+    <!-- <button type="button" class="btn btn-primary getStarted">Let's Get Started</button>
             <h1>Find Recipes and Restaurants: <br><small>tailored to your dietry requirements</small></hi>
         </section>
         <section class="section static">
@@ -341,8 +345,11 @@
         <!--/ .Cuisine -->
         <!--City-->
         <div class="form-group text-center">
-            <label><h4>Eating Out? Let us know what city you live in?</h4></label>
-            <input type="text" class="form-control mx-auto text-center" id="city" placeholder="City" value="" style="width: 50%">
+            <label>
+                <h4>Eating Out? Let us know what city you live in?</h4>
+            </label>
+            <input type="text" class="form-control mx-auto text-center" id="city" placeholder="City" value=""
+                style="width: 50%">
         </div>
 
         <!-- Search Button -->
@@ -356,28 +363,141 @@
     <!--/ .Dietry Requirements -->
 
     <!-- Search Results -->
-    <div class="results text-center">
+    <div class="results">
         <!-- Recipes -->
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-md-6">
                     <div class="recipes">
-                        <h2>Recipes</h2>
-                    </div>
-                </div>
-                <!--/ .Recipes -->
+                        <h2>Recipes Results</h2>
+                        <div id="recipe_accordion">
+                            <div class="card">
+                                <!--image and Title-->
+                                <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0 text-center">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                            aria-expanded="true" aria-controls="collapseOne"><img
+                                                class="card-img ml-auto" src="assets/images/699591-312x231.jpg"
+                                                alt="Card image cap">
+                                            Recipe Title
+                                        </button>
+                                    </h5>
+                                </div>
+                                <!--Prep and Instructions-->
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                    data-parent="#recipe_accordion">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Prep Time: </h5>
+                                        <h5 class="card-title">Instructions</h5>
+                                        <p class="card-text">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                            richardson ad squid. 3
+                                            wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
+                                            quinoa
+                                            nesciunt laborum
+                                            eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+                                            single-origin coffee nulla
+                                            assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
+                                            wes
+                                            anderson cred nesciunt
+                                            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                                            occaecat
+                                            craft beer
+                                            farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
+                                            of
+                                            them accusamus
+                                            labore sustainable VHS.
+                                        </p>
+                                    </div>
+                                    <!--Ingredients-->
+                                    <div class="card-deck">
+                                        <div class="card ml-3 border-0">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Ingredients</h5>
+                                                <ul class="list-group">
+                                                    <!--will add bullets. Dynamic list would be easier??-->
+                                                    <li class="list-group-item">Cras justo odio</li>
+                                                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                                                    <li class="list-group-item">Vestibulum at eros</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!--Nutrients-->
+                                        <div class="card mr-3 border-0">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Nutrients</h5>
+                                                <ul class="list-group">
+                                                    <!--will add bullets. Dynamic list would be easier??-->
+                                                    <li class="list-group-item">Fat:</li>
+                                                    <li class="list-group-item">Calories</li>
+                                                    <li class="list-group-item">Protein:</li>
+                                                </ul>
+                                            </div>
+                                        </div>
 
-                <!-- Restaurants -->
-                <div class="col-sm-6">
-                    <div class="restaurants">
-                        <h2>Restaurants</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!--/ .Restaurants -->
+    <!--/ .Recipes -->
+
+    <!-- Restaurants -->
+    <div class="col-md-6 ml-auto">
+        <div class="restaurants">
+            <h2>Restaurant Results</h2>
+            <div id="restaurant_accordion">
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="true" aria-controls="collapseTwo">
+                                <h4>Restaurant Name</h4>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
+                        data-parent="#restaurant_accordion">
+                        <div class="card-body">
+                            <h5 class="card-title">Location</h5>
+                            <p class="card-text">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                richardson ad squid.
+                            </p>
+                        </div>
+                        <div class="card-deck">
+                            <!--Rating-->
+                            <div class="card border-0">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rating:</h5>
+                                </div>
+                            </div>
+                            <!--Average Cost-->
+                            <div class="card mr-3 border-0">
+                                <div class="card-body">
+                                    <h5 class="card-title">Average Cost:</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card border-0">
+                            <!--Tags-->
+                            <div class="card-body">
+                                <!--Spacing-->
+                                <button type="button" class="btn btn-primary">Primary</button>
+                                <button type="button" class="btn btn-primary">Primary</button>
+                                <button type="button" class="btn btn-primary">Primary</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!--/ .Recipes -->
         </div>
     </div>
+</div>
+</div>
+</div>
+    <!--/ .Restaurants -->
     <!--/ .Search Results -->
 
     <!-- Footer -->
