@@ -2,48 +2,182 @@
   margin: 0;
   padding: 0; }
 
-nav {
-  margin: 30px;
-  background-color: #f9ed69; }
-  nav::after {
-    content: "";
-    clear: both;
-    display: table; }
+.jumbotron {
+  background: linear-gradient(to bottom right, #F2C879, #F28C02); }
 
-.navigation {
-  list-style: none;
-  float: left; }
-  .navigation li {
-    display: inline-block;
-    margin-left: 30px; }
-    .navigation li:first-child {
-      margin: 0; }
-    .navigation li a:link {
-      text-decoration: none;
-      text-transform: uppercase;
-      color: #333; }
+* {
+  margin: 0;
+  padding: 0; }
 
-.buttons {
-  float: right; }
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 34px;
+  /* height: 1500px; */
+  /* color: #f3f3f3; */ }
 
-.btn-main:link, .btn-hot:link {
-  padding: 10px;
-  display: inline-block;
+* {
+  box-sizing: border-box; }
+
+/* Image */
+.wrapper {
+  height: 90vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px; }
+
+.section {
+  position: relative;
+  height: 90vh;
+  display: flex;
   text-align: center;
-  border-radius: 100px;
-  width: 150px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+  font-size: 10vw; }
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1; }
+
+.static {
+  background: red; }
+
+.bg1::after {
+  opacity: 0.5;
+  background-image: url("casserole-dish-2776735_1920.jpg"); }
+
+.bg2::after {
+  opacity: 0.5;
+  background-image: url("ryan-concepcion-1398520-unsplash.jpg"); }
+
+/* .main {
+    /* color: #ffffff; */
+/* background: #f3f3f3; 
+  } */
+/* .container {
+    /* color: #ffffff; */
+/* background: #f3f3f3; 
+  } */
+/* Top Navbar */
+#masthead {
+  z-index: 99;
+  width: 100%;
+  /* color: #ffffff; */
+  /* background: #f3f3f3; */ }
+
+#logo {
+  width: 250px;
+  height: 90px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 50px;
   text-decoration: none;
-  text-transform: uppercase;
-  color: #eee; }
+  text-align: left;
+  /* background: #f3f3f3; */ }
 
-.btn-main:link {
-  background-color: #f08a5d; }
+nav {
+  margin-top: 5px;
+  margin-right: 25px;
+  top: 0;
+  background-color: transparent; }
 
-.btn-main:hover {
-  background-color: #ea5717; }
+nav a {
+  display: inline-block;
+  padding-left: 25px;
+  margin-left: 15px;
+  line-height: 10px;
+  color: #3d3838;
+  text-decoration: none;
+  top: 0px; }
 
-.btn-hot:link {
-  background-color: #b83b5e; }
+nav a:first-child {
+  border-left: 0 none;
+  margin-top: 0px; }
 
-.btn-hot:hover {
-  background-color: #7e2840; }
+/* Search Button */
+.searchBtn {
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+/* About Page */
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px; }
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em; }
+
+blockquote p {
+  display: inline; }
+
+.letter-e {
+  font-size: 50px;
+  font-weight: 500;
+  color: #000000; }
+
+.subtitle {
+  text-align: center;
+  padding: 25px; }
+
+.container {
+  text-align: left;
+  padding: 18px;
+  margin: 12px;
+  color: #383e42;
+  font-family: 'Roboto', sans-serif; }
+
+/* Footer */
+footer {
+  background-color: #ebebeb;
+  color: #3d3838;
+  padding: 30px 0;
+  bottom: 0;
+  width: 100%; }
+
+.container-fluid {
+  color: #817c7c; }
+
+/* Media Query */
+@media only screen and (max-width: 640px) {
+  #masthead {
+    position: static; }
+  #logo {
+    width: 100%;
+    margin-left: 0px; }
+  nav a {
+    margin-right: 70px; }
+  .parallax {
+    background-attachment: scroll; } }
+
+@media only screen and (max-width: 768px) {
+  #logo {
+    margin-left: 0px; }
+  nav {
+    margin-right: 50px; }
+  .parallax {
+    background-attachment: scroll; } }
+
+@media only screen and (max-width: 980px) {
+  #logo {
+    margin-left: 0px; }
+  nav {
+    margin-right: 30px; }
+  .parallax {
+    background-attachment: scroll; } }
