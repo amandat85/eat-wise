@@ -1,6 +1,6 @@
-function main() {
+var foodSearch = (function() {
     alert('All JS files have been loaded. Main process will execute now');
-
+    var searchParams, recipeInfoArray;
     // This would be in the UI controller in reality
     function getValues() {
         return {
@@ -12,33 +12,42 @@ function main() {
         }
     }
     
-    function mySecondCallback(restaurantArray) {
-        UIController.displayRestaurantList(restaurantArray);
+    function processRestaurantList(restaurantArray) {
+        UIController.createRestaurantCards(restaurantArray);
     }
     
-    function myCallback(cityid) {
-        APIController.zomatoSearch(mySecondCallback, cityid, searchParams.cuisine, searchParams.diet, searchParams.mealType);
+    function performZomatoSearch(cityid) {
+        APIController.zomatoSearch(processRestaurantList, cityid, searchParams.cuisine, searchParams.diet, searchParams.mealType);
     }
 
-    function displayRecipes(arr) {
-        if (arr.length) {
-            for (var i = 0; i < arr.length; i++) {
-                console.log(arr[i]);
-            }
-        } else {
-            console.log("Array had zero length.");
-        } 
+    function processRecipeInfo(recipeInfo) {
+        recipeInfoArray.push(recipeInfo);
+        console.log(recipeInfoArray);
+        if (recipeInfoArray.length === APIController.numOfResults) {
+            UIController.createRecipeCards(recipeInfoArray);
+        }
     }
 
-    var searchParams = getValues();
-    APIController.zomatoGetCityNumber(myCallback, searchParams.city);
-    //APIController.spoonacularCall(displayRecipes, searchParams.cuisine, searchParams.intolerances, searchParams.mealType, searchParams.diet);
-}
+    function getRecipeInfo(arr) {
+        for (var i = 0; i < arr.length; i++) {
+            APIController.spoonacularGetRecipeInfo(processRecipeInfo, arr[i]);
+        }
+    }
+
+    return {
+        init: function() {
+            recipeInfoArray = [];
+            searchParams = getValues();
+            APIController.zomatoGetCityNumber(performZomatoSearch, searchParams.city);
+            APIController.spoonacularGetRecipeIDs(getRecipeInfo, searchParams.cuisine, searchParams.intolerances, searchParams.mealType, searchParams.diet);
+        }
+    }
+})();
 
 
 function onAPIControllerLoaded() {
     alert("API controller loaded");
-    generalFunctions.loadScript("./assets/javascript/UI.js", main);
+    generalFunctions.loadScript("./assets/javascript/UI.js", foodSearch.init);
 }
 
 function onjQueryLoaded(){
