@@ -33,14 +33,6 @@
     <!-- Link to Firebase Database -->
     <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
 
-    <!-- Link to jQuery Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Link to JavaScript File -->
-    <script src="assets/javascript/UI.js" type="text/javascript"></script>
-
-    <!-- Link to JavaScript File -->
-    <script src="assets/javascript/firebase.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -98,7 +90,7 @@
             <!-- Type -->
             <div class="col-sm jumbotron text-center" id="meals">
                 <h2>Meal Time</h2>
-                <h5>Please Select a Mealtime</h5>
+                <h5>Please Select One</h5>
                 <form>
                     <label for="breafast"><input type="radio" id="breakfast" name="mealtime" value="breakfast">
                         Breakfast</label>
@@ -106,7 +98,7 @@
                         Lunch</label>
                     <label for="dinner"><input class="ml-3" type="radio" id="dinner" name="mealtime" value="dinner">
                         Dinner</label>
-                    <label for="none"><input class="ml-3" type="radio" id="none" name="mealtime" value="">
+                    <label for="no_preference"><input class="ml-3" type="radio" id="no_preference" name="mealtime" value="">
                         No Preference</label>
                 </form>
             </div>
@@ -115,35 +107,31 @@
         <!--/ .Type -->
 
         <!-- Intolerance -->
-        <div class="col-sm jumbotron text-center color" id="intolerance">
+        <div class="col-sm jumbotron  text-center color" id="intolerance">
             <h2>Intolerances</h2>
+            <h5>Please Select All That Apply</h5>
             <div class="form-check form-check-inline">
-                <form>
-                    <label for="inlineCheckbox1"><input class="form-check-input" type="checkbox" name="intolerance"
-                            id="inlineCheckbox1" value="dairy">Dairy</label>
-                    <label for="inlineCheckbox2"></label><input class="form-check-input ml-3" type="checkbox"
-                        name="intolerance" id="inlineCheckbox2" value="egg">Egg</label>
-                    <label for="inlineCheckbox3"><input class="form-check-input ml-3" type="checkbox" name="intolerance"
-                            id="inlineCheckbox3" value="gluten">Gluten</label>
-                    <label for="inlineCheckbox4"><input class="form-check-input ml-3" type="checkbox" name="intolerance"
-                            id="inlineCheckbox4" value="peanut">Peanut</label>
-                    <label for=<label for="inlineCheckbox5"><input class="form-check-input ml-3" type="checkbox"
-                            name="intolerance" id="inlineCheckbox5" value="sesame">Sesame</label>
-                    <label for=<label for="inlineCheckbox6"><input class="form-check-input ml-3" type="checkbox"
-                            name="intolerance" id="inlineCheckbox6" value="shellfish">Shellfish</label>
-                    <label for=<label for="inlineCheckbox7"><input class="form-check-input ml-3" type="checkbox"
-                            name="intolerance" id="inlineCheckbox7" value="soy">Soy</label>
-                    <label for=<label for="inlineCheckbox8"><input class="form-check-input ml-3" type="checkbox"
-                            name="intolerance" id="inlineCheckbox8" value="sulfate">Sulfate</label>
-                    <label for=<label for="inlineCheckbox9"><input class="form-check-input ml-3" type="checkbox"
-                            name="intolerance" id="inlineCheckbox9" value="treenut">Treenut</label>
-                    <label for=<label for="inlineCheckbox10"><input class="form-check-input ml-3" type="checkbox"
-                            name="intolerance" id="inlineCheckbox10" value="wheat">Wheat</label>
-                    <label for=<label for="inlineCheckbox11"><input class="form-check-input ml-3" type="checkbox"
-                            name="intolerance" id="inlineCheckbox11" value="">None</label>
-                </form>
-
-
+                <!--Fix Labels-->
+                <input class="form-check-input" type="checkbox" name="intolerance" id="inlineCheckbox1" value="dairy">
+                Dairy
+                <input class="form-check-input ml-3" type="checkbox" name="intolerance" id="inlineCheckbox2"
+                    value="egg"> Egg
+                <input class="form-check-input ml-3" type="checkbox" name="intolerance" id="inlineCheckbox3"
+                    value="gluten"> Gluten
+                <input class="form-check-input ml-3" type="checkbox" name="intolerance" id="inlineCheckbox4"
+                    value="peanut"> Peanut
+                <input class="form-check-input ml-3" type="checkbox" name="intolerance" id="inlineCheckbox5"
+                    value="sesame"> Sesame
+                <input class="form-check-input ml-3" type="checkbox" name="intolerance" id="inlineCheckbox6"
+                    value="shellfish"> Shellfish
+                <input class="form-check-input ml-3" type="checkbox" name="intolerance" id="inlineCheckbox7"
+                    value="soy"> Soy
+                <input class="form-check-input ml-3" type="checkbox" name="intolerance" id="inlineCheckbox8"
+                    value="sulfite"> Sulfite
+                <input class="form-check-input ml-3" type="checkbox" name="intolerance" id="inlineCheckbox9"
+                    value="treenut"> Treenut
+                <input class="form-check-input ml-3" type="checkbox" name="intolerance" id="inlineCheckbox10"
+                    value="wheat"> Wheat
             </div>
 
         </div>
@@ -152,22 +140,22 @@
         <!-- Diet -->
         <div class="col-sm jumbotron text-center" id="diet">
             <h2>Diet</h2>
-            <h5>Please Select a Dietary Requirement</h5>
+            <h5>Please Select One</h5>
             <form>
                 <label for="vegan"><input class="ml-3" type="radio" id="vegan" name="diet" value="vegan">
                     Vegan</label>
                 <label for="vegetarian"><input class="ml-3" type="radio" id="vegetarian" name="diet" value="vegetarian">
                     Vegetarian</label>
-                <label for="pescetarian"><input class="ml-3" type="radio" id="pescetarian" name="diet"
-                        value="pescetarian">
-                    Pescetarian</label>
+                <label for="pescatarian"><input class="ml-3" type="radio" id="pescatarian" name="diet"
+                        value="pescatarian">
+                    Pescatarian</label>
                 <label for="lactovegetarian"><input class="ml-3" type="radio" id="lactovegetarian" name="diet"
-                        value="lactovegetarian">
+                        value="lacto vegetarian">
                     Lacto Vegetarian</label>
                 <label for="ovovegetarian"><input class="ml-3" type="radio" id="ovovegetarian" name="diet"
-                        value="ovovegetarian">
+                        value="ovo vegetarian">
                     Ovo Vegetarian</label>
-                <label for="none"><input class="ml-3" type="radio" id="none" name="diet" value="none">
+                <label for="none"><input class="ml-3" type="radio" id="none" name="diet" value="">
                     None</label>
             </form>
         </div>
@@ -176,71 +164,71 @@
         <!-- Cuisine -->
         <div class="col-sm jumbotron text-center" id="cuisine">
             <h2>Cuisine</h2>
-            <h5>Please Select a Cuisine</h5>
+            <h5>Please Select One</h5>
             <form>
-                <label for="african"><input class="ml-3" type="radio" id="african" name="diet" value="african">
+                <label for="african"><input class="ml-3" type="radio" id="african" name="cuisine" value="African">
                     African</label>
-                <label for="american"><input class="ml-3" type="radio" id="american" name="diet" value="american">
+                <label for="american"><input class="ml-3" type="radio" id="american" name="cuisine" value="American">
                     American</label>
-                <label for="british"><input class="ml-3" type="radio" id="british" name="diet" value="british">
+                <label for="british"><input class="ml-3" type="radio" id="british" name="cuisine" value="British">
                     British</label>
-                <label for="cajun"><input class="ml-3" type="radio" id="cajun" name="diet" value="cajun">
+                <label for="cajun"><input class="ml-3" type="radio" id="cajun" name="cuisine" value="Cajun">
                     Cajun</label>
-                <label for="caribbean"><input class="ml-3" type="radio" id="caribbean" name="diet" value="caribbean">
+                <label for="caribbean"><input class="ml-3" type="radio" id="caribbean" name="cuisine" value="Caribbean">
                     Caribbean</label>
-                <label for="chinese"><input class="ml-3" type="radio" id="chinese" name="diet" value="chinese">
+                <label for="chinese"><input class="ml-3" type="radio" id="chinese" name="cuisine" value="Chinese">
                     Chinese</label>
-                <label for="eastern"><input class="ml-3" type="radio" id="eastern" name="diet" value="eastern">
-                    <label for="eastern">Eastern</label>
-                    <label for="french"><input class="ml-3" type="radio" id="french" name="diet" value="french">
-                        French</label>
-                    <label for="german"><input class="ml-3" type="radio" id="german" name="diet" value="german">
-                        German</label>
-                    <label for="greek"><input class="ml-3" type="radio" id="greek" name="diet" value="greek">
-                        Greek</label>
-                    <label for="indian"><input class="ml-3" type="radio" id="indian" name="diet" value="indian">
-                        Indian</label>
-                    <label for="irish"><input class="ml-3" type="radio" id="irish" name="diet"
-                            value="irish">Irish</label>
-                    <label for="italian"><input class="ml-3" type="radio" id="italian" name="diet" value="italian">
-                        Italian</label>
-                    <label for="japanese"><input class="ml-3" type="radio" id="japanese" name="diet" value="japanese">
-                        Japanese</label>
-                    <label for="jewish"><input class="ml-3" type="radio" id="jewish" name="diet" value="jewish">
-                        Jewish</label>
-                    <label for="korean"><input class="ml-3" type="radio" id="korean" name="diet" value="korean">
-                        Korean</label>
-                    <label for="mexican"><input class="ml-3" type="radio" id="mexican" name="diet" value="mexican">
-                        Mexican</label>
-                    <label for="middleastern"><input class="ml-3" type="radio" id="middleastern" name="diet"
-                            value="middleastern">
-                        Middle Eastern</label>
-                    <label for="spanish"><input class="ml-3" type="radio" id="spanish" name="diet" value="spanish">
-                        Spanish</label>
-                    <label for="southern"><input class="ml-3" type="radio" id="southern" name="diet" value="southern">
-                        Southern</label>
-                    <label for="thai"><input class="ml-3" type="radio" id="thai" name="diet" value="thai">Thai
-                    </label>
-                    <label for="vietnamese"><input class="ml-3" type="radio" id="vietnamese" name="diet"
-                            value="vietnamese">
-                        Vietnamese</label>
+                <label for="eastern"><input class="ml-3" type="radio" id="eastern" name="cuisine" value="Eastern European">
+                    Eastern European</label>
+                <label for="french"><input class="ml-3" type="radio" id="french" name="cuisine" value="French">
+                    French</label>
+                <label for="german"><input class="ml-3" type="radio" id="german" name="cuisine" value="German">
+                    German</label>
+                <label for="greek"><input class="ml-3" type="radio" id="greek" name="cuisine" value="Greek">
+                    Greek</label>
+                <label for="indian"><input class="ml-3" type="radio" id="indian" name="cuisine" value="Indian">
+                    Indian</label>
+                <label for="irish"><input class="ml-3" type="radio" id="irish" name="cuisine"
+                        value="Irish">Irish</label>
+                <label for="italian"><input class="ml-3" type="radio" id="italian" name="cuisine" value="Italian">
+                    Italian</label>
+                <label for="japanese"><input class="ml-3" type="radio" id="japanese" name="cuisine" value="Japanese">
+                    Japanese</label>
+                <label for="jewish"><input class="ml-3" type="radio" id="jewish" name="cuisine" value="Jewish">
+                    Jewish</label>
+                <label for="korean"><input class="ml-3" type="radio" id="korean" name="cuisine" value="Korean">
+                    Korean</label>
+                <label for="mexican"><input class="ml-3" type="radio" id="mexican" name="cuisine" value="Mexican">
+                    Mexican</label>
+                <label for="middleastern"><input class="ml-3" type="radio" id="middleastern" name="cuisine"
+                        value="Middle Eastern">
+                    Middle Eastern</label>
+                <label for="spanish"><input class="ml-3" type="radio" id="spanish" name="cuisine" value="Spanish">
+                    Spanish</label>
+                <label for="southern"><input class="ml-3" type="radio" id="southern" name="cuisine" value="Southern">
+                    Southern</label>
+                <label for="thai"><input class="ml-3" type="radio" id="thai" name="cuisine" value="Thai">Thai
+                </label>
+                <label for="vietnamese"><input class="ml-3" type="radio" id="vietnamese" name="cuisine"
+                        value="Vietnamese">
+                    Vietnamese</label>
             </form>
+
         </div>
         <!--/ .Cuisine -->
         <!--City-->
-        <div class="form-group text-center">
+        <div class="form-group text-center cityInput">
             <label>
                 <h4>Let us know what city you live in so we can show you awesome restaurant choices!</h4>
             </label>
-            <input type="text" class="form-control mx-auto text-center" name="city" id="city" placeholder="Your City"
+            <input type="text" class="form-control mx-auto text-center" name="city" id="city" placeholder="City"
                 value="" style="width: 50%">
+            <!-- Search Button -->
+            <div class="searchBtn text-center mt-4">
+                <button type="button" class="btn" id="search">Search</button>
+            </div>
+            <!--/ .Search Button -->
         </div>
-
-        <!-- Search Button -->
-        <div class="searchBtn text-center">
-            <button type="button" class="btn" id="search">Search</button>
-        </div>
-        <!--/ .Search Button -->
     </div>
     <!--/ .Dietry Requirements -->
 
@@ -249,136 +237,19 @@
         <!-- Recipes -->
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="recipes">
-                        <h2>Recipes Results</h2>
-                        <div id="recipe_accordion">
-                            <div class="card">
-                                <!--image and Title-->
-                                <div class="card-header collapseTitle" id="headingOne">
-                                    <h5 class="mb-0 text-center">
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
-                                            aria-expanded="true" aria-controls="collapseOne"><img
-                                                class="card-img ml-auto" src="assets/images/699591-312x231.jpg"
-                                                alt="Card image cap">
-                                            <h4>Recipe Title</h4>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <!--Prep and Instructions-->
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                    data-parent="#recipe_accordion">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Prep Time: </h5>
-                                        <h5 class="card-title">Instructions</h5>
-                                        <p class="card-text">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                            richardson ad squid. 3
-                                            wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                                            quinoa
-                                            nesciunt laborum
-                                            eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                            single-origin coffee nulla
-                                            assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
-                                            wes
-                                            anderson cred nesciunt
-                                            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                                            occaecat
-                                            craft beer
-                                            farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard
-                                            of
-                                            them accusamus
-                                            labore sustainable VHS.
-                                        </p>
-                                        <p><a href="#">Test</a></p>
-                                    </div>
-                                    <!--Ingredients-->
-                                    <div class="card-deck">
-                                        <div class="card ml-3 border-0">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Ingredients</h5>
-                                                <ul class="list-group">
-                                                    <!--will add bullets. Dynamic list would be easier??-->
-                                                    <li class="list-group-item">Cras justo odio</li>
-                                                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                                                    <li class="list-group-item">Vestibulum at eros</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!--Nutrients-->
-                                        <div class="card mr-3 border-0">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Nutrients</h5>
-                                                <ul class="list-group">
-                                                    <!--will add bullets. Dynamic list would be easier??-->
-                                                    <li class="list-group-item">Fat:</li>
-                                                    <li class="list-group-item">Calories</li>
-                                                    <li class="list-group-item">Protein:</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card mr-3 border-0">
-                                        <div class="card-body text-center">
-                                            <button type="button" class="btn btn-primary">Add to Recipe
-                                                Favourites</button>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="col-md-6">
+                        <div class="recipes">
+                            <h2>Eat In</h2>
+                            <div id="recipe_accordion">
+
                             </div>
                         </div>
                     </div>
-                </div>
-                <!--/ .Recipes -->
+                    <div class="col-md-6 ml-auto">
+                        <div class="restaurants">
+                            <h2>Eat Out</h2>
+                            <div id="restaurant_accordion">
 
-                <!-- Restaurants -->
-                <div class="col-md-6 ml-auto">
-                    <div class="restaurants">
-                        <h2>Restaurant Results</h2>
-                        <div id="restaurant_accordion">
-                            <div class="card">
-                                <div class="card-header" id="headingTwo">
-                                    <h5 class="mb-0">
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"
-                                            aria-expanded="true" aria-controls="collapseTwo">
-                                            <h4>Restaurant Name</h4>
-                                        </button>
-                                    </h5>
-                                </div>
-                                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
-                                    data-parent="#restaurant_accordion">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Location</h5>
-                                        <p class="card-text">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                            richardson ad squid.
-                                        </p>
-                                        <p><a href="#">Test</a></p>
-                                    </div>
-                                    <div class="card-deck">
-                                        <!--Rating-->
-                                        <div class="card border-0">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Rating:</h5>
-                                            </div>
-                                        </div>
-                                        <!--Average Cost-->
-                                        <div class="card mr-3 border-0">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Average Cost:</h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card border-0">
-                                        <!--Tags-->
-                                        <div class="card-body text-center">
-                                            <!--Spacing-->
-                                            <p class="card-text text-center">Tag1 | Tag2 | Tag3</p>
-                                            <button type="button" class="btn btn-primary">Add to Restaurant
-                                                Favourites</button>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -416,6 +287,9 @@
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+
     <footer class="page-footer flex-d">
         <!--Icons-->
         <div class="container-fluid">
@@ -440,8 +314,6 @@
     </footer>
 
     <!--Script-->
-    <script src="assets/javascript/modal.js"></script>
-    <script src="assets/javascript/pagedisplay.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

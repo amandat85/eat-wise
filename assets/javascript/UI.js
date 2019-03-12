@@ -7,9 +7,61 @@ var UIController = (function () {
         recipeList: '#recipe_accordion',
         ingredientList: '#ingredient_list',
         listItemClass: 'list-group-item',
+        btnSignUp: '#signUp',
+        txtLogin: '#username',
+        btnLogin: '#btnLogin',
+        txtEmail: '#email',
+        txtPasswrd: '#password',
+        passLogin: '#loginPassword',
+        searchBtn: '#search',
+        welcomeDiv: '.wrapper',
+        mainForm: '.dietaryReq',
+        searchResults: '.results',
+        logoutBtn: '#logout',
+        startBtn: '#getStarted',
+        infoBtn: '#info',
+        disclaimer: '#disclaimer',
+        closeDisclaimer: '#closeModal'
+
     }
 
     return {
+        getDOMStrings: function() {
+            return DOMStrings;
+        },
+        displayMainPage: function() {
+            $(DOMStrings.mainForm).hide();
+            $(DOMStrings.searchResults).hide();
+            $(DOMStrings.logoutBtn).hide();
+        },
+        displaySearchPage: function() {
+            $(DOMStrings.welcomeDiv).hide();
+            $(DOMStrings.mainForm).show();
+            $(DOMStrings.logoutBtn).show();
+        },
+        displaySearchResults: function() {
+            $(DOMStrings.mainForm).hide();
+            $(DOMStrings.searchResults).show();
+            //$("#logout").show();
+        },
+        getUserInput: function() {
+            var mealtime = $('input[name="mealtime"]:checked').val();
+            var intolerances = [];
+            $('input[name="intolerance"]:checked').each(function () {
+                intolerances.push($(this).val());
+            });
+            var diet = $('input[name="diet"]:checked').val();
+            var cuisine = $('input[name="cuisine"]:checked').val();
+            var city = $('input[name="city"]').val();
+        
+            return {
+                city: city,
+                cuisine: cuisine,
+                diet: diet,
+                mealType: mealtime,
+                intolerances: intolerances
+            };
+        },
         createResultsDivs: function() {
             var $resultsDiv = $(".results").find(".row");
             $resultsDiv.append('<div class="col-md-6"><div class="recipes"><h2>Eat In</h2><div id="recipe_accordion"></div></div></div></div>');
@@ -51,14 +103,20 @@ var UIController = (function () {
                         .appendTo(DOMStrings.ingredientList + i);
                 }
             }
+        },
+        showModal: function() {
+            $(DOMStrings.disclaimer).toggleClass("show").css("display", "block");
+        },
+        hideModal: function() {
+            $(DOMStrings.disclaimer).toggleClass("show").css("display", "none");
         }
     }
 
     
 })();
-/*
+
 $(document).ready(function() {
-    var recipe = {
+    /* var recipe = {
         title: 'Quinoa Salad',
         image: './assets/images/699591-312x231.jpg',
         prepTime: 15 + ' mins',
@@ -69,5 +127,25 @@ $(document).ready(function() {
         protein: 30 + ' g',
         fat: 12 + ' g'
     }
-    UIController.createRecipeCards([recipe]);
-}); */
+    UIController.createRecipeCards([recipe]); */
+    /*var DOM = UIController.getDOMStrings();
+    $(DOM.searchBtn).on("click", function () {
+        var mealtime = $('input[name="mealtime"]:checked').val();
+        var intolerances = [];
+        $('input[name="intolerance"]:checked').each(function () {
+            intolerances.push($(this).val());
+        });
+        var diet = $('input[name="diet"]:checked').val();
+        var cuisine = $('input[name="cuisine"]:checked').val();
+        var city = $('input[name="city"]').val();
+    
+        return {
+            city: city,
+            cuisine: cuisine,
+            diet: diet,
+            mealType: mealtime,
+            intolerances: intolerances
+    
+        };
+    });*/
+}); 
