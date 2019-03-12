@@ -28,9 +28,6 @@ var firebaseController = (function() {
 
 // no code will actually be run in this file. that will only happen in the main controller file
 $(document).ready(function () { 
-
-	UIController.getDOMStrings
-
 // These UI elements will eventually be moved to UI.js
 //GET ELEMENTS IN HTML======================================================
 // var btnSignUp = document.querySelector();
@@ -124,8 +121,8 @@ $(document).ready(function () {
 // });
 
 document.querySelector("#search").addEventListener("click", function (event) {
-  // event.stopPropagation();
-  event.preventDefault();
+  event.stopPropagation();
+  //event.preventDefault();
 
   //VALIDATION FORM===========================================================
   if ($("input:radio[name='mealtime']").is(":checked") === false) {
@@ -134,14 +131,6 @@ document.querySelector("#search").addEventListener("click", function (event) {
       $("#alertMeal").removeClass("show").css("display", "none");
     });
   }
-
-  // // else if ($("input:radio[name='intolerance']").is(":checked") === false) {
-  // //   $("#alertIntolerance").addClass("show").css("display", "block");
-  // //   $("#closeModalIn").on("click", function () {
-  // //     $("#alertIntolerance").removeClass("show").css("display", "none");
-  // //     return;
-  // //   });
-  // // }
 
   else if ($("input:radio[name='diet']").is(":checked") === false) {
     $("#alertDiet").addClass("show").css("display", "block");

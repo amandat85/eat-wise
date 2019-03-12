@@ -97,9 +97,9 @@ var APIController = (function() {
     ];
 
     var numOfResults = 5;
+    var numOfRecipes
 
     return {
-        numOfResults: numOfResults,
         zomatoGetCityNumber: function(callback, city) {
             var queryURL, cityID;
             queryURL = 'https://developers.zomato.com/api/v2.1/locations?query=' + city;
@@ -117,7 +117,6 @@ var APIController = (function() {
         },
         zomatoSearch: function(callback, cityID, cuisine, diet, mealType) {
             var cuisineNum;
-            cuisine = cuisine.replace(' ', '+');
 
             switch (diet) {
                 case 'pescatarian':
@@ -237,26 +236,3 @@ var APIController = (function() {
         }
     };
 })();
-
-/* Calls a more straighforward search in spoonacular that simply takes any number of keywords
-function displayRecipeByNaturalLanguage() {
-    //var cuisine = $(this).attr("data-natural");
-    var test = "Chinese Vegetarian";
-    var replaced_test = test.replace(' ', '+');
-    console.log(replaced_test);
-    var queryURL = "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?number=10&offset=0&type=main+course&query=" + replaced_test;
-
-    $.ajax({
-        url: queryURL,
-        method: "GET",
-        headers: {
-            "X-RapidAPI-Key": "fd24c4e1bamsh51cc6ab2c5a5849p1a9263jsn8e0025b690c2"
-        }
-    }).then(function (response) {
-        for (var property in response["results"]) {
-            //gives the name of the recipe
-            //other attributes: id, readyinminutes, servings, image, imageURL
-            console.log(response["results"][property]["title"]);
-        }
-    });
-} */

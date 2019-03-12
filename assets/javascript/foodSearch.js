@@ -1,7 +1,6 @@
 var foodSearch = (function() {
     
-    var searchParams, recipeInfoArray;
-    // This would be in the UI controller in reality
+    var searchParams, recipeInfoArray, numOfRecipes;
 
     function setUpEventListeners() {
         
@@ -13,9 +12,13 @@ var foodSearch = (function() {
 
         $(DOM.searchAgainBtn).on("click", UIController.displaySearchPage);
 
-        $(DOM.infoBtn).on("click", UIController.showModal);
+        $(DOM.infoBtn).on("click", function() {
+			UIController.showModal(DOM.disclaimer);
+		});
 
-        $(DOM.closeDisclaimer).on("click", UIController.hideModal);
+        $(DOM.closeModal).on("click", function() {
+			UIController.hideModal(this);
+		});
     }
 
     function processRestaurantList(restaurantArray) {
@@ -28,25 +31,29 @@ var foodSearch = (function() {
 
     function processRecipeInfo(recipeInfo) {
         recipeInfoArray.push(recipeInfo);
-        if (recipeInfoArray.length === APIController.numOfResults) {
+        if (recipeInfoArray.length === numOfRecipes) {
             console.log(recipeInfoArray);
             UIController.createRecipeCards(recipeInfoArray);
         }
     }
 
     function getRecipeInfo(arr) {
+		numOfRecipes = arr.length;
         for (var i = 0; i < arr.length; i++) {
             APIController.spoonacularGetRecipeInfo(processRecipeInfo, arr[i]);
         }
     }
 
     function performFoodSearch() {
-        searchParams = UIController.getUserInput();
-        console.log(searchParams);
-        UIController.displaySearchResults();
-        recipeInfoArray = [];
-        APIController.zomatoGetCityNumber(performZomatoSearch, searchParams.city);
-        APIController.spoonacularGetRecipeIDs(getRecipeInfo, searchParams.cuisine, searchParams.intolerances, searchParams.mealType, searchParams.diet);
+        if (UIController.checkUserInput()) {
+			searchParams = UIController.getUserInput();
+			console.log(searchParams);
+			UIController.displaySearchResults();
+			recipeInfoArray = [];
+			APIController.zomatoGetCityNumber(performZomatoSearch, searchParams.city);
+			APIController.spoonacularGetRecipeIDs(getRecipeInfo, searchParams.cuisine, searchParams.intolerances, searchParams.mealType, searchParams.diet);
+		}
+        
     };
 
     return {
@@ -57,7 +64,6 @@ var foodSearch = (function() {
         }
     }
 })();
-
 
 function onAPIControllerLoaded() {
     generalFunctions.loadScript("./assets/javascript/UI.js", foodSearch.init);

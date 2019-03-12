@@ -21,7 +21,7 @@ var UIController = (function () {
         startBtn: '#getStarted',
         infoBtn: '#info',
         disclaimer: '#disclaimer',
-        closeDisclaimer: '#closeModal',
+        closeModal: '.closeModal',
         searchAgainBtn: '#searchAgain'
     }
 
@@ -32,19 +32,37 @@ var UIController = (function () {
         displayMainPage: function() {
             $(DOMStrings.mainForm).hide();
             $(DOMStrings.searchResults).hide();
-            $(DOMStrings.logoutBtn).hide();
+            $(DOMStrings.searchAgainBtn).hide();
         },
         displaySearchPage: function() {
             $(DOMStrings.welcomeDiv).hide();
             $(DOMStrings.searchResults).hide();
+            $(DOMStrings.searchAgainBtn).hide();
             $(DOMStrings.restaurantList).empty();
             $(DOMStrings.recipeList).empty();
             $(DOMStrings.mainForm).show();
+            
         },
         displaySearchResults: function() {
             $(DOMStrings.mainForm).hide();
             $(DOMStrings.searchResults).show();
             $(DOMStrings.searchAgainBtn).show();
+        },
+        checkUserInput: function() {
+            var inputValidated = false;
+            if ($("input:radio[name='mealtime']").is(":checked") === false) {
+                this.showModal("#alertMeal");
+            } else if ($("input:radio[name='diet']").is(":checked") === false) {
+                this.showModal("#alertDiet");
+            }else if ($("input:radio[name='cuisine']").is(":checked") === false) {
+                this.showModal("#alertCuisine");
+            } else if (document.querySelector("#city").value.trim() === "") {
+                this.showModal("#alertCity");
+            } else {
+                inputValidated = true;
+            }
+
+            return inputValidated;
         },
         getUserInput: function() {
             var mealtime = $('input[name="mealtime"]:checked').val();
@@ -104,13 +122,11 @@ var UIController = (function () {
                 }
             }
         },
-        showModal: function() {
-            $(DOMStrings.disclaimer).toggleClass("show").css("display", "block");
+        showModal: function(selector) {
+            $(selector).closest('.modal').toggleClass("show").css("display", "block");
         },
-        hideModal: function() {
-            $(DOMStrings.disclaimer).toggleClass("show").css("display", "none");
+        hideModal: function(selector) {
+            $(selector).closest('.modal').toggleClass("show").css("display", "none");
         }
     }
-
-    
 })();
