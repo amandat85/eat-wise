@@ -274,7 +274,7 @@
 
 
     <!--Modals-->
-    <!--Modal - Mealtime-->
+    <!--Mealtime-->
     <div class="modal fade" id="alertMeal" tabindex="-1" role="dialog" aria-labelledby="mealLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -282,7 +282,7 @@
                     <h5 class="modal-title" id="alertLabel">Meal Time</h5>
                 </div>
                 <div class="modal-body">
-                    <p>Please enter a train name.</p>
+                    <p>Please select a meal time.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" id="closeModalMeal" data-dismiss="modal">Close</button>
@@ -290,16 +290,16 @@
             </div>
         </div>
     </div>
-    <!--Modal - Intolerance-->
+    <!--Intolerance-->
     <div class="modal fade" id="alertIntolerance" tabindex="-1" role="dialog" aria-labelledby="destinationLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="alertLabel">Destination Error</h5>
+                    <h5 class="modal-title" id="alertLabel">Intolerance</h5>
                 </div>
                 <div class="modal-body">
-                    <p>Please fill in a destination you would like to disppear to.</p>
+                    <p>Please select an intolerance</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" id="closeModalIn"
@@ -308,16 +308,16 @@
             </div>
         </div>
     </div>
-    <!--Modal - Diet-->
+    <!--Diet-->
     <div class="modal fade" id="alertDiet" tabindex="-1" role="dialog" aria-labelledby="dietLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="alertLabel">Military Time Error</h5>
+                    <h5 class="modal-title" id="alertLabel">Diet</h5>
                 </div>
                 <div class="modal-body">
-                    <p>Please select a time, in military time, at which you wish to disappear.</p>
+                    <p>Please select a dietary requirement.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" id="closeModalDiet"
@@ -326,19 +326,36 @@
             </div>
         </div>
     </div>
-    <!--Modal -Cuisine-->
-    <div class="modal fade" id="alertCuisne" tabindex="-1" role="dialog" aria-labelledby="cuiseinLabel"
+    <!--Cuisine-->
+    <div class="modal fade" id="alertCuisine" tabindex="-1" role="dialog" aria-labelledby="cuisineLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="alertLabel">Train Frequency Error</h5>
+                    <h5 class="modal-title" id="alertLabel">Cuisine</h5>
                 </div>
                 <div class="modal-body">
-                    <p>Please enter the frequency of your train.</p>
+                    <p>Please select a cuisine type.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" id="closeModalCuisine" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--City-->
+    <div class="modal fade" id="alertCity" tabindex="-1" role="dialog" aria-labelledby="cityLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="alertLabel">City</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Please enter a city.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="closeModalCity" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -369,7 +386,6 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-1 mt-md-0 ml-5 pl-3 mt-3 offset-md-5">
-                    <!-- <a href="disclaimer.html" class="icoIcon" title="Icon"> -->
                     <i class="fas fa-info-circle fa-3x" id="info" style="color:#c43f3f"></i></a>
                 </div>
 
@@ -399,6 +415,7 @@
         crossorigin="anonymous"></script>
     <script src="./assets/javascript/generalFunctions.js"></script>
     <script src="./assets/javascript/foodSearch.js"></script>
+    <script src="assets/javascript/firebase.js"></script>
 </body>
 
 </html>

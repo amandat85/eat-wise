@@ -33,64 +33,64 @@ $(document).ready(function () {
 
 // These UI elements will eventually be moved to UI.js
 //GET ELEMENTS IN HTML======================================================
-var btnSignUp = document.querySelector();
-var txtLogin = document.querySelector("#username");
-var btnLogin = document.querySelector("#btnLogin");
-var txtEmail = document.querySelector("#email");
-var txtPass = document.querySelector("#password");
-var passLogin = document.querySelector("#loginPassword");
+// var btnSignUp = document.querySelector();
+// var txtLogin = document.querySelector("#username");
+// var btnLogin = document.querySelector("#btnLogin");
+// var txtEmail = document.querySelector("#email");
+// var txtPass = document.querySelector("#password");
+// var passLogin = document.querySelector("#loginPassword");
 
-// Event listeners will be moved to main process js file eventually 
-// and the function for what happend when an event is triggered will be kept in this file
-//TODO: VALIDATE FIELDS & ADD EXTRA FIELDS TO VARIABLES
-//LOGIN BUTTON EVENT==============================================
-btnLogin.addEventListener("click", function(event) {
-    //get email and password
-   var login = txtLogin.value;
-   console.log(email);
-    var loginPass = passLogin.value;
-    console.log(loginPass);
-    console.log(uEmail);
-firebase.auth().signInWithEmailAndPassword(login, loginPass).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    console.log(errorCode);
-    console.log(errorMessage);
-  });
-});
+// // Event listeners will be moved to main process js file eventually 
+// // and the function for what happend when an event is triggered will be kept in this file
+// //TODO: VALIDATE FIELDS & ADD EXTRA FIELDS TO VARIABLES
+// //LOGIN BUTTON EVENT==============================================
+// btnLogin.addEventListener("click", function(event) {
+//     //get email and password
+//    var login = txtLogin.value;
+//    console.log(email);
+//     var loginPass = passLogin.value;
+//     console.log(loginPass);
+//     console.log(uEmail);
+// firebase.auth().signInWithEmailAndPassword(login, loginPass).catch(function(error) {
+//     // Handle Errors here.
+//     var errorCode = error.code;
+//     var errorMessage = error.message;
+//     console.log(errorCode);
+//     console.log(errorMessage);
+//   });
+// });
   
-//SIGN UP BUTTON EVENT=============================================
-btnSignUp.addEventListener("click", function(event) {
-    //get email and password
-   var email = txtEmail.value;
-   console.log(email);
-    var pass = txtPass.value;
-    console.log(pass);
-    //sign in 
-   firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // ...
-        console.log(errorCode);
-        console.log(errorMessage);
-      });
-});
+// //SIGN UP BUTTON EVENT=============================================
+// btnSignUp.addEventListener("click", function(event) {
+//     //get email and password
+//    var email = txtEmail.value;
+//    console.log(email);
+//     var pass = txtPass.value;
+//     console.log(pass);
+//     //sign in 
+//    firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function(error) {
+//         // Handle Errors here.
+//         var errorCode = error.code;
+//         var errorMessage = error.message;
+//         // ...
+//         console.log(errorCode);
+//         console.log(errorMessage);
+//       });
+// });
 
-//ADD REALTIME LISTENER TO CHANGED STATE=========================== Recommended
-firebase.auth().onAuthStateChanged(function(user) {
+// //ADD REALTIME LISTENER TO CHANGED STATE=========================== Recommended
+// firebase.auth().onAuthStateChanged(function(user) {
   
-    if (user) {
-      // User is signed in.
-      uEmail = user.email;
-       uid= user.uid;
-    } else {
-      uEmail = "";
-      uid = "";
+//     if (user) {
+//       // User is signed in.
+//       uEmail = user.email;
+//        uid= user.uid;
+//     } else {
+//       uEmail = "";
+//       uid = "";
       
-    }
-    console.log(uEmail, uid); //Tested - has user id and email
+//     }
+//     console.log(uEmail, uid); //Tested - has user id and email
 
 });
  //Test not defined - scoping issue?? - Do you need a snapshot of the onAuthStateChanged?
@@ -110,21 +110,21 @@ firebase.auth().onAuthStateChanged(function(user) {
 //                    // you have one. Use User.getToken() instead.
 // }
 
-  function writeUserData(favRecipes, favRestaurants) {
-    firebase.database().ref('users/' + uid).set({
-      // userEmail: uEmail,
-      // userID: uid,
-      favRecipes: favRecipes,
-      favRestaurants: favRestaurants,
-    });
-  }
-  console.log(writeUserData);
-  console.log(userEmail)
- //Not pushing anything to the database. userEmail and userID undefined
-});
+//   function writeUserData(favRecipes, favRestaurants) {
+//     firebase.database().ref('users/' + uid).set({
+//       // userEmail: uEmail,
+//       // userID: uid,
+//       favRecipes: favRecipes,
+//       favRestaurants: favRestaurants,
+//     });
+//   }
+//   console.log(writeUserData);
+//   console.log(userEmail)
+//  //Not pushing anything to the database. userEmail and userID undefined
+// });
 
 document.querySelector("#search").addEventListener("click", function (event) {
-  event.stopImmediatePropagation();
+  // event.stopImmediatePropagation();
 
   //VALIDATION FORM===========================================================
   if ($("input:radio[name='mealtime']").is(":checked") === false) {
@@ -134,27 +134,36 @@ document.querySelector("#search").addEventListener("click", function (event) {
     });
   }
 
-  else if ($("input:radio[name='mealtime']").is(":checked") === false) {
-    $("#alertIntolerance").addClass("show").css("display", "block");
-    $("#closeModaln").on("click", function () {
-      $("#alertIntolerance").removeClass("show").css("display", "none");
-      return;
-    });
-  }
+  // // else if ($("input:radio[name='intolerance']").is(":checked") === false) {
+  // //   $("#alertIntolerance").addClass("show").css("display", "block");
+  // //   $("#closeModalIn").on("click", function () {
+  // //     $("#alertIntolerance").removeClass("show").css("display", "none");
+  // //     return;
+  // //   });
+  // // }
 
   else if ($("input:radio[name='diet']").is(":checked") === false) {
     $("#alertDiet").addClass("show").css("display", "block");
     $("#closeModalDiet").on("click", function () {
-      $("#alertdiet").removeClass("show").css("display", "none");
+      $("#alertDiet").removeClass("show").css("display", "none");
       return;
     });
-
   }
-  else if ($("input:radio[name='diet']").is(":checked") === false) {
+
+  else if ($("input:radio[name='cuisine']").is(":checked") === false) {
     $("#alertCuisine").addClass("show").css("display", "block");
     $("#closeModalCuisine").on("click", function () {
       $("#alertCuisine").removeClass("show").css("display", "none");
       return;
     });
   }
+
+  else if (document.querySelector("#city").value.trim() === "") {
+    $("#alertCity").addClass("show").css("display", "block");
+    $("#closeModalCity").on("click", function () {
+      $("#alertCity").removeClass("show").css("display", "none");
+      return;
+    });
+  }
 });
+
