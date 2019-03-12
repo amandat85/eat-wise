@@ -82,9 +82,9 @@ nav a {
   background-image: url("../images/ryan-concepcion-1398520-unsplash.jpg"); }
 
 /* Search Button */
-.searchBtn {
-  margin-top: 50px;
-  margin-bottom: 50px; }
+#search {
+  background-color: #80A602;
+  color: #ffffff; }
 
 /* About Page */
 blockquote {
