@@ -124,7 +124,8 @@ $(document).ready(function () {
 // });
 
 document.querySelector("#search").addEventListener("click", function (event) {
-  // event.stopImmediatePropagation();
+  // event.stopPropagation();
+  event.preventDefault();
 
   //VALIDATION FORM===========================================================
   if ($("input:radio[name='mealtime']").is(":checked") === false) {
