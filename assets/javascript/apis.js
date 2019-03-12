@@ -117,6 +117,8 @@ var APIController = (function() {
         },
         zomatoSearch: function(callback, cityID, cuisine, diet, mealType) {
             var cuisineNum;
+            cuisine = cuisine.replace(' ', '+');
+            diet = diet.replace(' ', '+');
             for (var i = 0; i < zomatoCuisineArray.length; i++) {
                 if (zomatoCuisineArray[i].cuisine_name === cuisine) {
                     cuisineNum = zomatoCuisineArray[i].cuisine_id;
@@ -144,14 +146,16 @@ var APIController = (function() {
                             userScore: resto.user_rating.rating_text
                         };
                         restoArr.push(restoInfo);
-                        console.log(restoInfo);
                     }
+                    console.log(restoArr);
                     callback(restoArr);
                 }
             });
         },
         spoonacularGetRecipeIDs: function(callback, cuisine, intolerances, type, diet) {
             var intolerancesString = "";
+            cuisine = cuisine.replace(' ', '+');
+            diet = diet.replace(' ', '+');
             for (var i = 0; i < intolerances.length; i++) {
                 intolerancesString += intolerances[i];
                 if (i !== intolerances.length - 1) {

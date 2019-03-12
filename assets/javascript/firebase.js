@@ -1,28 +1,39 @@
 // DATABASE CONTROLLER USING FIREBASE
-// var firebaseController = (function() {
-//   // All the firebase code will be moved inside of here eventually
-// })();
+var firebaseController = (function() {
+  // All the firebase code will be moved inside of here eventually
+  // Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyDPHxT4nXafKkjoyGEPlve1lWrELWSBUcI",
+		authDomain: "eat-wise-955e8.firebaseapp.com",
+		databaseURL: "https://eat-wise-955e8.firebaseio.com",
+		projectId: "eat-wise-955e8",
+		storageBucket: "eat-wise-955e8.appspot.com",
+		messagingSenderId: "154506400505"
+	};
+	firebase.initializeApp(config);
+
+	return {
+
+		writeUserData: function(obj, type) {
+		var userId = firebase.auth().currentUser.uid;
+		firebase.database().ref('users/' + userId).set({
+			username: name,
+			email: email
+			//some more user data
+		});
+		}
+
+	};
+})();
 
 // no code will actually be run in this file. that will only happen in the main controller file
 $(document).ready(function () { 
-// console.log(process.env.TEST);
-var loggedIn;
-var uEmail;
-var uid;
-// Initialize Firebase
-var config = {
-    apiKey: "AIzaSyDPHxT4nXafKkjoyGEPlve1lWrELWSBUcI",
-    authDomain: "eat-wise-955e8.firebaseapp.com",
-    databaseURL: "https://eat-wise-955e8.firebaseio.com",
-    projectId: "eat-wise-955e8",
-    storageBucket: "eat-wise-955e8.appspot.com",
-    messagingSenderId: "154506400505"
-};
-firebase.initializeApp(config);
+
+	UIController.getDOMStrings
 
 // These UI elements will eventually be moved to UI.js
 //GET ELEMENTS IN HTML======================================================
-var btnSignUp = document.querySelector("#signUp");
+var btnSignUp = document.querySelector();
 var txtLogin = document.querySelector("#username");
 var btnLogin = document.querySelector("#btnLogin");
 var txtEmail = document.querySelector("#email");
