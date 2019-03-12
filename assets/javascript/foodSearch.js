@@ -11,6 +11,8 @@ var foodSearch = (function() {
 
         $(DOM.startBtn).on("click", UIController.displaySearchPage);
 
+        $(DOM.searchAgainBtn).on("click", UIController.displaySearchPage);
+
         $(DOM.infoBtn).on("click", UIController.showModal);
 
         $(DOM.closeDisclaimer).on("click", UIController.hideModal);
@@ -40,6 +42,7 @@ var foodSearch = (function() {
 
     function performFoodSearch() {
         searchParams = UIController.getUserInput();
+        console.log(searchParams);
         UIController.displaySearchResults();
         recipeInfoArray = [];
         APIController.zomatoGetCityNumber(performZomatoSearch, searchParams.city);
@@ -57,15 +60,11 @@ var foodSearch = (function() {
 
 
 function onAPIControllerLoaded() {
-    alert("API controller loaded");
     generalFunctions.loadScript("./assets/javascript/UI.js", foodSearch.init);
 }
 
 function onjQueryLoaded(){
-    // do stuff that you can do with jQuery
-    alert("jQuery loaded");
     generalFunctions.loadScript("./assets/javascript/apis.js", onAPIControllerLoaded);
-
 }
 
 function loadAllScripts(){
