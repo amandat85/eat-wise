@@ -118,7 +118,22 @@ var APIController = (function() {
         zomatoSearch: function(callback, cityID, cuisine, diet, mealType) {
             var cuisineNum;
             cuisine = cuisine.replace(' ', '+');
-            diet = diet.replace(' ', '+');
+
+            switch (diet) {
+                case 'pescatarian':
+                    diet = 'fish';
+                    break;
+                
+                case 'lacto vegetarian':
+                    diet = 'vegan';
+                    break;
+                case 'ovo vegetarian':
+                    diet = 'vegan';
+                    break;
+                default:
+                    break;
+            }
+
             for (var i = 0; i < zomatoCuisineArray.length; i++) {
                 if (zomatoCuisineArray[i].cuisine_name === cuisine) {
                     cuisineNum = zomatoCuisineArray[i].cuisine_id;
@@ -127,7 +142,8 @@ var APIController = (function() {
             var queryURL = 'https://developers.zomato.com/api/v2.1/search?entity_id=' 
                             + cityID + '&entity_type=city&q=' + diet + '%20' + mealType 
                             + '&count=' + numOfResults + '&cuisines=' + cuisineNum;
-              $.ajax({
+            console.log(queryURL);
+            $.ajax({
                 url: queryURL,
                 method: 'GET',
                 headers: {

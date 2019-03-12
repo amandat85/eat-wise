@@ -21,8 +21,8 @@ var UIController = (function () {
         startBtn: '#getStarted',
         infoBtn: '#info',
         disclaimer: '#disclaimer',
-        closeDisclaimer: '#closeModal'
-
+        closeDisclaimer: '#closeModal',
+        searchAgainBtn: '#searchAgain'
     }
 
     return {
@@ -36,13 +36,15 @@ var UIController = (function () {
         },
         displaySearchPage: function() {
             $(DOMStrings.welcomeDiv).hide();
+            $(DOMStrings.searchResults).hide();
+            $(DOMStrings.restaurantList).empty();
+            $(DOMStrings.recipeList).empty();
             $(DOMStrings.mainForm).show();
-            $(DOMStrings.logoutBtn).show();
         },
         displaySearchResults: function() {
             $(DOMStrings.mainForm).hide();
             $(DOMStrings.searchResults).show();
-            //$("#logout").show();
+            $(DOMStrings.searchAgainBtn).show();
         },
         getUserInput: function() {
             var mealtime = $('input[name="mealtime"]:checked').val();
@@ -50,6 +52,9 @@ var UIController = (function () {
             $('input[name="intolerance"]:checked').each(function () {
                 intolerances.push($(this).val());
             });
+            if (!intolerances) {
+                intolerances = "";
+            }
             var diet = $('input[name="diet"]:checked').val();
             var cuisine = $('input[name="cuisine"]:checked').val();
             var city = $('input[name="city"]').val();
@@ -61,11 +66,6 @@ var UIController = (function () {
                 mealType: mealtime,
                 intolerances: intolerances
             };
-        },
-        createResultsDivs: function() {
-            var $resultsDiv = $(".results").find(".row");
-            $resultsDiv.append('<div class="col-md-6"><div class="recipes"><h2>Eat In</h2><div id="recipe_accordion"></div></div></div></div>');
-            $resultsDiv.append(' <div class="col-md-6 ml-auto"><div class="restaurants"><h2>Eat Out</h2><div id="restaurant_accordion"></div></div></div>');
         },
         createRestaurantCards: function(restArr) {
             for (var i = 0; i < restArr.length; i++) {
@@ -114,38 +114,3 @@ var UIController = (function () {
 
     
 })();
-
-$(document).ready(function() {
-    /* var recipe = {
-        title: 'Quinoa Salad',
-        image: './assets/images/699591-312x231.jpg',
-        prepTime: 15 + ' mins',
-        ingredients: ['1 cup mushroms', '2 ounces of garlic, minced', '5 asparagus', '4 cups of quinoa'],
-        instructions: 'Make some quinoa yo',
-        url: 'https://spoonacular.com/simple-fried-rice-with-japanese-seven-spice-36193',
-        cals: 300,
-        protein: 30 + ' g',
-        fat: 12 + ' g'
-    }
-    UIController.createRecipeCards([recipe]); */
-    /*var DOM = UIController.getDOMStrings();
-    $(DOM.searchBtn).on("click", function () {
-        var mealtime = $('input[name="mealtime"]:checked').val();
-        var intolerances = [];
-        $('input[name="intolerance"]:checked').each(function () {
-            intolerances.push($(this).val());
-        });
-        var diet = $('input[name="diet"]:checked').val();
-        var cuisine = $('input[name="cuisine"]:checked').val();
-        var city = $('input[name="city"]').val();
-    
-        return {
-            city: city,
-            cuisine: cuisine,
-            diet: diet,
-            mealType: mealtime,
-            intolerances: intolerances
-    
-        };
-    });*/
-}); 
