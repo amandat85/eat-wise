@@ -1,91 +1,225 @@
 //This is a test
 
 *{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+//Colour Variables
+
+$color-jumbotron-light1:#F2C879;
+$color-jumbotron-dark1: #F28C02;
+$color-jumbotron-dark2: #80A602;
+$color-jumbotron-light2: #9CA660;
+$color-jumbotron-dark3: #8E0002;
+$color-jumbotron-light3: #8E5D57;
+$color-jumbotron-dark4: #661D8E;
+$color-jumbotron-light4: #79518E;
+$card-header: rgba(#FFB979, .2)!important;
+
+$color-button: #80A602;
+
+@mixin style-link-text {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #3d3838;
+}
+
+$base-font: 'Roboto', sans-serif;
+
+body  {
+  font-family: $base-font;
+  font-size: 18px;
+  line-height: 34px;
+}
+/*Jumbotron*/
+#meals {
+background: linear-gradient(to bottom right, rgba($color-jumbotron-light1, 0.2), rgba($color-jumbotron-dark1, 0.6));
+}
+
+#intolerance {
+  background: linear-gradient(to bottom right, rgba($color-jumbotron-light2, 0.2), rgba($color-jumbotron-dark2, 0.6));
   }
-  
-  $color-primary: #f9ed69; //This is a variable in sass
-  $color-secondary: #f08a5d; //Orange
-  $color-tertiary: #b83b5e; //Pink 
-  $color-text-dark: #333;
-  $color-text-light: #eee;
-  $width-button: 150px;
-  @mixin clearfix{
-     &::after {
-    content: "";
-    clear: both;
-    display: table;
-    }
+
+#diet {
+  background: linear-gradient(to bottom right, rgba($color-jumbotron-light3, 0.2), rgba($color-jumbotron-dark3, 0.6));
   }
-  
-  @mixin style-link-text($col){
-     text-decoration: none;
-    text-transform: uppercase;
-    color: $col;
+
+#cuisine {
+  background: linear-gradient(to bottom right, rgba($color-jumbotron-light4, 0.2), rgba($color-jumbotron-dark4, 0.6));
   }
+/* Top Navbar */
+
+#logo {
+  width: 250px;
+  height: 90px;
+  font-family: $base-font;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 50px;
+  text-decoration: none;
+  text-align: left;
+}
+
+nav a {
+  @include style-link-text
+}
+
+/* Image */
+
+.wrapper {
+  height: 90vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+.section {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 0 5px #000;
+  font-size:10vw;
+}
+
+#getStarted {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+}
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
+
+.static {
+  background: rgba(red, 0.7);
+}
+
+.bg1::after {
+  opacity: 0.5;
+  background-image: url("../images/casserole-dish-2776735_1920.jpg");
+}
+
+.bg2::after {
+  opacity: 0.5;
+  background-image: url("../images/ryan-concepcion-1398520-unsplash.jpg");
+}
+
+/* Search Button */
+
+#search {
+  background-color: $color-button;
+  color: #ffffff;
   
-  @function divide($a, $b) {
-    @return $a / $b;
-  }
+}
+
+/* About Page */
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+.letter-e {
+  font-size: 50px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.subtitle {
+  text-align: center;
+  padding: 25px;
+}
+
+.container {
+  text-align: left;
+  padding: 18px;
+  margin: 12px;
+  color: #383e42;
+  font-family: $base-font;
+}
+//Footer
+footer {
+  background-color: #ebebeb;
+  color: #3d3838;
+  padding: 30px 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Media Query */
+
+// @media only screen and (max-width: 640px) {
+//   #masthead {
+//     position: static;
+//   }
+
+//   #logo {
+//     width: 100%;
+//     margin-left: 0px;
+//   }
   
-    
-  nav {
-    margin: divide(60, 2) * 1px; //=30 px How to theoretically use functions
-    background-color: $color-primary;
-    @include clearfix;
-  }
+//   nav a {
+//     margin-right: 70px;
+//   }
+
+//   .parallax {
+//     background-attachment: scroll;
+//   }
+
+// }
+
+// @media only screen and (max-width: 768px) {
+//   #logo {
+//     margin-left: 0px;
+//   }
+
+//   nav {
+//    margin-right: 50px;
+//   }
+
+//   .parallax {
+//     background-attachment: scroll;
+//   }
+// }
+
+// @media only screen and (max-width: 980px) {  
+//   #logo {
+//     margin-left: 0px;
+//   }
   
-  .navigation {
-    list-style: none;
-    float: left; //color goes away because floating so have zero height
-    li { //nested navigation
-      display: inline-block;
-      margin-left: 30px;
-      
-        &:first-child { //pseudoclass to target the different elements in the li //& = .navigation li:first-child Writes out selector at certain point
-      margin: 0;
-      }
-      
-      a:link {
-        @include style-link-text($color-text-dark);
-      }
-      
-    } 
-  }
-  
-  .buttons {
-    float: right;
-  }
-  %btn-placeholder {
-    padding: 10px;
-    display: inline-block;
-    text-align: center;
-    border-radius:100px;
-    width: $width-button;
-    @include style-link-text($color-text-light);
-  }
-  
-  .btn-main{
-    &:link {
-      @extend %btn-placeholder;
-      background-color: $color-secondary;  
-    }
-    
-    &:hover {
-      background-color: darken($color-secondary, 15%);
-    }
-  }
-  
-  .btn-hot{
-    &:link {
-       @extend %btn-placeholder;
-      background-color: $color-tertiary;  
-    }
-    
-    &:hover {
-      background-color: darken($color-tertiary, 15%);
-    }
-  }
-  
-  
+//   nav {
+//     margin-right: 30px;
+//   }
+
+//   .parallax {
+//     background-attachment: scroll;
+//   }
+// }
