@@ -2,16 +2,20 @@ var foodSearch = (function() {
     
     var searchParams, recipeInfoArray;
     // This would be in the UI controller in reality
-    function getValues() {
-        return {
-            city: 'Toronto',
-            cuisine: 'Chinese',
-            diet: 'vegetarian',
-            mealType: 'lunch',
-            intolerances: ["seafood", "egg"]
-        }
+
+    function setUpEventListeners() {
+        
+        var DOM = UIController.getDOMStrings();
+
+        $(DOM.searchBtn).on("click", performFoodSearch);
+
+        $(DOM.startBtn).on("click", UIController.displaySearchPage);
+
+        $(DOM.infoBtn).on("click", UIController.showModal);
+
+        $(DOM.closeDisclaimer).on("click", UIController.hideModal);
     }
-    
+
     function processRestaurantList(restaurantArray) {
         UIController.createRestaurantCards(restaurantArray);
     }
@@ -22,8 +26,8 @@ var foodSearch = (function() {
 
     function processRecipeInfo(recipeInfo) {
         recipeInfoArray.push(recipeInfo);
-        console.log(recipeInfoArray);
         if (recipeInfoArray.length === APIController.numOfResults) {
+            console.log(recipeInfoArray);
             UIController.createRecipeCards(recipeInfoArray);
         }
     }
@@ -34,14 +38,19 @@ var foodSearch = (function() {
         }
     }
 
+    function performFoodSearch() {
+        searchParams = UIController.getUserInput();
+        UIController.displaySearchResults();
+        recipeInfoArray = [];
+        APIController.zomatoGetCityNumber(performZomatoSearch, searchParams.city);
+        APIController.spoonacularGetRecipeIDs(getRecipeInfo, searchParams.cuisine, searchParams.intolerances, searchParams.mealType, searchParams.diet);
+    };
+
     return {
         init: function() {
             alert('All JS files have been loaded. Main process will execute now');
-            recipeInfoArray = [];
-            searchParams = getValues();
-            UIController.createResultsDivs();
-            APIController.zomatoGetCityNumber(performZomatoSearch, searchParams.city);
-            APIController.spoonacularGetRecipeIDs(getRecipeInfo, searchParams.cuisine, searchParams.intolerances, searchParams.mealType, searchParams.diet);
+            UIController.displayMainPage();
+            setUpEventListeners();
         }
     }
 })();
