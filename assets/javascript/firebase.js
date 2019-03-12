@@ -122,3 +122,39 @@ firebase.auth().onAuthStateChanged(function(user) {
   console.log(userEmail)
  //Not pushing anything to the database. userEmail and userID undefined
 });
+
+document.querySelector("#search").addEventListener("click", function (event) {
+  event.stopImmediatePropagation();
+
+  //VALIDATION FORM===========================================================
+  if ($("input:radio[name='mealtime']").is(":checked") === false) {
+    $("#alertMeal").addClass("show").css("display", "block");
+    $("#closeModalMeal").on("click", function () {
+      $("#alertMeal").removeClass("show").css("display", "none");
+    });
+  }
+
+  else if ($("input:radio[name='mealtime']").is(":checked") === false) {
+    $("#alertIntolerance").addClass("show").css("display", "block");
+    $("#closeModaln").on("click", function () {
+      $("#alertIntolerance").removeClass("show").css("display", "none");
+      return;
+    });
+  }
+
+  else if ($("input:radio[name='diet']").is(":checked") === false) {
+    $("#alertDiet").addClass("show").css("display", "block");
+    $("#closeModalDiet").on("click", function () {
+      $("#alertdiet").removeClass("show").css("display", "none");
+      return;
+    });
+
+  }
+  else if ($("input:radio[name='diet']").is(":checked") === false) {
+    $("#alertCuisine").addClass("show").css("display", "block");
+    $("#closeModalCuisine").on("click", function () {
+      $("#alertCuisine").removeClass("show").css("display", "none");
+      return;
+    });
+  }
+});

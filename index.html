@@ -98,7 +98,8 @@
                         Lunch</label>
                     <label for="dinner"><input class="ml-3" type="radio" id="dinner" name="mealtime" value="dinner">
                         Dinner</label>
-                    <label for="no_preference"><input class="ml-3" type="radio" id="no_preference" name="mealtime" value="">
+                    <label for="no_preference"><input class="ml-3" type="radio" id="no_preference" name="mealtime"
+                            value="">
                         No Preference</label>
                 </form>
             </div>
@@ -178,7 +179,8 @@
                     Caribbean</label>
                 <label for="chinese"><input class="ml-3" type="radio" id="chinese" name="cuisine" value="Chinese">
                     Chinese</label>
-                <label for="eastern"><input class="ml-3" type="radio" id="eastern" name="cuisine" value="Eastern European">
+                <label for="eastern"><input class="ml-3" type="radio" id="eastern" name="cuisine"
+                        value="Eastern European">
                     Eastern European</label>
                 <label for="french"><input class="ml-3" type="radio" id="french" name="cuisine" value="French">
                     French</label>
@@ -237,25 +239,25 @@
         <!-- Recipes -->
         <div class="container">
             <div class="row">
-                    <div class="col-md-6">
-                        <div class="recipes">
-                            <h2>Eat In</h2>
-                            <div id="recipe_accordion">
+                <div class="col-md-6">
+                    <div class="recipes">
+                        <h2>Eat In</h2>
+                        <div id="recipe_accordion">
 
-                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6 ml-auto">
-                        <div class="restaurants">
-                            <h2>Eat Out</h2>
-                            <div id="restaurant_accordion">
+                </div>
+                <div class="col-md-6 ml-auto">
+                    <div class="restaurants">
+                        <h2>Eat Out</h2>
+                        <div id="restaurant_accordion">
 
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!--/ .Restaurants -->
     <!--/ .Search Results -->
@@ -269,7 +271,79 @@
     </div>
     <!--/ .Logout-->
 
-    <!--Modal - Disclaimer-->
+
+
+    <!--Modals-->
+    <!--Modal - Mealtime-->
+    <div class="modal fade" id="alertMeal" tabindex="-1" role="dialog" aria-labelledby="mealLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="alertLabel">Meal Time</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Please enter a train name.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="closeModalMeal" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal - Intolerance-->
+    <div class="modal fade" id="alertIntolerance" tabindex="-1" role="dialog" aria-labelledby="destinationLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="alertLabel">Destination Error</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Please fill in a destination you would like to disppear to.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="closeModalIn"
+                        data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal - Diet-->
+    <div class="modal fade" id="alertDiet" tabindex="-1" role="dialog" aria-labelledby="dietLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="alertLabel">Military Time Error</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Please select a time, in military time, at which you wish to disappear.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="closeModalDiet"
+                        data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal -Cuisine-->
+    <div class="modal fade" id="alertCuisne" tabindex="-1" role="dialog" aria-labelledby="cuiseinLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="alertLabel">Train Frequency Error</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Please enter the frequency of your train.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="closeModalCuisine" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Disclaimer-->
     <div class="modal fade" id="disclaimer" tabindex="-1" role="dialog" aria-labelledby="disclaimerLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
