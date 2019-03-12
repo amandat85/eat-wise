@@ -59,6 +59,11 @@ nav a {
   top: 3%;
   left: 3%; }
 
+  #getStarted2 {
+    position: absolute;
+    top: 100%;
+    left: 88%; }
+ 
 .parallax::after {
   content: " ";
   position: absolute;

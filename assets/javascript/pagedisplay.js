@@ -4,7 +4,7 @@ $(document).ready(function () {
     $(".results").hide();
     $("#logout").hide();
 
-    $("#getStarted").on("click", function (e) {
+    $(".started").on("click", function (e) {
         $(".wrapper").hide();
         $(".dietaryReq").show();
         $("#logout").show();
@@ -14,5 +14,4 @@ $(document).ready(function () {
         $(".results").show();
         $("#logout").show();
     });
-
 });

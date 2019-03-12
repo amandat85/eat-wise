@@ -1,11 +1,14 @@
 // DATABASE CONTROLLER USING FIREBASE
-var firebaseController = (function() {
-  // All the firebase code will be moved inside of here eventually
-})();
+// var firebaseController = (function() {
+//   // All the firebase code will be moved inside of here eventually
+// })();
 
 // no code will actually be run in this file. that will only happen in the main controller file
 $(document).ready(function () { 
-
+// console.log(process.env.TEST);
+var loggedIn;
+var uEmail;
+var uid;
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyDPHxT4nXafKkjoyGEPlve1lWrELWSBUcI",
@@ -36,6 +39,7 @@ btnLogin.addEventListener("click", function(event) {
    console.log(email);
     var loginPass = passLogin.value;
     console.log(loginPass);
+    console.log(uEmail);
 firebase.auth().signInWithEmailAndPassword(login, loginPass).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -65,19 +69,20 @@ btnSignUp.addEventListener("click", function(event) {
 
 //ADD REALTIME LISTENER TO CHANGED STATE=========================== Recommended
 firebase.auth().onAuthStateChanged(function(user) {
+  
     if (user) {
       // User is signed in.
-      var uEmail = user.email;
-      var uid = user.uid;
-      
+      uEmail = user.email;
+       uid= user.uid;
     } else {
-      // User is signed out.
-      // ...
+      uEmail = "";
+      uid = "";
+      
     }
     console.log(uEmail, uid); //Tested - has user id and email
 
 });
-console.log(uEmail); //Test not defined - scoping issue?? - Do you need a snapshot of the onAuthStateChanged?
+ //Test not defined - scoping issue?? - Do you need a snapshot of the onAuthStateChanged?
 // var user = firebase.auth().currentUser;
 
 // if (user) {
@@ -94,13 +99,15 @@ console.log(uEmail); //Test not defined - scoping issue?? - Do you need a snapsh
 //                    // you have one. Use User.getToken() instead.
 // }
 
-//   function writeUserData(userID, userEmail) {
-//     firebase.database().ref('users/' + uid).set({
-//       userEmail: uEmail,
-//       userID: uid,
-//     });
-//   }
-//   console.log(writeUserData);
-//   console.log(userEmail)
-//  //Not pushing anything to the database. userEmail and userID undefined
+  function writeUserData(favRecipes, favRestaurants) {
+    firebase.database().ref('users/' + uid).set({
+      // userEmail: uEmail,
+      // userID: uid,
+      favRecipes: favRecipes,
+      favRestaurants: favRestaurants,
+    });
+  }
+  console.log(writeUserData);
+  console.log(userEmail)
+ //Not pushing anything to the database. userEmail and userID undefined
 });
