@@ -53,7 +53,7 @@ btnSignUp.addEventListener("click", function(event) {
     var pass = txtPass.value;
     console.log(pass);
     //sign in 
-    firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function(error) {
+   firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -63,21 +63,44 @@ btnSignUp.addEventListener("click", function(event) {
       });
 });
 
-//ADD REALTIME LISTENER TO CHANGED STATE===========================
+//ADD REALTIME LISTENER TO CHANGED STATE=========================== Recommended
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
-      var displayName = user.displayName;
-      var email = user.email;
-      var emailVerified = user.emailVerified;
-      var photoURL = user.photoURL;
-      var isAnonymous = user.isAnonymous;
+      var uEmail = user.email;
       var uid = user.uid;
-      var providerData = user.providerData;
-      // ...
+      
     } else {
       // User is signed out.
       // ...
     }
-  });
+    console.log(uEmail, uid); //Tested - has user id and email
+
+});
+console.log(uEmail); //Test not defined - scoping issue?? - Do you need a snapshot of the onAuthStateChanged?
+// var user = firebase.auth().currentUser;
+
+// if (user) {
+//   // User is signed in.
+// } else {
+//   // No user is signed in.
+// }
+// var user = firebase.auth().currentUser;
+// var email, uid;
+// if (user != null) {
+//   email = user.email;
+//   uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
+//                    // this value to authenticate with your backend server, if
+//                    // you have one. Use User.getToken() instead.
+// }
+
+//   function writeUserData(userID, userEmail) {
+//     firebase.database().ref('users/' + uid).set({
+//       userEmail: uEmail,
+//       userID: uid,
+//     });
+//   }
+//   console.log(writeUserData);
+//   console.log(userEmail)
+//  //Not pushing anything to the database. userEmail and userID undefined
 });

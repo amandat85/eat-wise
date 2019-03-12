@@ -53,6 +53,8 @@ var UIController = (function () {
             }
         }
     }
+
+    
 })();
 /*
 $(document).ready(function() {
