@@ -17,7 +17,6 @@ var generalFunctions = (function() {
                     callback(path, "ok");
                 }
             }
-        
             function handleReadyStateChange() {
                 var state;
         

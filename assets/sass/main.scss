@@ -155,17 +155,16 @@ nav a {
     }
 
 /* Search Button */
-
 #search {
   background-color: $color-button;
   color: $color-button-text;
 }
 
 //Results
-
 .results {
   padding-bottom: 8rem!important;
 }
+
 .card-header{
   background: linear-gradient(to bottom right, rgba($color-jumbotron-dark4, 0.1), rgba($color-jumbotron-light4, 0.4));
 }
@@ -290,7 +289,6 @@ blockquote p {
   iframe {
     width: 100%;
   }
-
 }
 
 @media screen and (min-width: 641px) and (max-width: 768px) {
@@ -334,16 +332,24 @@ blockquote p {
 @media screen and (min-width: 320px) and (max-width: 480px) {
   #getStarted {
     position: absolute;
-    top: 20%;
-    left: 30%;
+    top: 25%;
+    left: 25%;
     @include buttonStyle;
   }
   
   #getStarted2 {
     position: absolute;
-    top: 65%;
-    left: 28%;
+    top: 60%;
+    left: 25%;
     @include buttonStyle;
+  }
+
+  .dietaryReq {
+    padding-bottom: 12rem!important;
+  }
+
+  .results {
+    padding-bottom: 12rem!important;
   }
 
   iframe {

@@ -271,8 +271,8 @@ blockquote p {
 @media screen and (min-width: 320px) and (max-width: 480px) {
   #getStarted {
     position: absolute;
-    top: 20%;
-    left: 30%;
+    top: 25%;
+    left: 25%;
     background-color: #80A602;
     border-color: #4d6401;
     border-width: 2px;
@@ -280,12 +280,16 @@ blockquote p {
     font-size: 16pt; }
   #getStarted2 {
     position: absolute;
-    top: 65%;
-    left: 28%;
+    top: 60%;
+    left: 25%;
     background-color: #80A602;
     border-color: #4d6401;
     border-width: 2px;
     color: #ffffff;
     font-size: 16pt; }
+  .dietaryReq {
+    padding-bottom: 12rem !important; }
+  .results {
+    padding-bottom: 12rem !important; }
   iframe {
     width: 100%; } }
