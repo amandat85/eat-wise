@@ -30,8 +30,11 @@
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
       integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
+    <!--JavaScript-->
+   <script src="./assets/javascript/generalFunctions.js"></script>
+   <script src="./assets/javascript/foodSearch.js"></script>
    <!-- Link to Firebase Database -->
-   <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+   <!-- <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script> -->
 
 </head>
 
@@ -107,12 +110,13 @@
       <!-- Intolerance -->
       <div class="col-sm jumbotron text-center color" id="intolerance">
          <h2>Intolerance</h2>
+         <h5>Please Select All That Apply</h5>
          <div class="form-check form-check-inline">
             <!--Fix Labels-->
             <form>
                <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox1" name="intolerance"
-                  value="diary">
-               Diary
+                  value="dairy">
+               Dairy
                <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox2" name="intolerance" value="egg">
                Egg
                <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox3" name="intolerance"
@@ -128,7 +132,7 @@
                   value="shellfish">
                Shellfish
                <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox7" value="soy"> Soy
-               <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox8" value="sulfate"> Sulfate
+               <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox8" value="sulfite"> Sulfite
                <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox9" value="treenut"> Treenut
                <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox10" value="wheat"> Wheat
             </form>
@@ -339,7 +343,7 @@
                <h5 class="modal-title" id="alertLabel5">City</h5>
             </div>
             <div class="modal-body">
-               <p>Please enter a city.</p>
+               <p>Please enter a valid city.</p>
             </div>
             <div class="modal-footer">
                <button type="button" class="btn btn-secondary closeModal" data-dismiss="modal">Close</button>
@@ -360,7 +364,7 @@
                   your doctor before enrolling in a meal plan established on Eat Wise.</p>
             </div>
             <div class="modal-footer">
-               <button type="button" class="btn btn-secondary closeModal" data-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-secondary" id="closeDisclaimer" data-dismiss="modal">Close</button>
             </div>
          </div>
       </div>
@@ -399,10 +403,7 @@
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
       integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
       crossorigin="anonymous"></script>
-   <!--JavaScript-->
-   <script src="./assets/javascript/generalFunctions.js"></script>
-   <script src="./assets/javascript/foodSearch.js"></script>
-   <script src="assets/javascript/firebase.js"></script>
+   
 </body>
 
 </html>
