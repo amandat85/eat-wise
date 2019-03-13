@@ -52,6 +52,8 @@ var UIController = (function () {
             var inputValidated = false;
             if ($("input:radio[name='mealtime']").is(":checked") === false) {
                 this.showModal("#alertMeal");
+            } else if ($("input:checkbox[name='intolerance']").is(":checked") === false) {
+                this.showModal("#alertIntolerance");
             } else if ($("input:radio[name='diet']").is(":checked") === false) {
                 this.showModal("#alertDiet");
             }else if ($("input:radio[name='cuisine']").is(":checked") === false) {
@@ -61,7 +63,6 @@ var UIController = (function () {
             } else {
                 inputValidated = true;
             }
-
             return inputValidated;
         },
         getUserInput: function() {

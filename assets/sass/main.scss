@@ -18,7 +18,7 @@ $color-button: #80A602;
 @mixin style-link-text {
   text-decoration: none;
   color: #3d3838;
-  font-size: 20pt;
+  font-size: 16pt;
 }
 
 @mixin buttonStyle {
@@ -51,8 +51,7 @@ body  {
 }
 
 nav a {
-  @include style-link-text
-
+  @include style-link-text;
 }
 
 /* Image */
@@ -153,7 +152,8 @@ nav a {
 
 //Results
 .card-header{
-  background-color: $card-header;
+  background-color: linear-gradient(to bottom right, rgba($color-jumbotron-light3, 0.2), rgba($color-jumbotron-dark3, 0.6));
+  ;
 }
 
 .btn-link {

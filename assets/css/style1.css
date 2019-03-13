@@ -21,7 +21,7 @@ body {
 nav a {
   text-decoration: none;
   color: #3d3838;
-  font-size: 20pt; }
+  font-size: 16pt; }
 
 /* Image */
 .wrapper {
@@ -111,7 +111,7 @@ nav a {
   color: #ffffff; }
 
 .card-header {
-  background-color: rgba(142, 0, 2, 0.3) !important; }
+  background-color: linear-gradient(to bottom right, rgba(142, 93, 87, 0.2), rgba(142, 0, 2, 0.6)); }
 
 .btn-link {
   color: #404346 !important; }
