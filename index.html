@@ -4,416 +4,405 @@
 
 <head>
 
-    <meta charset="utf-8">
+   <meta charset="utf-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Title -->
-    <title>Eat Wise | Food Planner and Nutrition App</title>
+   <!-- Title -->
+   <title>Eat Wise | Food Planner and Nutrition App</title>
 
-    <!-- Favicon -->
-    <link rel='icon' href='favicon.ico' type='image/x-icon'>
+   <!-- Favicon -->
+   <link rel='icon' href='favicon.ico' type='image/x-icon'>
 
-    <!-- Link to CSS -->
-    <link rel="stylesheet" href="assets/css/style1.css">
+   <!-- Link to CSS -->
+   <link rel="stylesheet" href="assets/css/style1.css">
 
-    <!-- Link to Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+   <!-- Link to Google Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <!-- Link to Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+   <!-- Link to Font Awesome -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-    <!-- Link to Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+   <!-- Link to Bootstrap -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <!-- Link to Firebase Database -->
-    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+   <!-- Link to Firebase Database -->
+   <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
 
 </head>
 
 <body>
 
-    <!-- Top Navbar -->
-    <header id="masthead">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <span class="navbar-brand my-n2 mx-n3"></span><a href="index.html" id="logo"><img
-                        src="assets/images/eat-wise-logo-1.png" width="270" height="90" alt="Eat Wise"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Navbar Menu -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
+   <!-- Top Navbar -->
+   <header id="masthead">
+      <div class="container">
+         <nav class="navbar navbar-expand-lg navbar-light">
+            <span class="navbar-brand my-n2 mx-n3"></span><a href="index.html" id="logo"><img
+                  src="assets/images/eat-wise-logo-1.png" width="270" height="90" alt="Eat Wise"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar Menu -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="blog.html">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+               </ul>
 
-                </div>
-            </nav>
-        </div>
-    </header>
-    <!--/ .Top Navbar -->
-
-    <!-- Image -->
-    <main class="wrapper">
-        <section class="section parallax bg1">
-            <button type="button" class="btn btn-outline-dark started p-3" id="getStarted">Let's Get Started</button>
-            <h1>Find Recipes and Restaurants: <br><small>Tailored to your dietry requirements</small></hi>
-        </section>
-        <section class="section static">
-            <img src="assets/images/how-does-this-work-poster.png" class="img-fluid" width="900" height="600"
-                alt="Eat Wise">
-        </section>
-        <section class="section parallax bg2">
-            <h1>Your next delicious meal is at your fingertips!<br><small></small></h1>
-            <button type="button" class="btn btn-outline-dark started p-3" id="getStarted2">Let's Get Started</button>
-        </section>
-    </main>
-    <!--/ .Image -->
-
-    <!-- Dietry Requirements -->
-    <div class="container dietaryReq">
-        <div class="row">
-            <!-- Type -->
-            <div class="col-sm jumbotron text-center" id="meals">
-                <h2>Meal Time</h2>
-                <h5>Please Select One</h5>
-                <form>
-                    <label for="breafast"><input type="radio" id="breakfast" name="mealtime" value="breakfast">
-                        Breakfast</label>
-                    <label for="lunch"><input class="ml-3" type="radio" id="lunch" name="mealtime" value="lunch">
-                        Lunch</label>
-                    <label for="dinner"><input class="ml-3" type="radio" id="dinner" name="mealtime" value="dinner">
-                        Dinner</label>
-                    <label for="no_preference"><input class="ml-3" type="radio" id="no_preference" name="mealtime"
-                            value="">
-                        No Preference</label>
-                </form>
             </div>
-        </div>
+         </nav>
+      </div>
+   </header>
+   <!--/ .Top Navbar -->
 
-        <!--/ .Type -->
+   <!-- Image -->
+   <main class="wrapper">
+      <section class="section parallax bg1">
+         <button type="button" class="btn btn-outline-dark started p-3" id="getStarted">Let's Get Started</button>
+         <h1>Find Recipes and Restaurants: <br><small>Tailored to your dietry requirements</small></h1>
+      </section>
+      <section class="section static">
+         <img src="assets/images/how-does-this-work-poster.png" class="img-fluid" width="900" height="600"
+            alt="Eat Wise">
+      </section>
+      <section class="section parallax bg2">
+         <h1>Your next delicious meal is at your fingertips!<br><small></small></h1>
+         <button type="button" class="btn btn-outline-dark started p-3" id="getStarted2">Let's Get Started</button>
+      </section>
+   </main>
+   <!--/ .Image -->
 
-        <!-- Intolerance -->
-        <div class="col-sm jumbotron  text-center color" id="intolerance">
-            <h2>Intolerances</h2>
-            <h5>Please Select All That Apply</h5>
-            <div class="form-check form-check-inline">
-                <!--Fix Labels-->
-                <input class="form-check-input" type="checkbox" name="intolerance" id="inlineCheckbox1" value="dairy">
-                Dairy
-                <input class="form-check-input ml-3" type="checkbox" name="intolerance" id="inlineCheckbox2"
-                    value="egg"> Egg
-                <input class="form-check-input ml-3" type="checkbox" name="intolerance" id="inlineCheckbox3"
-                    value="gluten"> Gluten
-                <input class="form-check-input ml-3" type="checkbox" name="intolerance" id="inlineCheckbox4"
-                    value="peanut"> Peanut
-                <input class="form-check-input ml-3" type="checkbox" name="intolerance" id="inlineCheckbox5"
-                    value="sesame"> Sesame
-                <input class="form-check-input ml-3" type="checkbox" name="intolerance" id="inlineCheckbox6"
-                    value="shellfish"> Shellfish
-                <input class="form-check-input ml-3" type="checkbox" name="intolerance" id="inlineCheckbox7"
-                    value="soy"> Soy
-                <input class="form-check-input ml-3" type="checkbox" name="intolerance" id="inlineCheckbox8"
-                    value="sulfite"> Sulfite
-                <input class="form-check-input ml-3" type="checkbox" name="intolerance" id="inlineCheckbox9"
-                    value="treenut"> Treenut
-                <input class="form-check-input ml-3" type="checkbox" name="intolerance" id="inlineCheckbox10"
-                    value="wheat"> Wheat
-            </div>
+   <!-- Dietry Requirements -->
+   <div class="container dietaryReq">
 
-        </div>
-        <!--/ .Intolerance -->
+      <!-- Type -->
+      <div class="col-sm jumbotron text-center" id="meals">
+         <h2>Meal Time</h2>
+         <h5>Please Select One</h5>
+         <form>
+            <label for="breakfast"><input type="radio" id="breakfast" name="mealtime" value="breakfast">
+               Breakfast</label>
+            <label for="lunch"><input class="ml-3" type="radio" id="lunch" name="mealtime" value="lunch">
+               Lunch</label>
+            <label for="dinner"><input class="ml-3" type="radio" id="dinner" name="mealtime" value="dinner">
+               Dinner</label>
+            <label for="no_preference"><input class="ml-3" type="radio" id="no_preference" name="mealtime" value="">
+               No Preference</label>
+         </form>
+      </div>
+      <!--/ .Type -->
 
-        <!-- Diet -->
-        <div class="col-sm jumbotron text-center" id="diet">
-            <h2>Diet</h2>
-            <h5>Please Select One</h5>
+      <!-- Intolerance -->
+      <div class="col-sm jumbotron text-center color" id="intolerance">
+         <h2>Intolerance</h2>
+         <div class="form-check form-check-inline">
+            <!--Fix Labels-->
             <form>
-                <label for="vegan"><input class="ml-3" type="radio" id="vegan" name="diet" value="vegan">
-                    Vegan</label>
-                <label for="vegetarian"><input class="ml-3" type="radio" id="vegetarian" name="diet" value="vegetarian">
-                    Vegetarian</label>
-                <label for="pescatarian"><input class="ml-3" type="radio" id="pescatarian" name="diet"
-                        value="pescatarian">
-                    Pescatarian</label>
-                <label for="lactovegetarian"><input class="ml-3" type="radio" id="lactovegetarian" name="diet"
-                        value="lacto vegetarian">
-                    Lacto Vegetarian</label>
-                <label for="ovovegetarian"><input class="ml-3" type="radio" id="ovovegetarian" name="diet"
-                        value="ovo vegetarian">
-                    Ovo Vegetarian</label>
-                <label for="none"><input class="ml-3" type="radio" id="none" name="diet" value="">
-                    None</label>
+               <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox1" name="intolerance"
+                  value="diary">
+               Diary
+               <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox2" name="intolerance" value="egg">
+               Egg
+               <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox3" name="intolerance"
+                  value="gluten">
+               Gluten
+               <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox4" name="intolerance"
+                  value="peanut">
+               Peanut
+               <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox5" name="intolerance"
+                  value="sesame">
+               Sesame
+               <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox6" name="intolerance"
+                  value="shellfish">
+               Shellfish
+               <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox7" value="soy"> Soy
+               <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox8" value="sulfate"> Sulfate
+               <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox9" value="treenut"> Treenut
+               <input class="form-check-input ml-3" type="checkbox" id="inlineCheckbox10" value="wheat"> Wheat
             </form>
-        </div>
-        <!--/ .Diet -->
+         </div>
+      </div>
+      <!--/ .Intolerance -->
 
-        <!-- Cuisine -->
-        <div class="col-sm jumbotron text-center" id="cuisine">
-            <h2>Cuisine</h2>
-            <h5>Please Select One</h5>
-            <form>
-                <label for="african"><input class="ml-3" type="radio" id="african" name="cuisine" value="African">
-                    African</label>
-                <label for="american"><input class="ml-3" type="radio" id="american" name="cuisine" value="American">
-                    American</label>
-                <label for="british"><input class="ml-3" type="radio" id="british" name="cuisine" value="British">
-                    British</label>
-                <label for="cajun"><input class="ml-3" type="radio" id="cajun" name="cuisine" value="Cajun">
-                    Cajun</label>
-                <label for="caribbean"><input class="ml-3" type="radio" id="caribbean" name="cuisine" value="Caribbean">
-                    Caribbean</label>
-                <label for="chinese"><input class="ml-3" type="radio" id="chinese" name="cuisine" value="Chinese">
-                    Chinese</label>
-                <label for="eastern"><input class="ml-3" type="radio" id="eastern" name="cuisine"
-                        value="Eastern European">
-                    Eastern European</label>
-                <label for="french"><input class="ml-3" type="radio" id="french" name="cuisine" value="French">
-                    French</label>
-                <label for="german"><input class="ml-3" type="radio" id="german" name="cuisine" value="German">
-                    German</label>
-                <label for="greek"><input class="ml-3" type="radio" id="greek" name="cuisine" value="Greek">
-                    Greek</label>
-                <label for="indian"><input class="ml-3" type="radio" id="indian" name="cuisine" value="Indian">
-                    Indian</label>
-                <label for="irish"><input class="ml-3" type="radio" id="irish" name="cuisine"
-                        value="Irish">Irish</label>
-                <label for="italian"><input class="ml-3" type="radio" id="italian" name="cuisine" value="Italian">
-                    Italian</label>
-                <label for="japanese"><input class="ml-3" type="radio" id="japanese" name="cuisine" value="Japanese">
-                    Japanese</label>
-                <label for="jewish"><input class="ml-3" type="radio" id="jewish" name="cuisine" value="Jewish">
-                    Jewish</label>
-                <label for="korean"><input class="ml-3" type="radio" id="korean" name="cuisine" value="Korean">
-                    Korean</label>
-                <label for="latin"><input class="ml-3" type="radio" id="latin" name="cuisine" value="Latin American">
-                    Latin American</label>
-                <label for="mexican"><input class="ml-3" type="radio" id="mexican" name="cuisine" value="Mexican">
-                    Mexican</label>
-                <label for="middleastern"><input class="ml-3" type="radio" id="middleastern" name="cuisine"
-                        value="Middle Eastern">
-                    Middle Eastern</label>
-                <label for="spanish"><input class="ml-3" type="radio" id="spanish" name="cuisine" value="Spanish">
-                    Spanish</label>
-                <label for="southern"><input class="ml-3" type="radio" id="southern" name="cuisine" value="Southern">
-                    Southern</label>
-                <label for="thai"><input class="ml-3" type="radio" id="thai" name="cuisine" value="Thai">
-                    Thai</label>
-                <label for="vietnamese"><input class="ml-3" type="radio" id="vietnamese" name="cuisine"
-                        value="Vietnamese">
-                    Vietnamese</label>
-            </form>
+      <!-- Diet -->
+      <div class="col-sm jumbotron text-center" id="diet">
+         <h2>Diet</h2>
+         <h5>Please Select One</h5>
+         <form>
+            <label for="vegan"><input class="ml-3" type="radio" id="vegan" name="diet" value="vegan">
+               Vegan</label>
+            <label for="vegetarian"><input class="ml-3" type="radio" id="vegetarian" name="diet" value="vegetarian">
+               Vegetarian</label>
+            <label for="pescatarian"><input class="ml-3" type="radio" id="pescatarian" name="diet" value="pescatarian">
+               Pescatarian</label>
+            <label for="lactovegetarian"><input class="ml-3" type="radio" id="lactovegetarian" name="diet"
+                  value="lacto vegetarian">
+               Lacto Vegetarian</label>
+            <label for="ovovegetarian"><input class="ml-3" type="radio" id="ovovegetarian" name="diet"
+                  value="ovo vegetarian">
+               Ovo Vegetarian</label>
+            <label for="none"><input class="ml-3" type="radio" id="none" name="diet" value="">
+               None</label>
+         </form>
+      </div>
+      <!--/ .Diet -->
 
-        </div>
-        <!--/ .Cuisine -->
-        <!--City-->
-        <div class="form-group text-center cityInput">
-            <label>
-                <h4>Let us know what city you live in so we can show you awesome restaurant choices!</h4>
-            </label>
-            <input type="text" class="form-control mx-auto text-center" name="city" id="city" placeholder="City"
-                value="" style="width: 50%">
-            <!-- Search Button -->
-            <div class="searchBtn text-center mt-4">
-                <button type="button" class="btn" id="search">Search</button>
+      <!-- Cuisine -->
+      <div class="col-sm jumbotron text-center" id="cuisine">
+         <h2>Cuisine</h2>
+         <h5>Please Select One</h5>
+         <form>
+            <label for="african"><input class="ml-3" type="radio" id="african" name="cuisine" value="African">
+               African</label>
+            <label for="american"><input class="ml-3" type="radio" id="american" name="cuisine" value="American">
+               American</label>
+            <label for="british"><input class="ml-3" type="radio" id="british" name="cuisine" value="British">
+               British</label>
+            <label for="cajun"><input class="ml-3" type="radio" id="cajun" name="cuisine" value="Cajun">
+               Cajun</label>
+            <label for="caribbean"><input class="ml-3" type="radio" id="caribbean" name="cuisine" value="Caribbean">
+               Caribbean</label>
+            <label for="chinese"><input class="ml-3" type="radio" id="chinese" name="cuisine" value="Chinese">
+               Chinese</label>
+            <label for="eastern"><input class="ml-3" type="radio" id="eastern" name="cuisine" value="Eastern European">
+               Eastern European</label>
+            <label for="french"><input class="ml-3" type="radio" id="french" name="cuisine" value="French">
+               French</label>
+            <label for="german"><input class="ml-3" type="radio" id="german" name="cuisine" value="German">
+               German</label>
+            <label for="greek"><input class="ml-3" type="radio" id="greek" name="cuisine" value="Greek">
+               Greek</label>
+            <label for="indian"><input class="ml-3" type="radio" id="indian" name="cuisine" value="Indian">
+               Indian</label>
+            <label for="irish"><input class="ml-3" type="radio" id="irish" name="cuisine" value="Irish">Irish</label>
+            <label for="italian"><input class="ml-3" type="radio" id="italian" name="cuisine" value="Italian">
+               Italian</label>
+            <label for="japanese"><input class="ml-3" type="radio" id="japanese" name="cuisine" value="Japanese">
+               Japanese</label>
+            <label for="jewish"><input class="ml-3" type="radio" id="jewish" name="cuisine" value="Jewish">
+               Jewish</label>
+            <label for="korean"><input class="ml-3" type="radio" id="korean" name="cuisine" value="Korean">
+               Korean</label>
+            <label for="latin"><input class="ml-3" type="radio" id="latin" name="cuisine" value="Latin American">
+               Latin American</label>
+            <label for="mexican"><input class="ml-3" type="radio" id="mexican" name="cuisine" value="Mexican">
+               Mexican</label>
+            <label for="middleastern"><input class="ml-3" type="radio" id="middleastern" name="cuisine"
+                  value="Middle Eastern">
+               Middle Eastern</label>
+            <label for="spanish"><input class="ml-3" type="radio" id="spanish" name="cuisine" value="Spanish">
+               Spanish</label>
+            <label for="southern"><input class="ml-3" type="radio" id="southern" name="cuisine" value="Southern">
+               Southern</label>
+            <label for="thai"><input class="ml-3" type="radio" id="thai" name="cuisine" value="Thai">
+               Thai</label>
+            <label for="vietnamese"><input class="ml-3" type="radio" id="vietnamese" name="cuisine" value="Vietnamese">
+               Vietnamese</label>
+         </form>
+
+      </div>
+      <!--/ .Cuisine -->
+      <!--City-->
+      <div class="form-group text-center cityInput">
+            <h4>Let us know what city you live in so we can show you awesome restaurant choices!</h4>
+         <input type="text" class="form-control mx-auto text-center" name="city" id="city" placeholder="City" value=""
+            style="width: 50%">
+         <!-- Search Button -->
+         <div class="searchBtn text-center mt-4">
+            <button type="button" class="btn" id="search">Search</button>
+         </div>
+         <!--/ .Search Button -->
+      </div>
+   </div>
+   <!--/ .Dietry Requirements -->
+
+   <!-- Search Results -->
+   <div class="results">
+      <!-- Recipes -->
+      <div class="container">
+         <div class="row">
+            <div class="col-md-6">
+               <div class="recipes">
+                  <h2>Eat In</h2>
+                  <div id="recipe_accordion">
+
+                  </div>
+               </div>
             </div>
-            <!--/ .Search Button -->
-        </div>
-    </div>
-    <!--/ .Dietry Requirements -->
-
-    <!-- Search Results -->
-    <div class="results">
-        <!-- Recipes -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="recipes">
-                        <h2>Eat In</h2>
-                        <div id="recipe_accordion">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 ml-auto">
-                    <div class="restaurants">
-                        <h2>Eat Out</h2>
-                        <div id="restaurant_accordion">
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-6 ml-auto">
+               <div class="restaurants">
+                  <h2>Eat Out</h2>
+                  <div id="restaurant_accordion">
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
-    </div>
-    <!--/ .Restaurants -->
-    <!--/ .Search Results -->
-    <!--Make Another Search-->
-    <div class="container" id="searchAgain">
-        <div class="row">
-            <div class="col-md-3 offset-md-9 mb-3">
-                <button type="button" class="btn btn-primary">Make Another Search</button>
-            </div>
-        </div>
-    </div>
-    <!--/ .Make Another Search-->
+         </div>
+      </div>
+   </div>
 
+   <!--/ .Restaurants -->
+   <!--/ .Search Results -->
+   <!--Make Another Search-->
+   <div class="container" id="searchAgain">
+      <div class="row">
+         <div class="col-md-3 offset-md-9 mb-3">
+            <button type="button" class="btn btn-primary">Make Another Search</button>
+         </div>
+      </div>
+   </div>
+   <!--/ .Make Another Search-->
 
+   <!--Modals-->
+   <!--Mealtime-->
+   <div class="modal fade" id="alertMeal" tabindex="-1" role="dialog" aria-labelledby="mealLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="alertLabel1">Meal Time</h5>
+            </div>
+            <div class="modal-body">
+               <p>Please select a meal time.</p>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary closeModal" data-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--Intolerance-->
+   <div class="modal fade" id="alertIntolerance" tabindex="-1" role="dialog" aria-labelledby="destinationLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="alertLabel2">Intolerance</h5>
+            </div>
+            <div class="modal-body">
+               <p>Please select an intolerance</p>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary closeModal" data-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--Diet-->
+   <div class="modal fade" id="alertDiet" tabindex="-1" role="dialog" aria-labelledby="dietLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="alertLabel3">Diet</h5>
+            </div>
+            <div class="modal-body">
+               <p>Please select a dietary requirement.</p>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary closeModal" data-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--Cuisine-->
+   <div class="modal fade" id="alertCuisine" tabindex="-1" role="dialog" aria-labelledby="cuisineLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="alertLabel4">Cuisine</h5>
+            </div>
+            <div class="modal-body">
+               <p>Please select a cuisine type.</p>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary closeModal" data-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--City-->
+   <div class="modal fade" id="alertCity" tabindex="-1" role="dialog" aria-labelledby="cityLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="alertLabel5">City</h5>
+            </div>
+            <div class="modal-body">
+               <p>Please enter a city.</p>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary closeModal" data-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--Disclaimer-->
+   <div class="modal fade" id="disclaimer" tabindex="-1" role="dialog" aria-labelledby="disclaimerLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="alertLabel">Disclaimer</h5>
+            </div>
+            <div class="modal-body">
+               <p class="card-text text-center mt-5">Your health and wellbeing is our main priority. Please consult
+                  your doctor before enrolling in a meal plan established on Eat Wise.</p>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary closeModal" data-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
 
-    <!--Modals-->
-    <!--Mealtime-->
-    <div class="modal fade" id="alertMeal" tabindex="-1" role="dialog" aria-labelledby="mealLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="alertLabel">Meal Time</h5>
-                </div>
-                <div class="modal-body">
-                    <p>Please select a meal time.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary closeModal" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Intolerance-->
-    <div class="modal fade" id="alertIntolerance" tabindex="-1" role="dialog" aria-labelledby="destinationLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="alertLabel">Intolerance</h5>
-                </div>
-                <div class="modal-body">
-                    <p>Please select an intolerance</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary closeModal" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Diet-->
-    <div class="modal fade" id="alertDiet" tabindex="-1" role="dialog" aria-labelledby="dietLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="alertLabel">Diet</h5>
-                </div>
-                <div class="modal-body">
-                    <p>Please select a dietary requirement.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary closeModal" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Cuisine-->
-    <div class="modal fade" id="alertCuisine" tabindex="-1" role="dialog" aria-labelledby="cuisineLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="alertLabel">Cuisine</h5>
-                </div>
-                <div class="modal-body">
-                    <p>Please select a cuisine type.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary closeModal" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--City-->
-    <div class="modal fade" id="alertCity" tabindex="-1" role="dialog" aria-labelledby="cityLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="alertLabel">City</h5>
-                </div>
-                <div class="modal-body">
-                    <p>Please enter a city.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary closeModal" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Disclaimer-->
-    <div class="modal fade" id="disclaimer" tabindex="-1" role="dialog" aria-labelledby="disclaimerLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="alertLabel">Disclaimer</h5>
-                </div>
-                <div class="modal-body">
-                    <p class="card-text text-center mt-5">Your health and wellbeing is our main priority. Please consult
-                        your doctor before enrolling in a meal plan established on Eat Wise.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary closeModal" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-
-    <footer class="page-footer flex-d">
-        <!--Icons-->
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-1 mt-md-0 ml-5 pl-3 mt-3 offset-md-5">
-                    <i class="fas fa-info-circle fa-3x" id="info" style="color:#404346"></i></a>
-                </div>
-
-                <div class="col-md-2 mb-md-0 mb-3 ml-auto">
-                    <a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-square fa-2x"
-                            style="color: #3b5998"></i></a>
-                    <a href="#" class="icoInstagram" title="Instagram"><i class="fab fa-instagram fa-2x social"
-                            style="color:#517fa4"></i></a>
-                    <a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter-square fa-2x social"
-                            style="color:#55acee"></i></a>
-                </div>
+   <!-- Footer -->
+   <footer class="page-footer flex-d">
+      <!--Icons-->
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-md-1 mt-md-0 ml-5 pl-3 mt-3 offset-md-5">
+               <i class="fas fa-info-circle fa-3x" id="info" style="color:#404346"></i>
             </div>
 
-            <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">Copyright &copy; 2019 - Pineapple on Pizza</div>
-    </footer>
+            <div class="col-md-2 mb-md-0 mb-3 ml-auto">
+               <a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-square fa-2x"
+                     style="color: #3b5998"></i></a>
+               <a href="#" class="icoInstagram" title="Instagram"><i class="fab fa-instagram fa-2x social"
+                     style="color:#517fa4"></i></a>
+               <a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter-square fa-2x social"
+                     style="color:#55acee"></i></a>
+            </div>
+         </div>
+         <!-- Copyright -->
+         <div class="footer-copyright text-center py-3">Copyright &copy; 2019 - Pineapple on Pizza</div>
+      </div>   
+   </footer>
 
-    <!--Script-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
-    <script src="./assets/javascript/generalFunctions.js"></script>
-    <script src="./assets/javascript/foodSearch.js"></script>
-    <!-- <script src="assets/javascript/firebase.js"></script> -->
+   <!--Script - Bootstrap-->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"></script>
+   <!--JavaScript-->
+   <script src="./assets/javascript/generalFunctions.js"></script>
+   <script src="./assets/javascript/foodSearch.js"></script>
+   <script src="assets/javascript/firebase.js"></script>
 </body>
 
 </html>
