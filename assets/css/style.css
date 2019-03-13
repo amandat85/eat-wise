@@ -268,7 +268,7 @@ blockquote p {
   iframe {
     width: 100%; } }
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 321px) and (max-width: 480px) {
   #getStarted {
     position: absolute;
     top: 25%;
@@ -292,7 +292,37 @@ blockquote p {
   .results {
     padding-bottom: 12rem !important; }
   .blog {
-    margin-bottom: 20rem !important; }
+    margin-bottom: 15rem !important; }
+  #blogImage {
+    width: 100%; }
+  iframe {
+    width: 100%; } }
+
+@media screen and (max-width: 320px) {
+  #getStarted {
+    position: absolute;
+    top: 18%;
+    left: 23%;
+    background-color: #80A602;
+    border-color: #4d6401;
+    border-width: 2px;
+    color: #ffffff;
+    font-size: 16pt; }
+  #getStarted2 {
+    position: absolute;
+    top: 65%;
+    left: 25%;
+    background-color: #80A602;
+    border-color: #4d6401;
+    border-width: 2px;
+    color: #ffffff;
+    font-size: 16pt; }
+  .dietaryReq {
+    padding-bottom: 15rem !important; }
+  .results {
+    padding-bottom: 15rem !important; }
+  .blog {
+    margin-bottom: 25rem !important; }
   #blogImage {
     width: 100%; }
   iframe {
