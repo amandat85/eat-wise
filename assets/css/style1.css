@@ -33,7 +33,6 @@ body {
 
 nav a {
   text-decoration: none;
-  text-transform: uppercase;
   color: #3d3838; }
 
 /* Image */
@@ -56,14 +55,24 @@ nav a {
 
 #getStarted {
   position: absolute;
-  top: 3%;
-  left: 3%; }
+  top: 30%;
+  left: 45%;
+  background-color: #80A602;
+  border-color: #4d6401;
+  border-width: 2px;
+  color: #ffffff;
+  font-size: 16pt; }
 
-  #getStarted2 {
-    position: absolute;
-    top: 100%;
-    left: 88%; }
- 
+#getStarted2 {
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  background-color: #80A602;
+  border-color: #4d6401;
+  border-width: 2px;
+  color: #ffffff;
+  font-size: 16pt; }
+
 .parallax::after {
   content: " ";
   position: absolute;
@@ -76,7 +85,7 @@ nav a {
   z-index: -1; }
 
 .static {
-  background: rgba(255, 0, 0, 0.7); }
+  background: rgba(255, 0, 0, 0.9); }
 
 .bg1::after {
   opacity: 0.5;

@@ -45,30 +45,35 @@
 
     <!-- Top Navbar -->
     <header id="masthead">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <span class="navbar-brand my-n2 mx-n3"></span><a href="index.html" id="logo"><img
-                    src="assets/images/eat-wise-logo-1.png" width="270" height="90" alt="Eat Wise"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Navbar Menu -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <span class="navbar-brand my-n2 mx-n3"></span><a href="index.html" id="logo"><img
+                        src="assets/images/eat-wise-logo-1.png" width="270" height="90" alt="Eat Wise"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar Menu -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
     </header>
     <!--/ .Top Navbar -->
+
 
     <div class="container">
         <form>
@@ -81,8 +86,8 @@
                         width="500" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
                 <div class="col-md-6">
-                    <h5>Email: <small>info-ca@eatwise.com</small></h5>
-                    <h5>Phone: <small>+1 (787) 437-9863</small></h5>
+                    <h5>Email: <small>eatwise@gmail.com</small></h5>
+                    <h5>Phone: <small>+1 (555) 555-5555</small></h5>
                     <h5>Address: <small>55 Saint George St, Toronto, ON, M5S 0C9</small></h5>
                 </div>
             </div>
@@ -93,10 +98,10 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">First Name</label>
-                    <input type="text" class="form-control" id="inputName" placeholder="Jane">
+                    <input type="text" class="form-control" id="inputFirst" placeholder="Jane">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="inputEmail4">Surname</label>
+                    <label for="inputLast">Last Name</label>
                     <input type="text" class="form-control" id="inputName" placeholder="Doe">
                 </div>
                 <div class="form-group col-md-6">
@@ -108,26 +113,26 @@
                     <input type="number" class="form-control" id="inputNumber" placeholder="000-000-0000">
                 </div>
                 <div class="form-group col-md-6">
-                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">How did you find us?</label>
-                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref1">How did you find us?</label>
+                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref2">
                         <option selected>Choose</option>
-                        <option value="1">Google Search</option>
-                        <option value="2">Advertisement</option>
-                        <option value="3">Word of mouth</option>
+                        <option value="Google Search">Google Search</option>
+                        <option value="Advertisement">Advertisement</option>
+                        <option value="Word Mouth">Word of mouth</option>
                     </select>
                 </div>
                 <div class="form-group col-md-6">
                     <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Would you recommend our app?</label>
                     <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
                         <option selected>Choose</option>
-                        <option value="1">Yes</option>
-                        <option value="2">No</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
                     </select>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="exampleFormControlTextarea1">Additional comments</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                        placeholder="I just wanted to say.."></textarea>
+                    <input type="text" class="form-control" id="comments" rows="3"
+                        placeholder="I just wanted to say.."></input>
                 </div>
             </div>
             <!--/. Contact Form -->
@@ -147,7 +152,7 @@
             <div class="row">
                 <div class="col-md-1 mt-md-0 ml-5 pl-3 mt-3 offset-md-2">
                     <a href="#" class="icoIcon" title="Icon"><i class="fas fa-info-circle fa-3x"
-                            style="color:#c43f3f"></i></a>
+                            style="color:#404346"></i></a>
                 </div>
 
                 <div class="col-md-2 mb-md-0 mb-3 ml-auto">

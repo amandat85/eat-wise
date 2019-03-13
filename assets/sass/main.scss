@@ -16,13 +16,21 @@ $color-jumbotron-light3: #8E5D57;
 $color-jumbotron-dark4: #661D8E;
 $color-jumbotron-light4: #79518E;
 $card-header: rgba(#FFB979, .2)!important;
+$color-button-text: #ffffff;
 
 $color-button: #80A602;
 
 @mixin style-link-text {
   text-decoration: none;
-  text-transform: uppercase;
   color: #3d3838;
+}
+
+@mixin buttonStyle {
+  background-color: $color-button;
+  border-color: darken($color-button, 13%);
+  border-width: 2px;
+  color: $color-button-text;
+  font-size: 16pt;
 }
 
 $base-font: 'Roboto', sans-serif;
@@ -88,9 +96,18 @@ nav a {
 
 #getStarted {
   position: absolute;
-  top: 3%;
-  left: 3%;
+  top: 30%;
+  left: 45%;
+  @include buttonStyle;
 }
+
+#getStarted2 {
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  @include buttonStyle;
+}
+
 .parallax::after {
   content: " ";
   position: absolute;
@@ -104,7 +121,7 @@ nav a {
 }
 
 .static {
-  background: rgba(red, 0.7);
+  background: rgba(red, 0.9);
 }
 
 .bg1::after {

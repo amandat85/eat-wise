@@ -18,7 +18,7 @@ var UIController = (function () {
         mainForm: '.dietaryReq',
         searchResults: '.results',
         logoutBtn: '#logout',
-        startBtn: '#getStarted',
+        startBtn: '.started',
         infoBtn: '#info',
         disclaimer: '#disclaimer',
         closeModal: '.closeModal',
