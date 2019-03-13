@@ -7,12 +7,6 @@ var UIController = (function () {
         recipeList: '#recipe_accordion',
         ingredientList: '#ingredient_list',
         listItemClass: 'list-group-item',
-        btnSignUp: '#signUp',
-        txtLogin: '#username',
-        btnLogin: '#btnLogin',
-        txtEmail: '#email',
-        txtPasswrd: '#password',
-        passLogin: '#loginPassword',
         searchBtn: '#search',
         welcomeDiv: '.wrapper',
         mainForm: '.dietaryReq',
@@ -66,9 +60,10 @@ var UIController = (function () {
         getUserInput: function() {
             var mealtime = $('input[name="mealtime"]:checked').val();
             var intolerances = [];
-            $('input[name="intolerance"]:checked').each(function () {
+            $('input[name="intolerance"]:checked').each(function() {
                 intolerances.push($(this).val());
             });
+            console.log(intolerances);
             if (!intolerances) {
                 intolerances = "";
             }
@@ -83,6 +78,14 @@ var UIController = (function () {
                 mealType: mealtime,
                 intolerances: intolerances
             };
+        },
+        displayNoZomatoResults: function() {
+            var html = '<h3>Sorry, we could not find any restaurants that matched your search parameters.</h3>';
+            $(DOMStrings.restaurantList).append(html);
+        },
+        displayNoSpoonacularResults: function() {
+            var html = '<h3>Sorry, we could not find any recipes that matched your search parameters.</h3>';
+            $(DOMStrings.recipeList).append(html);
         },
         createRestaurantCards: function(restArr) {
             for (var i = 0; i < restArr.length; i++) {
