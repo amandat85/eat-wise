@@ -294,15 +294,15 @@ blockquote p {
 @media screen and (min-width: 641px) and (max-width: 768px) {
   #getStarted {
     position: absolute;
-    top: 25%;
-    left: 33%;
+    top: 30%;
+    left: 40%;
     @include buttonStyle;
   }
   
   #getStarted2 {
     position: absolute;
-    top: 65%;
-    left: 28%;
+    top: 60%;
+    left: 37%;
     @include buttonStyle;
   }
   iframe {
@@ -350,6 +350,14 @@ blockquote p {
 
   .results {
     padding-bottom: 12rem!important;
+  }
+
+  .blog {
+    margin-bottom: 20rem!important;
+  }
+
+  #blogImage{
+    width: 100%;
   }
 
   iframe {
