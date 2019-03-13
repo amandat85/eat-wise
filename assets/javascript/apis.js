@@ -97,7 +97,6 @@ var APIController = (function() {
     ];
 
     var numOfResults = 5;
-    var numOfRecipes
 
     return {
         zomatoGetCityNumber: function(callback, city) {
@@ -110,7 +109,13 @@ var APIController = (function() {
                     'user-key':'df75e3e330c13e41814d56e42a276a03'
                 },
                 success: function(response) {
-                    cityID = response.location_suggestions[0].entity_id;
+                    console.log(response);
+                    if (response.location_suggestions.length > 0) {
+                        cityID = response.location_suggestions[0].entity_id;
+                    } else {
+                        cityID = false;
+                    }
+                    
                     callback(cityID);
                 }
             });
@@ -122,7 +127,6 @@ var APIController = (function() {
                 case 'pescatarian':
                     diet = 'fish';
                     break;
-                
                 case 'lacto vegetarian':
                     diet = 'vegetarian';
                     break;
@@ -141,7 +145,6 @@ var APIController = (function() {
             var queryURL = 'https://developers.zomato.com/api/v2.1/search?entity_id=' 
                             + cityID + '&entity_type=city&q=' + diet + '%20' + mealType 
                             + '&count=' + numOfResults + '&cuisines=' + cuisineNum;
-            console.log(queryURL);
             $.ajax({
                 url: queryURL,
                 method: 'GET',
@@ -162,7 +165,6 @@ var APIController = (function() {
                         };
                         restoArr.push(restoInfo);
                     }
-                    console.log(restoArr);
                     callback(restoArr);
                 }
             });
@@ -195,7 +197,6 @@ var APIController = (function() {
                         recipeIDsArray.push(response.results[i].id);
                         
                     }
-                    console.log(recipeIDsArray);
                     callback(recipeIDsArray);
                 }
             });
@@ -229,7 +230,6 @@ var APIController = (function() {
                         ingredients.push(ingredient.original);
                     }
                     recipeInfo.ingredients = ingredients;
-                    console.log(recipeInfo);
                     callback(recipeInfo);
                 }
             });

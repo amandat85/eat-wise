@@ -39,14 +39,14 @@ var UIController = (function () {
             $(DOMStrings.welcomeDiv).hide();
             $(DOMStrings.searchResults).hide();
             $(DOMStrings.searchAgainBtn).hide();
-            $(DOMStrings.restaurantList).empty();
-            $(DOMStrings.recipeList).empty();
             $(DOMStrings.mainForm).show();
         },
         displaySearchResults: function() {
             $(DOMStrings.mainForm).hide();
             $(DOMStrings.searchResults).show();
             $(DOMStrings.searchAgainBtn).show();
+            $(DOMStrings.restaurantList).empty();
+            $(DOMStrings.recipeList).empty();
         },
         checkUserInput: function() {
             var inputValidated = false;
