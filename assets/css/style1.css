@@ -134,6 +134,18 @@ blockquote p {
   color: #383e42;
   font-family: "Roboto", sans-serif; }
 
+#choices {
+  background-image: linear-gradient(120deg, #80A602 20%, #80A602 50%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in; }
+  #choices:hover {
+    background-size: 100% 88%; }
+
+.card-header {
+  background-color: #80A602 !important; }
+
 footer {
   background-color: #ebebeb;
   color: #3d3838;

@@ -182,6 +182,23 @@ blockquote p {
   color: #383e42;
   font-family: $base-font;
 }
+
+#choices {
+  background-image: linear-gradient(120deg, $color-jumbotron-dark2 20%, $color-button 50%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  &:hover {
+    background-size: 100% 88%;
+  }
+}
+
+//Results
+.card-header{
+  background-color: $color-button!important;
+}
+
 //Footer
 footer {
   background-color: #ebebeb;
