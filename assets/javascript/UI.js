@@ -21,6 +21,7 @@ var UIController = (function () {
         startBtn: '.started',
         infoBtn: '#info',
         disclaimer: '#disclaimer',
+        closeDisclaimer: '#closeDisclaimer',
         closeModal: '.closeModal',
         searchAgainBtn: '#searchAgain'
     }
@@ -41,7 +42,6 @@ var UIController = (function () {
             $(DOMStrings.restaurantList).empty();
             $(DOMStrings.recipeList).empty();
             $(DOMStrings.mainForm).show();
-            
         },
         displaySearchResults: function() {
             $(DOMStrings.mainForm).hide();

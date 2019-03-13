@@ -124,10 +124,10 @@ var APIController = (function() {
                     break;
                 
                 case 'lacto vegetarian':
-                    diet = 'vegan';
+                    diet = 'vegetarian';
                     break;
                 case 'ovo vegetarian':
-                    diet = 'vegan';
+                    diet = 'vegetarian';
                     break;
                 default:
                     break;

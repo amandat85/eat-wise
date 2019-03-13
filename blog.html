@@ -30,11 +30,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-  <!-- Link to Firebase Database -->
-  <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
-
-  <!-- Link to jQuery Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--JavaScript-->
+  <script src="./assets/javascript/generalFunctions.js"></script>
+  <script src="./assets/javascript/basic.js"></script>
 
 </head>
 
@@ -78,13 +76,32 @@
   </div>
   <!--/. Blog Content -->
 
+  <!--Disclaimer-->
+  <div class="modal fade" id="disclaimer" tabindex="-1" role="dialog" aria-labelledby="disclaimerLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="alertLabel">Disclaimer</h5>
+        </div>
+        <div class="modal-body">
+          <p class="card-text text-center mt-5">Your health and wellbeing is our main priority. Please consult
+              your doctor before enrolling in a meal plan established on Eat Wise.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="closeDisclaimer" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer class="page-footer flex-d">
     <!--Icons-->
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-1 mt-md-0 ml-5 pl-3 mt-3 offset-md-2">
-          <a href="#" class="icoIcon" title="Icon"><i class="fas fa-info-circle fa-3x" style="color:#404346"></i></a>
+        <div class="col-md-1 mt-md-0 ml-5 pl-3 mt-3 offset-md-5">
+          <i class="fas fa-info-circle fa-3x" id="info" style="color:#404346"></i>
         </div>
 
         <div class="col-md-2 mb-md-0 mb-3 ml-auto">
@@ -111,10 +128,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
-  <!--JavaScript-->
-  <script src="./assets/javascript/generalFunctions.js"></script>
-  <script src="./assets/javascript/foodSearch.js"></script>
-  <script src="assets/javascript/firebase.js"></script>
 </body>
 
 </html>
