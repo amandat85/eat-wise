@@ -1,3 +1,4 @@
+// MAIN APP CONTROLLER
 var foodSearch = (function() {
     
     var searchParams, recipeInfoArray, numOfRecipes;

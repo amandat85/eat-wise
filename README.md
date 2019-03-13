@@ -34,8 +34,11 @@ Food and Nutrition Application. Project One for Full Stack Web Development Bootc
 
 ## Future Developments
 * Authentication Integration
+* Storage and Retrieval of User Data
 * Google Maps Integration
+* Geolocation Service Integration
 * Meal Planner Integration
+* Blog Page 
 
 ## License
 * MIT

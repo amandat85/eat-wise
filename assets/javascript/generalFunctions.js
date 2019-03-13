@@ -1,3 +1,4 @@
+// STORES GENERAL APP FUNCTIONS
 var generalFunctions = (function() {
     return {
         loadScript: function(path, callback) {

@@ -109,7 +109,6 @@ var APIController = (function() {
                     'user-key':'df75e3e330c13e41814d56e42a276a03'
                 },
                 success: function(response) {
-                    console.log(response);
                     if (response.location_suggestions.length > 0) {
                         cityID = response.location_suggestions[0].entity_id;
                     } else {
@@ -222,7 +221,7 @@ var APIController = (function() {
                         fat: response.nutrition.nutrients[1].amount + ' g'
                     }
                     if (recipeInfo.instructions) {
-                        recipeInfo.instructions = recipeInfo.instructions.replace(/\s+/g,' ').trim()
+                        recipeInfo.instructions = recipeInfo.instructions.replace(/\s+/g,'  ').trim()
                     }
                     var ingredients = [];
                     for (let i = 0; i < response.extendedIngredients.length; i++) {
