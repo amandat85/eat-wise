@@ -1,3 +1,4 @@
+// MAIN APP CONTROLLER
 var foodSearch = (function() {
     
     var searchParams, recipeInfoArray, numOfRecipes;
@@ -20,7 +21,11 @@ var foodSearch = (function() {
     }
 
     function processRestaurantList(restaurantArray) {
-        UIController.createRestaurantCards(restaurantArray);
+        if (restaurantArray.length > 0) {
+            UIController.createRestaurantCards(restaurantArray);
+        } else {
+            UIController.displayNoZomatoResults();
+        }
     }
     
     function performZomatoSearch(cityid) {
@@ -35,10 +40,15 @@ var foodSearch = (function() {
     }
 
     function getRecipeInfo(arr) {
-		numOfRecipes = arr.length;
-        for (var i = 0; i < arr.length; i++) {
-            APIController.spoonacularGetRecipeInfo(processRecipeInfo, arr[i]);
+        if (arr.length > 0) {
+            numOfRecipes = arr.length;
+            for (var i = 0; i < arr.length; i++) {
+                APIController.spoonacularGetRecipeInfo(processRecipeInfo, arr[i]);
+            }
+        } else {
+            UIController.displayNoSpoonacularResults();
         }
+		
     }
 
     function performFoodSearch(cityid) {

@@ -7,12 +7,6 @@ var UIController = (function () {
         recipeList: '#recipe_accordion',
         ingredientList: '#ingredient_list',
         listItemClass: 'list-group-item',
-        btnSignUp: '#signUp',
-        txtLogin: '#username',
-        btnLogin: '#btnLogin',
-        txtEmail: '#email',
-        txtPasswrd: '#password',
-        passLogin: '#loginPassword',
         searchBtn: '#search',
         welcomeDiv: '.wrapper',
         mainForm: '.dietaryReq',
@@ -52,8 +46,6 @@ var UIController = (function () {
             var inputValidated = false;
             if ($("input:radio[name='mealtime']").is(":checked") === false) {
                 this.showModal("#alertMeal");
-            } else if ($("input:checkbox[name='intolerance']").is(":checked") === false) {
-                this.showModal("#alertIntolerance");
             } else if ($("input:radio[name='diet']").is(":checked") === false) {
                 this.showModal("#alertDiet");
             }else if ($("input:radio[name='cuisine']").is(":checked") === false) {
@@ -68,9 +60,10 @@ var UIController = (function () {
         getUserInput: function() {
             var mealtime = $('input[name="mealtime"]:checked').val();
             var intolerances = [];
-            $('input[name="intolerance"]:checked').each(function () {
+            $('input[name="intolerance"]:checked').each(function() {
                 intolerances.push($(this).val());
             });
+            console.log(intolerances);
             if (!intolerances) {
                 intolerances = "";
             }
@@ -86,12 +79,20 @@ var UIController = (function () {
                 intolerances: intolerances
             };
         },
+        displayNoZomatoResults: function() {
+            var html = '<h3>Sorry, we could not find any restaurants that matched your search parameters.</h3>';
+            $(DOMStrings.restaurantList).append(html);
+        },
+        displayNoSpoonacularResults: function() {
+            var html = '<h3>Sorry, we could not find any recipes that matched your search parameters.</h3>';
+            $(DOMStrings.recipeList).append(html);
+        },
         createRestaurantCards: function(restArr) {
             for (var i = 0; i < restArr.length; i++) {
                 var resto = restArr[i];
                 var tagString = '';
 
-                var html = '<div class="card"><div class="card-header" id="restoHeading' + i + '"><button class="btn btn-link" data-toggle="collapse" data-target="#restoCollapse' + i + '" aria-expanded="true" aria-controls="restoCollapse' + i + '"><h4 class="mb-0">' + resto.name + '</h4></button></div><div id="restoCollapse' + i + '" class="collapse" aria-labelledby="restoHeading' + i + '" data-parent="#restaurant_accordion"><div class="card-body"><h5 class="card-title">Location</h5><p class="card-text">' + resto.address + '</p><p><a href="' + resto.url + '" target="_blank">Click to see restaurant on zomato.com</a></p></div><div class="card-deck"><div class="card border-0"><div class="card-body"><h5 class="card-title">Rating: ' + resto.userScore + '</h5></div></div><div class="card mr-3 border-0"><div class="card-body"><h5 class="card-title">Avg. Cost for Two: ' + resto.avgCost + '</h5></div></div></div><div class="card border-0"><div class="card-body"><p class="card-text text-center tags" id="cuisine_tags' + i + '"></p></div></div></div></div>';
+                var html = '<div class="card"><div class="card-header" id="restoHeading' + i + '"><button class="btn btn-link" data-toggle="collapse" data-target="#restoCollapse' + i + '" aria-expanded="true" aria-controls="restoCollapse' + i + '"><h4 class="mb-0">' + resto.name + '</h4></button></div><div id="restoCollapse' + i + '" class="collapse" aria-labelledby="restoHeading' + i + '" data-parent="#restaurant_accordion"><div class="card-body"><h5 class="card-title">Location</h5><p class="card-text">' + resto.address + '</p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.3898032266898!2d-79.39894648464556!3d43.66086227912101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34c759aac983%3A0x22314ceb9e69c275!2s55+St+George+St%2C+Toronto%2C+ON+M5S+0C9!5e0!3m2!1sen!2sca!4v1552263614662" frameborder="0" style="border:0" allowfullscreen></iframe><p><a href="' + resto.url + '" target="_blank">Click to see restaurant on zomato.com</a></p></div><div class="card-deck"><div class="card border-0"><div class="card-body"><h5 class="card-title">Rating: ' + resto.userScore + '</h5></div></div><div class="card mr-3 border-0"><div class="card-body"><h5 class="card-title">Avg. Cost for Two: ' + resto.avgCost + '</h5></div></div></div><div class="card border-0"><div class="card-body"><p class="card-text text-center tags" id="cuisine_tags' + i + '"></p></div></div></div></div>';
 
                 $(DOMStrings.restaurantList).append(html);
 
