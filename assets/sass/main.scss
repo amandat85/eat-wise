@@ -36,18 +36,19 @@ $color-button: #80A602;
   background-repeat: no-repeat;
   background-size: 100% 0.2em;
   background-position: 0 88%;
-  transition: background-size 0.25s ease-in;
-  &:hover {
-  background-size: 100% 88%;
-  }
 }
 
 $base-font: 'Roboto', sans-serif;
+html {
+  min-height: 100%;
+  position: relative;
+}
 
 body  {
   font-family: $base-font;
-  font-size: 18px;
+  font-size: 14pt!important;
   line-height: 34px;
+  
 }
 
 /* Top Navbar */
@@ -74,6 +75,7 @@ nav a {
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 2px;
+  margin-bottom: 8rem!important;
 }
 
 .section {
@@ -85,7 +87,6 @@ nav a {
   justify-content: center;
   color: $color-button-text;
   text-shadow: 0 0 5px #000;
-  font-size:10vw;
 }
 
 #getStarted {
@@ -129,6 +130,10 @@ nav a {
 }
 
 /*Jumbotron*/
+.dietaryReq {
+  padding-bottom: 8rem!important;
+}
+
 #choices {
  @include underline;
 }
@@ -157,6 +162,10 @@ nav a {
 }
 
 //Results
+
+.results {
+  padding-bottom: 8rem!important;
+}
 .card-header{
   background: linear-gradient(to bottom right, rgba($color-jumbotron-dark4, 0.1), rgba($color-jumbotron-light4, 0.4));
 }
@@ -183,7 +192,6 @@ p a {
 .tags {
   background-color: $color-jumbotron-light1;
   font-size: 16pt;
-  // color: $color-button-text;
 }
 
 //Footer
@@ -193,9 +201,14 @@ footer {
   padding: 30px 0;
   bottom: 0;
   width: 100%;
+  position: absolute;
 }
 
 /* About Page */
+.about {
+  margin-bottom: 12rem!important;
+}
+
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
@@ -234,52 +247,107 @@ blockquote p {
   color: #383e42;
   font-family: $base-font;
 }
-/* Media Query */
 
-// @media only screen and (max-width: 640px) {
-//   #masthead {
-//     position: static;
-//   }
+.blog {
+  margin-bottom: 12rem!important;
+}
 
-//   #logo {
-//     width: 100%;
-//     margin-left: 0px;
-//   }
+.contact {
+  margin-bottom: 12rem!important;
+}
+
+//Modals 
+.modal-header {
+  background:linear-gradient(to bottom right, rgba($color-underline-dark, 0.9), rgba($color-underline-light, 0.6));
+}
+
+.closeModal {
+  background-color: $color-jumbotron-dark1!important;
+  color:  #f9f9f9!important;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
   
-//   nav a {
-//     margin-right: 70px;
-//   }
+}
+@media screen and (min-width: 981px) and (max-width: 1024px) {
 
-//   .parallax {
-//     background-attachment: scroll;
-//   }
+}
 
-// }
-
-// @media only screen and (max-width: 768px) {
-//   #logo {
-//     margin-left: 0px;
-//   }
-
-//   nav {
-//    margin-right: 50px;
-//   }
-
-//   .parallax {
-//     background-attachment: scroll;
-//   }
-// }
-
-// @media only screen and (max-width: 980px) {  
-//   #logo {
-//     margin-left: 0px;
-//   }
+@media screen and (min-width: 769px) and (max-width: 980px) {
+  #getStarted {
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    @include buttonStyle;
+  }
   
-//   nav {
-//     margin-right: 30px;
-//   }
+  #getStarted2 {
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    @include buttonStyle;
+  }
+  iframe {
+    width: 100%;
+  }
 
-//   .parallax {
-//     background-attachment: scroll;
-//   }
-// }
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px) {
+  #getStarted {
+    position: absolute;
+    top: 25%;
+    left: 33%;
+    @include buttonStyle;
+  }
+  
+  #getStarted2 {
+    position: absolute;
+    top: 65%;
+    left: 28%;
+    @include buttonStyle;
+  }
+  iframe {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 640px) {
+  #getStarted {
+    position: absolute;
+    top: 25%;
+    left: 33%;
+    @include buttonStyle;
+  }
+  
+  #getStarted2 {
+    position: absolute;
+    top: 65%;
+    left: 35%;
+    @include buttonStyle;
+  }
+  iframe {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #getStarted {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    @include buttonStyle;
+  }
+  
+  #getStarted2 {
+    position: absolute;
+    top: 65%;
+    left: 28%;
+    @include buttonStyle;
+  }
+
+  iframe {
+    width: 100%;
+  }
+}
+
