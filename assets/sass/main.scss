@@ -11,6 +11,8 @@ $color-jumbotron-dark3: #8E0002;
 $color-jumbotron-light3: #8E5D57;
 $color-jumbotron-dark4: #661D8E;
 $color-jumbotron-light4: #79518E;
+$color-underline-dark: #6497b1;
+$color-underline-light: #b3cde0;
 $card-header: rgba(#8E0002, .3)!important;
 $color-button-text: #ffffff;
 $color-button: #80A602;
@@ -27,6 +29,17 @@ $color-button: #80A602;
   border-width: 2px;
   color: $color-button-text;
   font-size: 16pt;
+}
+
+@mixin underline {
+  background-image: linear-gradient(120deg, $color-underline-dark 30%, $color-underline-light 50%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  &:hover {
+  background-size: 100% 88%;
+  }
 }
 
 $base-font: 'Roboto', sans-serif;
@@ -117,14 +130,7 @@ nav a {
 
 /*Jumbotron*/
 #choices {
-  background-image: linear-gradient(120deg, $color-jumbotron-dark2 20%, $color-button 50%);
-  background-repeat: no-repeat;
-  background-size: 100% 0.2em;
-  background-position: 0 88%;
-  transition: background-size 0.25s ease-in;
-  &:hover {
-    background-size: 100% 88%;
-  }
+ @include underline;
 }
 
 #meals {
@@ -152,8 +158,11 @@ nav a {
 
 //Results
 .card-header{
-  background-color: linear-gradient(to bottom right, rgba($color-jumbotron-light3, 0.2), rgba($color-jumbotron-dark3, 0.6));
-  ;
+  background: linear-gradient(to bottom right, rgba($color-jumbotron-dark4, 0.1), rgba($color-jumbotron-light4, 0.4));
+}
+
+.eat{
+  @include underline;
 }
 
 .btn-link {
@@ -163,6 +172,18 @@ nav a {
 #anotherSearch{
   background-color: $color-button;
   color:$color-button-text;
+}
+
+p a {
+  @include style-link-text;
+  font-size:14pt;
+  text-decoration: underline;
+}
+
+.tags {
+  background-color: $color-jumbotron-light1;
+  font-size: 16pt;
+  // color: $color-button-text;
 }
 
 //Footer
@@ -175,7 +196,6 @@ footer {
 }
 
 /* About Page */
-
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;

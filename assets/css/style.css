@@ -85,7 +85,7 @@ nav a {
 
 /*Jumbotron*/
 #choices {
-  background-image: linear-gradient(120deg, #80A602 20%, #80A602 50%);
+  background-image: linear-gradient(120deg, #6497b1 30%, #b3cde0 50%);
   background-repeat: no-repeat;
   background-size: 100% 0.2em;
   background-position: 0 88%;
@@ -111,7 +111,16 @@ nav a {
   color: #ffffff; }
 
 .card-header {
-  background-color: rgba(142, 0, 2, 0.3) !important; }
+  background: linear-gradient(to bottom right, rgba(102, 29, 142, 0.1), rgba(121, 81, 142, 0.4)); }
+
+.eat {
+  background-image: linear-gradient(120deg, #6497b1 30%, #b3cde0 50%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in; }
+  .eat:hover {
+    background-size: 100% 88%; }
 
 .btn-link {
   color: #404346 !important; }
@@ -119,6 +128,17 @@ nav a {
 #anotherSearch {
   background-color: #80A602;
   color: #ffffff; }
+
+p a {
+  text-decoration: none;
+  color: #3d3838;
+  font-size: 16pt;
+  font-size: 14pt;
+  text-decoration: underline; }
+
+.tags {
+  background-color: #F2C879;
+  font-size: 16pt; }
 
 footer {
   background-color: #ebebeb;
