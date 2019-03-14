@@ -275,8 +275,8 @@ blockquote p {
 @media screen and (min-width: 321px) and (max-width: 480px) {
   #getStarted {
     position: absolute;
-    top: 25%;
-    left: 25%;
+    top: 18%;
+    left: 28%;
     background-color: #80A602;
     border-color: #4d6401;
     border-width: 2px;
@@ -284,7 +284,7 @@ blockquote p {
     font-size: 16pt; }
   #getStarted2 {
     position: absolute;
-    top: 60%;
+    top: 65%;
     left: 25%;
     background-color: #80A602;
     border-color: #4d6401;
