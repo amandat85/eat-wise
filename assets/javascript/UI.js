@@ -82,12 +82,16 @@ var UIController = (function () {
         getContactInput: function() {
             var firstName = $('input[id="inputFirst"]').val();
             var lastName = $('input[id="inputLast"]').val();
+            var email = $('#inputEmail').val();
+            var phone = $('#inputNumber').val();
             var hearAbout = $('#inlineFormCustomSelectPref1').val();
             var wouldRecommend = $('#inlineFormCustomSelectPref2').val();
             var comments = $('#comments').val();
             return {
                 firstName: firstName,
                 lastName: lastName,
+                email: email,
+                phone: phone,
                 hearAbout: hearAbout,
                 wouldRecommend: wouldRecommend,
                 comments: comments
