@@ -192,8 +192,8 @@ blockquote p {
 .blog {
   margin-bottom: 12rem !important; }
 
-.contact {
-  margin-bottom: 12rem !important; }
+.submit {
+  padding-bottom: 12rem !important; }
 
 .modal-header {
   background: linear-gradient(to bottom right, rgba(100, 151, 177, 0.9), rgba(179, 205, 224, 0.6)); }
@@ -227,8 +227,8 @@ blockquote p {
 @media screen and (min-width: 641px) and (max-width: 768px) {
   #getStarted {
     position: absolute;
-    top: 25%;
-    left: 33%;
+    top: 30%;
+    left: 40%;
     background-color: #80A602;
     border-color: #4d6401;
     border-width: 2px;
@@ -236,13 +236,15 @@ blockquote p {
     font-size: 16pt; }
   #getStarted2 {
     position: absolute;
-    top: 65%;
-    left: 28%;
+    top: 60%;
+    left: 37%;
     background-color: #80A602;
     border-color: #4d6401;
     border-width: 2px;
     color: #ffffff;
     font-size: 16pt; }
+  .submit {
+    padding-bottom: 15rem !important; }
   iframe {
     width: 100%; } }
 
@@ -265,14 +267,16 @@ blockquote p {
     border-width: 2px;
     color: #ffffff;
     font-size: 16pt; }
+  .submit {
+    padding-bottom: 15rem !important; }
   iframe {
     width: 100%; } }
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 321px) and (max-width: 480px) {
   #getStarted {
     position: absolute;
-    top: 20%;
-    left: 30%;
+    top: 18%;
+    left: 28%;
     background-color: #80A602;
     border-color: #4d6401;
     border-width: 2px;
@@ -281,11 +285,53 @@ blockquote p {
   #getStarted2 {
     position: absolute;
     top: 65%;
-    left: 28%;
+    left: 25%;
     background-color: #80A602;
     border-color: #4d6401;
     border-width: 2px;
     color: #ffffff;
     font-size: 16pt; }
+  .dietaryReq {
+    padding-bottom: 12rem !important; }
+  .results {
+    padding-bottom: 12rem !important; }
+  .blog {
+    padding-bottom: 15rem !important; }
+  #blogImage {
+    width: 100%; }
+  .submit {
+    padding-bottom: 18rem !important; }
+  iframe {
+    width: 100%; } }
+
+@media screen and (max-width: 320px) {
+  #getStarted {
+    position: absolute;
+    top: 18%;
+    left: 23%;
+    background-color: #80A602;
+    border-color: #4d6401;
+    border-width: 2px;
+    color: #ffffff;
+    font-size: 16pt; }
+  #getStarted2 {
+    position: absolute;
+    top: 65%;
+    left: 25%;
+    background-color: #80A602;
+    border-color: #4d6401;
+    border-width: 2px;
+    color: #ffffff;
+    font-size: 16pt; }
+  .dietaryReq {
+    padding-bottom: 15rem !important; }
+  .results {
+    padding-bottom: 15rem !important; }
+  .blog {
+    padding-bottom: 15rem !important; }
+  #blogImage {
+    width: 100%; }
+  .submit {
+    padding-bottom: 18rem !important; }
   iframe {
     width: 100%; } }

@@ -1,6 +1,6 @@
 // DATABASE CONTROLLER USING FIREBASE
 var firebaseController = (function () {
-	// All the firebase code will be moved inside of here eventually
+	// All the firebase code
 	// Initialize Firebase
 	var config = {
 		apiKey: "AIzaSyDPHxT4nXafKkjoyGEPlve1lWrELWSBUcI",
@@ -17,7 +17,6 @@ var firebaseController = (function () {
 		storeSearchParamsFirebase: function (inputChoices) {
 			//Push to database
 			database.ref("users/").push(inputChoices);
-			console.log(inputChoices);
 		},
 		storeSearchParamsLocal: function (inputChoices) {
 			//Local Storage

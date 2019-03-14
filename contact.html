@@ -32,7 +32,7 @@
 
     <!--JavaScript-->
     <script src="./assets/javascript/generalFunctions.js"></script>
-    <script src="./assets/javascript/basic.js"></script>
+    <script src="./assets/javascript/contact.js"></script>
 
 </head>
 
@@ -53,16 +53,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav nav-tabs ml-auto">
                         <li class="nav-item mr-3">
-                            <a class="nav-link" href="blog.html">Blog</a>
+                            <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item mr-3">
                             <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item mr-3">
+                            <a class="nav-link" href="blog.html">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                     </ul>
-
                 </div>
             </nav>
         </div>
@@ -74,13 +76,13 @@
             <h2 class="subtitle"><strong>Contact Us</strong><br><br>﹌</h2>
             <!-- Contact Us -->
             <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.3898032266898!2d-79.39894648464556!3d43.66086227912101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34c759aac983%3A0x22314ceb9e69c275!2s55+St+George+St%2C+Toronto%2C+ON+M5S+0C9!5e0!3m2!1sen!2sca!4v1552263614662"
                         width="500" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
-                <div class="col-lg-6 col-md-8">
-                    <h5>Email: <small>eatwise@gmail.com</small></h5>
+                <div class="col-xl-5 col-lg-5 offset-lg-1 col-md-12 col-sm-12 col-xs-12 contactArea">
+                    <h5>Email: <small><a href="mailto:wiseeat@gmail.com">wiseeat@gmail.com</a></small></h5>
                     <h5>Phone: <small>+1 (555) 555-5555</small></h5>
                     <h5>Address: <small>55 Saint George St, Toronto, ON, M5S 0C9</small></h5>
                 </div>
@@ -128,17 +130,14 @@
                     <textarea class="form-control" id="comments" rows="3"
                         placeholder="I just wanted to say.."></textarea>
                 </div>
-
-                <!-- Submit Button -->
-                <div class="form-group col-md-6">
-                    <button type="submit" id="submitInfo" class="btn btn-primary">Submit</button>
-                </div>
-                <!--/ .Submit Button -->
-
             </div>
             <!--/. Contact Form -->
 
-
+            <!-- Submit Button -->
+            <div class="col-auto my-1 ml-auto submit">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            <!--/ .Submit Button -->
         </form>
     </div>
     <!--Disclaimer-->
@@ -171,11 +170,11 @@
                 </div>
 
                 <div class="col-md-2 mb-md-0 mb-3 ml-auto">
-                    <a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-square fa-2x ml-5"
+                    <a href="https://www.facebook.com/Eat-Wise-630822097348464/?modal=admin_todo_tour" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-square fa-2x ml-5"
                             style="color: #3b5998"></i></a>
                     <a href="#" class="icoInstagram" title="Instagram"><i class="fab fa-instagram fa-2x"
                             style="color:#517fa4"></i></a>
-                    <a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter-square fa-2x"
+                    <a href="https://twitter.com/eatwise2" class="icoTwitter" title="Twitter"><i class="fab fa-twitter-square fa-2x"
                             style="color:#55acee"></i></a>
                 </div>
             </div>
@@ -184,6 +183,7 @@
             <div class="footer-copyright text-center py-3">Copyright &copy; 2019 - Pineapple on Pizza</div>
         </div>
     </footer>
+
     <!--Script - Bootstrap-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -194,7 +194,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-
 </body>
 
 </html>
