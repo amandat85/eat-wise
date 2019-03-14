@@ -1,12 +1,10 @@
 var contactPageController = (function() {
     
     function setEventListners() {
-
         var DOM = UIController.getDOMStrings();
 
         $(DOM.submitInfoBtn).on("click", function(event) {
             event.preventDefault;
-            console.log("itworks");
             UIController.getContactInput();
         });
 

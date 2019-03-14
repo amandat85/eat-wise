@@ -81,18 +81,17 @@ var UIController = (function () {
         },
         getContactInput: function() {
             var firstName = $('input[id="inputFirst"]').val();
-            var lastName = $('input[name="inputLast"]').val();
+            var lastName = $('input[id="inputLast"]').val();
             var hearAbout = $('#inlineFormCustomSelectPref1').val();
             var wouldRecommend = $('#inlineFormCustomSelectPref2').val();
             var comments = $('#comments').val();
-            alert("success");
-            console.log(firstName);
-            console.log(lastName);
-            console.log(hearAbout);
-            console.log(wouldRecommend);
-            console.log(comments);
-
-
+            return {
+                firstName: firstName,
+                lastName: lastName,
+                hearAbout: hearAbout,
+                wouldRecommend: wouldRecommend,
+                comments: comments
+            };
         },
         displayNoZomatoResults: function() {
             var html = '<h3>Sorry, we could not find any restaurants that matched your search parameters.</h3>';
