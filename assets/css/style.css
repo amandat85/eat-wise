@@ -202,6 +202,30 @@ blockquote p {
   background-color: #F28C02 !important;
   color: #f9f9f9 !important; }
 
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+#getStarted {
+  position: absolute;
+  top: 20%;
+  left: 44%;
+  background-color: #80A602;
+  border-color: #4d6401;
+  border-width: 2px;
+  color: #ffffff;
+  font-size: 16pt; }
+}
+
+@media screen and (min-width: 981px) and (max-width: 1024px){
+  #getStarted {
+    position: absolute;
+    top: 18%;
+    left: 40%;
+    background-color: #80A602;
+    border-color: #4d6401;
+    border-width: 2px;
+    color: #ffffff;
+    font-size: 16pt; }
+}
+
 @media screen and (min-width: 769px) and (max-width: 980px) {
   #getStarted {
     position: absolute;
