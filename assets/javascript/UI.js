@@ -17,7 +17,8 @@ var UIController = (function () {
         disclaimer: '#disclaimer',
         closeDisclaimer: '#closeDisclaimer',
         closeModal: '.closeModal',
-        searchAgainBtn: '#searchAgain'
+        searchAgainBtn: '#searchAgain',
+        submitInfoBtn: '#submitInfo'
     }
 
     return {
@@ -63,7 +64,6 @@ var UIController = (function () {
             $('input[name="intolerance"]:checked').each(function() {
                 intolerances.push($(this).val());
             });
-            console.log(intolerances);
             if (!intolerances) {
                 intolerances = "";
             }
@@ -78,6 +78,21 @@ var UIController = (function () {
                 mealType: mealtime,
                 intolerances: intolerances
             };
+        },
+        getContactInput: function() {
+            var firstName = $('input[id="inputFirst"]').val();
+            var lastName = $('input[name="inputLast"]').val();
+            var hearAbout = $('#inlineFormCustomSelectPref1').val();
+            var wouldRecommend = $('#inlineFormCustomSelectPref2').val();
+            var comments = $('#comments').val();
+
+            console.log(firstName);
+            console.log(lastName);
+            console.log(hearAbout);
+            console.log(wouldRecommend);
+            console.log(comments);
+
+
         },
         displayNoZomatoResults: function() {
             var html = '<h3>Sorry, we could not find any restaurants that matched your search parameters.</h3>';

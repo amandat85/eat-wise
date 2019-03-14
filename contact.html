@@ -92,7 +92,7 @@
             <div class="form-row contact">
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">First Name</label>
-                    <input type="text" class="form-control" id="inputEmail4" placeholder="Jane">
+                    <input type="text" class="form-control" id="inputFirst" placeholder="Jane">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputLast">Last Name</label>
@@ -128,30 +128,34 @@
                     <textarea class="form-control" id="comments" rows="3"
                         placeholder="I just wanted to say.."></textarea>
                 </div>
+
+                <!-- Submit Button -->
+                <div class="form-group col-md-6">
+                    <button type="submit" id="submitInfo" class="btn btn-primary">Submit</button>
+                </div>
+                <!--/ .Submit Button -->
+
             </div>
             <!--/. Contact Form -->
 
-            <!-- Submit Button -->
-            <div class="col-auto my-1 ml-auto">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-            <!--/ .Submit Button -->
+
         </form>
     </div>
     <!--Disclaimer-->
     <div class="modal fade" id="disclaimer" tabindex="-1" role="dialog" aria-labelledby="disclaimerLabel"
-    aria-hidden="true">
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                <h5 class="modal-title" id="alertLabel">Disclaimer</h5>
+                    <h5 class="modal-title" id="alertLabel">Disclaimer</h5>
                 </div>
                 <div class="modal-body">
-                <p class="card-text text-center mt-5">Your health and wellbeing is our main priority. Please consult
-                    your doctor before enrolling in a meal plan established on Eat Wise.</p>
+                    <p class="card-text text-center mt-5">Your health and wellbeing is our main priority. Please consult
+                        your doctor before enrolling in a meal plan established on Eat Wise.</p>
                 </div>
                 <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" id="closeDisclaimer" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" id="closeDisclaimer"
+                        data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -190,7 +194,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-    
+
 </body>
 
 </html>
