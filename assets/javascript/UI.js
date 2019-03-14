@@ -85,14 +85,6 @@ var UIController = (function () {
             var hearAbout = $('#inlineFormCustomSelectPref1').val();
             var wouldRecommend = $('#inlineFormCustomSelectPref2').val();
             var comments = $('#comments').val();
-
-            console.log(firstName);
-            console.log(lastName);
-            console.log(hearAbout);
-            console.log(wouldRecommend);
-            console.log(comments);
-
-
         },
         displayNoZomatoResults: function() {
             var html = '<h3>Sorry, we could not find any restaurants that matched your search parameters.</h3>';
