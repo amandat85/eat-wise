@@ -18,7 +18,7 @@ var UIController = (function () {
         closeDisclaimer: '#closeDisclaimer',
         closeModal: '.closeModal',
         searchAgainBtn: '#searchAgain',
-        submitInfoBtn: '#submitInfo'
+        submitInfoBtn: '.submit'
     }
 
     return {

@@ -6,7 +6,6 @@ var foodSearch = (function() {
     function setUpEventListeners() {
         
         var DOM = UIController.getDOMStrings();
-        console.log("here");
 
         disclaimerModalController.addModalEventListeners();
 
@@ -20,7 +19,7 @@ var foodSearch = (function() {
 			UIController.hideModal(this);
         });
         
-        $(DOM.submitInfoBtn).on("click", UIController.getContactInput);
+    
     }
 
     function processRestaurantList(restaurantArray) {
