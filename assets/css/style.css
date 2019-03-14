@@ -192,8 +192,8 @@ blockquote p {
 .blog {
   margin-bottom: 12rem !important; }
 
-.contact {
-  margin-bottom: 12rem !important; }
+.submit {
+  padding-bottom: 12rem !important; }
 
 .modal-header {
   background: linear-gradient(to bottom right, rgba(100, 151, 177, 0.9), rgba(179, 205, 224, 0.6)); }
@@ -243,6 +243,8 @@ blockquote p {
     border-width: 2px;
     color: #ffffff;
     font-size: 16pt; }
+  .submit {
+    padding-bottom: 15rem !important; }
   iframe {
     width: 100%; } }
 
@@ -265,6 +267,8 @@ blockquote p {
     border-width: 2px;
     color: #ffffff;
     font-size: 16pt; }
+  .submit {
+    padding-bottom: 15rem !important; }
   iframe {
     width: 100%; } }
 
@@ -292,9 +296,11 @@ blockquote p {
   .results {
     padding-bottom: 12rem !important; }
   .blog {
-    margin-bottom: 15rem !important; }
+    padding-bottom: 15rem !important; }
   #blogImage {
     width: 100%; }
+  .submit {
+    padding-bottom: 18rem !important; }
   iframe {
     width: 100%; } }
 
@@ -322,8 +328,10 @@ blockquote p {
   .results {
     padding-bottom: 15rem !important; }
   .blog {
-    margin-bottom: 25rem !important; }
+    padding-bottom: 15rem !important; }
   #blogImage {
     width: 100%; }
+  .submit {
+    padding-bottom: 18rem !important; }
   iframe {
     width: 100%; } }

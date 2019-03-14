@@ -251,9 +251,9 @@ blockquote p {
   margin-bottom: 12rem!important;
 }
 
-.contact {
-  margin-bottom: 12rem!important;
-}
+.submit {
+  padding-bottom: 12rem!important;
+ } 
 
 //Modals 
 .modal-header {
@@ -264,12 +264,6 @@ blockquote p {
   background-color: $color-jumbotron-dark1!important;
   color:  #f9f9f9!important;
 }
-
-@media screen and (min-width: 1025px) and (max-width: 1280px) {}
-  
-@media screen and (min-width: 981px) and (max-width: 1024px) {}
-
- 
 
 @media screen and (min-width: 769px) and (max-width: 980px) {
   #getStarted {
@@ -304,6 +298,11 @@ blockquote p {
     left: 37%;
     @include buttonStyle;
   }
+
+  .submit {
+    padding-bottom: 15rem!important;
+   } 
+
   iframe {
     width: 100%;
   }
@@ -323,6 +322,11 @@ blockquote p {
     left: 35%;
     @include buttonStyle;
   }
+
+  .submit {
+    padding-bottom: 15rem!important;
+   } 
+
   iframe {
     width: 100%;
   }
@@ -352,12 +356,16 @@ blockquote p {
   }
 
   .blog {
-    margin-bottom: 15rem!important;
+    padding-bottom: 15rem!important;
   }
 
   #blogImage{
     width: 100%;
   }
+
+  .submit {
+    padding-bottom: 18rem!important;
+   } 
 
   iframe {
     width: 100%;
@@ -388,11 +396,15 @@ blockquote p {
   }
 
   .blog {
-    margin-bottom: 25rem!important;
+    padding-bottom: 15rem!important;
   }
 
   #blogImage{
     width: 100%;
+  }
+
+  .submit {
+    padding-bottom: 18rem!important;
   }
 
   iframe {
