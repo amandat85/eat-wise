@@ -79,24 +79,6 @@ var UIController = (function () {
                 intolerances: intolerances
             };
         },
-        getContactInput: function() {
-            var firstName = $('input[id="inputFirst"]').val();
-            var lastName = $('input[id="inputLast"]').val();
-            var email = $('#inputEmail').val();
-            var phone = $('#inputNumber').val();
-            var hearAbout = $('#inlineFormCustomSelectPref1').val();
-            var wouldRecommend = $('#inlineFormCustomSelectPref2').val();
-            var comments = $('#comments').val();
-            return {
-                firstName: firstName,
-                lastName: lastName,
-                email: email,
-                phone: phone,
-                hearAbout: hearAbout,
-                wouldRecommend: wouldRecommend,
-                comments: comments
-            };
-        },
         displayNoZomatoResults: function() {
             var html = '<h3>Sorry, we could not find any restaurants that matched your search parameters.</h3>';
             $(DOMStrings.restaurantList).append(html);
