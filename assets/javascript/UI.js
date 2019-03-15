@@ -14,11 +14,16 @@ var UIController = (function () {
         logoutBtn: '#logout',
         startBtn: '.started',
         infoBtn: '#info',
+        modal: '.modal',
         disclaimer: '#disclaimer',
         closeDisclaimer: '#closeDisclaimer',
         closeModal: '.closeModal',
         searchAgainBtn: '#searchAgain',
-        submitInfoBtn: '.btn'
+        submitInfoBtn: '.btn',
+        alertCity: "#alertCity",
+        alertCuisine: "#alertCuisine",
+        alertDiet: "#alertDiet",
+        alertMeal: "#alertMeal"
     }
 
     return {
@@ -46,13 +51,13 @@ var UIController = (function () {
         checkUserInput: function() {
             var inputValidated = false;
             if ($("input:radio[name='mealtime']").is(":checked") === false) {
-                this.showModal("#alertMeal");
+                this.showModal(DOMStrings.alertMeal);
             } else if ($("input:radio[name='diet']").is(":checked") === false) {
-                this.showModal("#alertDiet");
+                this.showModal(DOMStrings.alertDiet);
             }else if ($("input:radio[name='cuisine']").is(":checked") === false) {
-                this.showModal("#alertCuisine");
+                this.showModal(DOMStrings.alertCuisine);
             } else if (document.querySelector("#city").value.trim() === "") {
-                this.showModal("#alertCity");
+                this.showModal(DOMStrings.alertCity);
             } else {
                 inputValidated = true;
             }
@@ -125,10 +130,10 @@ var UIController = (function () {
             }
         },
         showModal: function(selector) {
-            $(selector).closest('.modal').toggleClass("show").css("display", "block");
+            $(selector).closest(DOMStrings.modal).toggleClass("show").css("display", "block");
         },
         hideModal: function(selector) {
-            $(selector).closest('.modal').toggleClass("show").css("display", "none");
+            $(selector).closest(DOMstrings.modal).toggleClass("show").css("display", "none");
         }
     }
 })();

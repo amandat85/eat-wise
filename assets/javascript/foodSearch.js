@@ -4,7 +4,6 @@ var foodSearch = (function() {
     var searchParams, recipeInfoArray, numOfRecipes;
 
     function setUpEventListeners() {
-        
         var DOM = UIController.getDOMStrings();
 
         disclaimerModalController.addModalEventListeners();
@@ -48,7 +47,6 @@ var foodSearch = (function() {
         } else {
             UIController.displayNoSpoonacularResults();
         }
-		
     }
 
     function performFoodSearch(cityid) {
@@ -66,9 +64,10 @@ var foodSearch = (function() {
             APIController.spoonacularGetRecipeIDs(getRecipeInfo, searchParams.cuisine, searchParams.intolerances, searchParams.mealType, searchParams.diet);
 		
         } else {
+            var DOM = UIController.getDOMStrings();
             // If the city the user inputed does not exist in Zomato 
             // we let the user know with a modal
-            UIController.showModal("#alertCity");
+            UIController.showModal(DOM.alertCity);
         }        
     }
 
