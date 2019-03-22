@@ -14,6 +14,7 @@ var UIController = (function () {
         logoutBtn: '#logout',
         startBtn: '.started',
         infoBtn: '#info',
+        modal: '.modal',
         disclaimer: '#disclaimer',
         closeDisclaimer: '#closeDisclaimer',
         closeModal: '.closeModal',
@@ -46,13 +47,13 @@ var UIController = (function () {
         checkUserInput: function() {
             var inputValidated = false;
             if ($("input:radio[name='mealtime']").is(":checked") === false) {
-                this.showModal("#alertMeal");
+                this.showModal(DOMStrings.alertMeal);
             } else if ($("input:radio[name='diet']").is(":checked") === false) {
-                this.showModal("#alertDiet");
+                this.showModal(DOMStrings.alertDiet);
             }else if ($("input:radio[name='cuisine']").is(":checked") === false) {
-                this.showModal("#alertCuisine");
+                this.showModal(DOMStrings.alertCuisine);
             } else if (document.querySelector("#city").value.trim() === "") {
-                this.showModal("#alertCity");
+                this.showModal(DOMStrings.alertCity);
             } else {
                 inputValidated = true;
             }
@@ -78,21 +79,6 @@ var UIController = (function () {
                 mealType: mealtime,
                 intolerances: intolerances
             };
-        },
-        getContactInput: function() {
-            var firstName = $('input[id="inputFirst"]').val();
-            var lastName = $('input[name="inputLast"]').val();
-            var hearAbout = $('#inlineFormCustomSelectPref1').val();
-            var wouldRecommend = $('#inlineFormCustomSelectPref2').val();
-            var comments = $('#comments').val();
-
-            console.log(firstName);
-            console.log(lastName);
-            console.log(hearAbout);
-            console.log(wouldRecommend);
-            console.log(comments);
-
-
         },
         displayNoZomatoResults: function() {
             var html = '<h3>Sorry, we could not find any restaurants that matched your search parameters.</h3>';
@@ -140,10 +126,10 @@ var UIController = (function () {
             }
         },
         showModal: function(selector) {
-            $(selector).closest('.modal').toggleClass("show").css("display", "block");
+            $(selector).closest(DOMStrings.modal).toggleClass("show").css("display", "block");
         },
         hideModal: function(selector) {
-            $(selector).closest('.modal').toggleClass("show").css("display", "none");
+            $(selector).closest(DOMstrings.modal).toggleClass("show").css("display", "none");
         }
     }
 })();
