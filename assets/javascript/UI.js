@@ -19,11 +19,7 @@ var UIController = (function () {
         closeDisclaimer: '#closeDisclaimer',
         closeModal: '.closeModal',
         searchAgainBtn: '#searchAgain',
-        submitInfoBtn: '.btn',
-        alertCity: "#alertCity",
-        alertCuisine: "#alertCuisine",
-        alertDiet: "#alertDiet",
-        alertMeal: "#alertMeal"
+        submitInfoBtn: '.submit'
     }
 
     return {
