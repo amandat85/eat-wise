@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/amandat85/eat-wise#readme",
   "devDependencies": {
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.13.1"
   }
 }
